@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9d489d6d-e696-4784-93b9-18beee68136e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AccountService1.wsdl" MetadataType="Wsdl" ID="9298d708-e5b5-445e-9f12-175ff9046092" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc?wsdl" />
+    <MetadataFile FileName="AccountWcf1.disco" MetadataType="Disco" ID="56b221dd-b06c-43f4-97be-8a0043bb3cc2" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc?disco" />
+    <MetadataFile FileName="AccountWcf4.xsd" MetadataType="Schema" ID="7b6a5e4f-a214-4b24-943f-24df68638f43" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="AccountWcf41.xsd" MetadataType="Schema" ID="c5d9a7ba-bd2c-4fe0-a3cc-d24e4a0a908f" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="AccountWcf42.xsd" MetadataType="Schema" ID="39b45a4a-3d66-452f-ac2f-b59e292048cb" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="AccountWcf43.xsd" MetadataType="Schema" ID="dce157d5-6489-4c8c-b5fb-f67c10eccb57" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

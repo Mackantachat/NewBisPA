@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NewBISService.StructureModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NewBISService.StructureModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/NewBisWcfSvc/NewBisWcf.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" />
+  <xs:complexType name="ArrayOfUPolicyBundleWaitExecuteItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UPolicyBundleWaitExecuteItem" nillable="true" type="tns:UPolicyBundleWaitExecuteItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUPolicyBundleWaitExecuteItem" nillable="true" type="tns:ArrayOfUPolicyBundleWaitExecuteItem" />
+  <xs:complexType name="UPolicyBundleWaitExecuteItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AppId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="AppNoOnwer" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="BundleSMS" nillable="true" type="q1:ZTB_BUNDLE_SMS" />
+      <xs:element minOccurs="0" name="CampaignName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChannelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChannelTypeOnwer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FeePlanName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlBlock" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlCode2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyIdOnwer" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SUMM" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UappId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="WorkGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZBC_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UPolicyBundleWaitExecuteItem" nillable="true" type="tns:UPolicyBundleWaitExecuteItem" />
+  <xs:complexType name="CampaignBundleFeeParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Age" type="xs:int" />
+      <xs:element minOccurs="0" name="AppDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ChannelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketingType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PlBlock" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlCode2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Summ" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CampaignBundleFeeParam" nillable="true" type="tns:CampaignBundleFeeParam" />
+</xs:schema>

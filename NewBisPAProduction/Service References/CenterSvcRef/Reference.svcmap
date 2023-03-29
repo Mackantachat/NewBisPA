@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fefe2849-069b-4ba1-b755-d166d38eea21" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CenterService.wsdl" MetadataType="Wsdl" ID="2a6c7586-60b6-497c-ab8c-612638e82468" SourceId="1" SourceUrl="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc?wsdl" />
+    <MetadataFile FileName="CenterWcf.xsd" MetadataType="Schema" ID="ff6dfa6f-0548-4403-8346-d6dc60ec7555" SourceId="1" SourceUrl="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="CenterWcf1.xsd" MetadataType="Schema" ID="a3a5adbd-2b4e-4785-8b7c-70cf5080079b" SourceId="1" SourceUrl="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc?xsd=xsd4" />
+    <MetadataFile FileName="CenterWcf.disco" MetadataType="Disco" ID="16c688cc-2512-4abe-a358-cd6826faf20e" SourceId="1" SourceUrl="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc?disco" />
+    <MetadataFile FileName="CenterWcf2.xsd" MetadataType="Schema" ID="2c772e86-2493-47ae-8c1c-7f2321b73e90" SourceId="1" SourceUrl="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="CenterWcf3.xsd" MetadataType="Schema" ID="4f1ca61c-181a-4aa9-a7aa-8ad85fe5388f" SourceId="1" SourceUrl="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="CenterWcf4.xsd" MetadataType="Schema" ID="6ff8fd1a-559c-4241-99e2-b1c618b0bee4" SourceId="1" SourceUrl="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

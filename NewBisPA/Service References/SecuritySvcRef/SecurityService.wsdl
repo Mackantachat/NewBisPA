@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SecurityService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AppSecurityProvider" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CenterProvider" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISecurityService_GetWebApplicationByPermit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebApplicationByPermit" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetWebApplicationByPermit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebApplicationByPermitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetWinApplicationByPermit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWinApplicationByPermit" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetWinApplicationByPermit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWinApplicationByPermitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetProgramByPermit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgramByPermit" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetProgramByPermit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgramByPermitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetWebProgramByPermit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebProgramByPermit" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetWebProgramByPermit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebProgramByPermitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetWinProgramByPermit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWinProgramByPermit" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetWinProgramByPermit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWinProgramByPermitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyPermit_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyPermit" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyPermit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyPermitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyPermitByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyPermitByCode" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyPermitByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyPermitByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyPassword" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetNUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNUserId" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetNUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetProgramGroupByPermit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgramGroupByPermit" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetProgramGroupByPermit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgramGroupByPermitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetProgramGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgramGroup" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetProgramGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgramGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetProgramGroupById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgramGroupById" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetProgramGroupById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgramGroupByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyDomainUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyDomainUser" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyDomainUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyDomainUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUserId" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplication" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyLdapUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyLdapUser" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyLdapUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyLdapUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyLdapCenterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyLdapCenterUser" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_VerifyLdapCenterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyLdapCenterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_TerminateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:TerminateUser" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_TerminateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TerminateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DeleteAppUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAppUser" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DeleteAppUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAppUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_RemoveApplicationUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicationUser" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_RemoveApplicationUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveApplicationUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_MarkProcessedTerminatedUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:MarkProcessedTerminatedUser" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_MarkProcessedTerminatedUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MarkProcessedTerminatedUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISecurityService">
+    <wsdl:operation name="GetWebApplicationByPermit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/GetWebApplicationByPermit" message="tns:ISecurityService_GetWebApplicationByPermit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/GetWebApplicationByPermitResponse" message="tns:ISecurityService_GetWebApplicationByPermit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWinApplicationByPermit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/GetWinApplicationByPermit" message="tns:ISecurityService_GetWinApplicationByPermit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/GetWinApplicationByPermitResponse" message="tns:ISecurityService_GetWinApplicationByPermit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramByPermit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/GetProgramByPermit" message="tns:ISecurityService_GetProgramByPermit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/GetProgramByPermitResponse" message="tns:ISecurityService_GetProgramByPermit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebProgramByPermit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/GetWebProgramByPermit" message="tns:ISecurityService_GetWebProgramByPermit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/GetWebProgramByPermitResponse" message="tns:ISecurityService_GetWebProgramByPermit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWinProgramByPermit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/GetWinProgramByPermit" message="tns:ISecurityService_GetWinProgramByPermit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/GetWinProgramByPermitResponse" message="tns:ISecurityService_GetWinProgramByPermit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPermit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/VerifyPermit" message="tns:ISecurityService_VerifyPermit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/VerifyPermitResponse" message="tns:ISecurityService_VerifyPermit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPermitByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/VerifyPermitByCode" message="tns:ISecurityService_VerifyPermitByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/VerifyPermitByCodeResponse" message="tns:ISecurityService_VerifyPermitByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/VerifyPassword" message="tns:ISecurityService_VerifyPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/VerifyPasswordResponse" message="tns:ISecurityService_VerifyPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/ChangePassword" message="tns:ISecurityService_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/ChangePasswordResponse" message="tns:ISecurityService_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/GetNUserId" message="tns:ISecurityService_GetNUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/GetNUserIdResponse" message="tns:ISecurityService_GetNUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramGroupByPermit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/GetProgramGroupByPermit" message="tns:ISecurityService_GetProgramGroupByPermit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/GetProgramGroupByPermitResponse" message="tns:ISecurityService_GetProgramGroupByPermit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/GetProgramGroup" message="tns:ISecurityService_GetProgramGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/GetProgramGroupResponse" message="tns:ISecurityService_GetProgramGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramGroupById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/GetProgramGroupById" message="tns:ISecurityService_GetProgramGroupById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/GetProgramGroupByIdResponse" message="tns:ISecurityService_GetProgramGroupById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyDomainUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/VerifyDomainUser" message="tns:ISecurityService_VerifyDomainUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/VerifyDomainUserResponse" message="tns:ISecurityService_VerifyDomainUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/VerifyUserId" message="tns:ISecurityService_VerifyUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/VerifyUserIdResponse" message="tns:ISecurityService_VerifyUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/GetApplication" message="tns:ISecurityService_GetApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/GetApplicationResponse" message="tns:ISecurityService_GetApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLdapUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/VerifyLdapUser" message="tns:ISecurityService_VerifyLdapUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/VerifyLdapUserResponse" message="tns:ISecurityService_VerifyLdapUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLdapCenterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/VerifyLdapCenterUser" message="tns:ISecurityService_VerifyLdapCenterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/VerifyLdapCenterUserResponse" message="tns:ISecurityService_VerifyLdapCenterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TerminateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/TerminateUser" message="tns:ISecurityService_TerminateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/TerminateUserResponse" message="tns:ISecurityService_TerminateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAppUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/DeleteAppUser" message="tns:ISecurityService_DeleteAppUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/DeleteAppUserResponse" message="tns:ISecurityService_DeleteAppUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicationUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/RemoveApplicationUser" message="tns:ISecurityService_RemoveApplicationUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/RemoveApplicationUserResponse" message="tns:ISecurityService_RemoveApplicationUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MarkProcessedTerminatedUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISecurityService/MarkProcessedTerminatedUser" message="tns:ISecurityService_MarkProcessedTerminatedUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISecurityService/MarkProcessedTerminatedUserResponse" message="tns:ISecurityService_MarkProcessedTerminatedUser_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISecurityService" type="tns:ISecurityService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetWebApplicationByPermit">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/GetWebApplicationByPermit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWinApplicationByPermit">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/GetWinApplicationByPermit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramByPermit">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/GetProgramByPermit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebProgramByPermit">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/GetWebProgramByPermit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWinProgramByPermit">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/GetWinProgramByPermit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPermit">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/VerifyPermit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPermitByCode">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/VerifyPermitByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPassword">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/VerifyPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNUserId">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/GetNUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramGroupByPermit">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/GetProgramGroupByPermit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramGroup">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/GetProgramGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramGroupById">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/GetProgramGroupById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyDomainUser">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/VerifyDomainUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserId">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/VerifyUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplication">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/GetApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLdapUser">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/VerifyLdapUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLdapCenterUser">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/VerifyLdapCenterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TerminateUser">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/TerminateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAppUser">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/DeleteAppUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicationUser">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/RemoveApplicationUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MarkProcessedTerminatedUser">
+      <soap:operation soapAction="http://tempuri.org/ISecurityService/MarkProcessedTerminatedUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SecurityService">
+    <wsdl:port name="BasicHttpBinding_ISecurityService" binding="tns:BasicHttpBinding_ISecurityService">
+      <soap:address location="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

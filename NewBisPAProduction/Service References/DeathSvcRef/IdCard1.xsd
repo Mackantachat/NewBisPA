@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DopaIdCardService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DopaIdCardService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="IdCardInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BirthDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Cid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Laser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IdCardInfo" nillable="true" type="tns:IdCardInfo" />
+  <xs:complexType name="VerifyOutput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="Desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessResult" nillable="true" type="tns:ProcessResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VerifyOutput" nillable="true" type="tns:VerifyOutput" />
+  <xs:complexType name="ProcessResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Successed" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcessResult" nillable="true" type="tns:ProcessResult" />
+</xs:schema>

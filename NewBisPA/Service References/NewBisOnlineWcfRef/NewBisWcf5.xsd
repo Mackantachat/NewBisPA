@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/NewBisOnlineWcf2/NewBisWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/NewBisOnlineWcf2/NewBisWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" />
+  <xs:complexType name="U_RDEM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EM_LASTPAY_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EM_PAY_TERM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EM_PERCENT" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EM_PERMUE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EM_PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TMN" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="URD_EM_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="URIDER_ID" nillable="true" type="xs:long" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="U_RDEM_TMN" nillable="true" type="q1:U_RDEM_TMN" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="U_RDEM" nillable="true" type="tns:U_RDEM" />
+</xs:schema>

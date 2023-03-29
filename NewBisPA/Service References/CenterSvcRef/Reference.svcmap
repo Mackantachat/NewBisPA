@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="df1a23de-e1b9-4c28-99af-8ca455cb7ff4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranetuat.bla.co.th:88/CenterWcfSvc/CenterWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CenterWcf5.xsd" MetadataType="Schema" ID="7a5395fb-7735-4ae8-9e00-663ba54c86d7" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/CenterWcfSvc/CenterWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="CenterWcf51.xsd" MetadataType="Schema" ID="a7a868db-7e78-4120-9f6b-3a730486a53d" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/CenterWcfSvc/CenterWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="CenterWcf52.xsd" MetadataType="Schema" ID="1a4f5cb6-63a7-4432-b431-0f742d215cda" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/CenterWcfSvc/CenterWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="CenterWcf1.disco" MetadataType="Disco" ID="5126cbce-b0f3-4157-a948-e5327258f175" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/CenterWcfSvc/CenterWcf.svc?disco" />
+    <MetadataFile FileName="CenterService1.wsdl" MetadataType="Wsdl" ID="6334dd29-f7f0-4d97-9196-1011c569d0f6" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/CenterWcfSvc/CenterWcf.svc?wsdl" />
+    <MetadataFile FileName="CenterWcf53.xsd" MetadataType="Schema" ID="c802ad7d-28e7-47c3-8b7b-e495c4087ea4" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/CenterWcfSvc/CenterWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="CenterWcf54.xsd" MetadataType="Schema" ID="e6bb1b89-73fe-49d5-8225-37e1ca265aa2" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/CenterWcfSvc/CenterWcf.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

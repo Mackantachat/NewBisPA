@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://ctDocSvc.Model/2011/cdDocModel" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://ctDocSvc.Model/2011/cdDocModel" location="http://ws2.bla.co.th/CtDocWCFSvcImpTest/CtDocWcfScv.svc?wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_DocServiceContract" type="i0:DocServiceContract">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertImg">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertImg" style="document" />
+      <wsdl:input name="InsertImgReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InsertImgRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImg">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteImg" style="document" />
+      <wsdl:input name="DeleteImgReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteImgRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDepart">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDepart" style="document" />
+      <wsdl:input name="InsertDepartReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InserDepartRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepart">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDepart" style="document" />
+      <wsdl:input name="GetDepartReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDepartRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartByID">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDepartByID" style="document" />
+      <wsdl:input name="GetDepartByIDReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDepartByIDRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditDepart">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditDepart" style="document" />
+      <wsdl:input name="EditDepartReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EditDepartRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDepart">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteDepart" style="document" />
+      <wsdl:input name="DeleteDepartReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteDepartRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCategory">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertCategory" style="document" />
+      <wsdl:input name="InsertCategoryReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InsertCategoryRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategory">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetCategory" style="document" />
+      <wsdl:input name="GetCategoryReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCategoryRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryByID">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetCategoryByID" style="document" />
+      <wsdl:input name="GetCategoryByIDReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCategoryByIDRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCategory">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditCategory" style="document" />
+      <wsdl:input name="EditCategoryReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EditCategoryRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCategory">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteCategory" style="document" />
+      <wsdl:input name="DeleteCategoryReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteCategoryRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDoctype">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDoctype" style="document" />
+      <wsdl:input name="InsertDoctypeReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InsertDoctypeRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctype">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDoctype" style="document" />
+      <wsdl:input name="GetDoctypeReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDoctypeRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctypeByID">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDoctypeByID" style="document" />
+      <wsdl:input name="GetDoctypeByIDReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDoctypeByIDRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditDoctype">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditDoctype" style="document" />
+      <wsdl:input name="EditDoctypeReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EditDoctypeRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDoctype">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteDoctype" style="document" />
+      <wsdl:input name="DeleteDoctypeReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteDoctypeRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctypeByCate">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDoctypeByCate" style="document" />
+      <wsdl:input name="GetDoctypeByCateReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDoctypeByCateRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryByName">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetCategoryByName" style="document" />
+      <wsdl:input name="GetCategoryByNameReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCategoryByNameRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAuthority">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertAuthority" style="document" />
+      <wsdl:input name="InsertAuthorityReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InsertAuthorityRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorityByID">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetAuthorityByID" style="document" />
+      <wsdl:input name="GetAuthorityByIDReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAuthorityByIDRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuthority">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteAuthority" style="document" />
+      <wsdl:input name="DeleteAuthorityReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteAuthorityRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocRefDetail">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDocRefDetail" style="document" />
+      <wsdl:input name="InsertDocRefDetailReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InsertDocRefDetailRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocRefDetail">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDocRefDetail" style="document" />
+      <wsdl:input name="GetDocRefDetailReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDocRefDetailRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocRefDetailByID">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDocRefDetailByID" style="document" />
+      <wsdl:input name="GetDocRefDetailByIDReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDocRefDetailByIDRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditDocRefDetail">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditDocRefDetail" style="document" />
+      <wsdl:input name="EditDocRefDetailReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EditDocRefDetailRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryByDepart">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetCategoryByDepart" style="document" />
+      <wsdl:input name="GetCategoryByDepartReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCategoryByDepartRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctypeByCateDocandTitle">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDoctypeByCateDocandTitle" style="document" />
+      <wsdl:input name="GetDoctypeByCateDocandTitleReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDoctypeByCateDocandTitleRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocRefDetailByDoctype">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDocRefDetailByDoctype" style="document" />
+      <wsdl:input name="GetDocRefDetailByDoctypeReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDocRefDetailByDoctypeRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHierarchy">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetHierarchy" style="document" />
+      <wsdl:input name="GetHierarchyReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetHierarchyRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocref">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDocref" style="document" />
+      <wsdl:input name="InsertDocrefReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InsertDocrefRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocref">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteDocref" style="document" />
+      <wsdl:input name="DeleteDocrefReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteDocrefRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocImageSearch">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DocImageSearch" style="document" />
+      <wsdl:input name="DocImageSearchReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DocImageSearchRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageByID">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetImageByID" style="document" />
+      <wsdl:input name="GetImageByIDReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetImageByIDRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocLog">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDocLog" style="document" />
+      <wsdl:input name="InsertDocLogReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InsertDocLogRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocrefByID">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDocrefByID" style="document" />
+      <wsdl:input name="GetDocrefByIDReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDocrefByIDRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditImage">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditImage" style="document" />
+      <wsdl:input name="EditImageReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EditImageRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorityByUserID">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetAuthorityByUserID" style="document" />
+      <wsdl:input name="GetAuthorityByUserIDReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAuthorityByUserIDRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertHighAuthority">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertHighAuthority" style="document" />
+      <wsdl:input name="InsertHighAuthorityReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InsertHighAuthorityRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHighAuthorityByID">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetHighAuthorityByID" style="document" />
+      <wsdl:input name="GetHighAuthorityByIDReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetHighAuthorityByIDRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHighAuthority">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteHighAuthority" style="document" />
+      <wsdl:input name="DeleteHighAuthorityReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteHighAuthorityRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertImgTemp">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertImgTemp" style="document" />
+      <wsdl:input name="InsertImgTempReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="InsertImgTempRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageTempByName">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetImageTempByName" style="document" />
+      <wsdl:input name="GetImageTempByNameReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetImageTempByNameRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImgTemp">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteImgTemp" style="document" />
+      <wsdl:input name="DeleteImgTempReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DeleteImgTempRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkImgFromCounter">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/ChkImgFromCounter" style="document" />
+      <wsdl:input name="ChkImgFromCounterReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ChkImgFromCounterRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocImagefixSearch">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DocImagefixSearch" style="document" />
+      <wsdl:input name="DocImagefixSearchReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DocImagefixSearchRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChkImgByReg">
+      <soap:operation soapAction="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/ChkImgByReg" style="document" />
+      <wsdl:input name="ChkImgByRegReq">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ChkImgByRegRes">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

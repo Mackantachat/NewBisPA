@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.LetterContact" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.LetterContact" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="U_RETURN_PRMNEWAPP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NEW_APP_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NEW_APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NEW_APP_SURNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NEW_APP_TRN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ULETTER_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="U_RETURN_PRMNEWAPP" nillable="true" type="tns:U_RETURN_PRMNEWAPP" />
+</xs:schema>

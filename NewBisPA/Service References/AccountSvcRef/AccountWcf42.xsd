@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Account.DataContract" />
+  <xs:element name="INS_AC_WAITPAY">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IN_JOB_CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IN_JOB_ID" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="IN_PAY_OPTION" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IN_BANK" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IN_BRANCH" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IN_ACCOUNT_NO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IN_PAY" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="IN_PAY_NAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IN_OPERATION" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IN_UPD_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IN_CHANNEL_TYPE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IN_PL_BLOCK" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INS_AC_WAITPAYResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="INS_AC_WAITPAYResult" nillable="true" type="xs:decimal" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pr" nillable="true" type="q1:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INS_AC_WAITPAY_ACCCODE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IN_AC_WAITPAY_ID" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="IN_ACCCODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IN_PAY" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INS_AC_WAITPAY_ACCCODEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="INS_AC_WAITPAY_ACCCODEResult" nillable="true" type="xs:decimal" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pr" nillable="true" type="q2:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountPayOption">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Account.DataContract" minOccurs="0" name="code" type="q3:PayOptionCode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountPayOptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Account.DataContract" minOccurs="0" name="GetAccountPayOptionResult" nillable="true" type="q4:ACCOUNT_PAY_OPTION" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pr" nillable="true" type="q5:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_AC_OPTPAY_BYREFID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IN_JOB_CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IN_JOB_ID" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_AC_OPTPAY_BYREFIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_AC_OPTPAY_BYREFIDResult" nillable="true" type="q6:ProcessResult" />
+        <xs:element minOccurs="0" name="OUT_PAY_OPTION" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OUT_BANK" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OUT_BRANCH" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OUT_ACCNO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OUT_PAY_NAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OUT_PAY_DT" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_AC_OPTPAY_BYREFID_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IN_JOB_CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IN_JOB_ID" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GET_AC_OPTPAY_BYREFID_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GET_AC_OPTPAY_BYREFID_V2Result" nillable="true" type="q7:ProcessResult" />
+        <xs:element minOccurs="0" name="OUT_PAY_OPTION" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OUT_BANK" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OUT_BRANCH" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OUT_ACCNO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OUT_PAY_NAME" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OUT_PAY_DT" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="OUT_PAY" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

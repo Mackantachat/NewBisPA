@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="13b131f7-1f75-4fd6-aab3-8cd3b9d4f627" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws2.bla.co.th/BankruptServices/BankruptServiceReference.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BankruptServiceReference.disco" MetadataType="Disco" ID="924e7340-566c-44b0-8068-8f24f6c25173" SourceId="1" SourceUrl="http://ws2.bla.co.th/BankruptServices/BankruptServiceReference.svc?disco" />
+    <MetadataFile FileName="BankruptServiceReference.xsd" MetadataType="Schema" ID="d886baae-0b36-44bd-8201-5b27c667ca58" SourceId="1" SourceUrl="http://ws2.bla.co.th/BankruptServices/BankruptServiceReference.svc?xsd=xsd0" />
+    <MetadataFile FileName="BankruptService.wsdl" MetadataType="Wsdl" ID="e9b2ebed-a5d1-49bf-9ac8-7ec5e7e01cf8" SourceId="1" SourceUrl="http://ws2.bla.co.th/BankruptServices/BankruptServiceReference.svc?wsdl" />
+    <MetadataFile FileName="BankruptServiceReference1.xsd" MetadataType="Schema" ID="2c1d216f-03aa-4366-82b0-e7749dea65f4" SourceId="1" SourceUrl="http://ws2.bla.co.th/BankruptServices/BankruptServiceReference.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9ac36a9e-bd11-465b-8e11-f62e95010427" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws3.bla.co.th:88/PolicyWcfSvc/PolicyWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PolicyWcf8.xsd" MetadataType="Schema" ID="b25a88c0-baf0-4e8f-b39a-4c59a4c09490" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/PolicyWcfSvc/PolicyWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="PolicyWcf81.xsd" MetadataType="Schema" ID="311c62bb-13ee-49a2-8776-de20f3874bfe" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/PolicyWcfSvc/PolicyWcf.svc?xsd=xsd7" />
+    <MetadataFile FileName="PolicyWcf82.xsd" MetadataType="Schema" ID="9166752f-9d7f-45ab-8568-419cbd6f9c3b" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/PolicyWcfSvc/PolicyWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="PolicyWcf83.xsd" MetadataType="Schema" ID="e1797043-8ca3-41c3-9d36-cb18231fda2f" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/PolicyWcfSvc/PolicyWcf.svc?xsd=xsd4" />
+    <MetadataFile FileName="PolicyWcf84.xsd" MetadataType="Schema" ID="78b56752-0ee4-4286-9da9-1ad764d89f89" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/PolicyWcfSvc/PolicyWcf.svc?xsd=xsd6" />
+    <MetadataFile FileName="PolicyWcf85.xsd" MetadataType="Schema" ID="75758804-24dc-4154-a5bc-20aa8fdcc17c" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/PolicyWcfSvc/PolicyWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="PolicySvc1.wsdl" MetadataType="Wsdl" ID="d33eb88c-76bc-48d7-b281-9ad62bccd785" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/PolicyWcfSvc/PolicyWcf.svc?wsdl" />
+    <MetadataFile FileName="PolicyWcf86.xsd" MetadataType="Schema" ID="e9764e51-9701-4285-b615-9d71df1a3485" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/PolicyWcfSvc/PolicyWcf.svc?xsd=xsd5" />
+    <MetadataFile FileName="PolicyWcf87.xsd" MetadataType="Schema" ID="0fb3d183-cf00-4c77-b37d-de093e2c329a" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/PolicyWcfSvc/PolicyWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="PolicyWcf1.disco" MetadataType="Disco" ID="f754da81-11b1-4179-98bb-2086b9895786" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/PolicyWcfSvc/PolicyWcf.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ImageManagement.DataContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ImageManagement.DataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/ImageManagementWcfSvc/ImagemanagementWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/ImageManagementWcfSvc/ImagemanagementWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+  <xs:complexType name="U_NEWBIS_SCAN">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ANSWER_LIMIT_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="APP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE_DESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOC_DESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOC_TYPE" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="FULL_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="MODIFY_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MODIFY_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MODIFY_OFC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PAGE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="REGISTER_OFC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REQUEST_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="REQUEST_DT_TO" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="REQUEST_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SCAN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SCAN_DT_TO" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SCAN_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SCAN_OFC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUBSTATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TMN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TMN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UNS_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="WORK_GROUP" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="U_NEWBIS_SCAN" nillable="true" type="tns:U_NEWBIS_SCAN" />
+  <xs:simpleType name="EnumContractDownloadType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="forPrint" />
+      <xs:enumeration value="forPreview" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnumContractDownloadType" nillable="true" type="tns:EnumContractDownloadType" />
+  <xs:complexType name="ArrayOfTAG_INFO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TAG_INFO" nillable="true" type="tns:TAG_INFO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTAG_INFO" nillable="true" type="tns:ArrayOfTAG_INFO" />
+  <xs:complexType name="TAG_INFO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TMN" nillable="true" type="tns:FLAG" />
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="tns:FSYSTEM" />
+      <xs:element minOccurs="0" name="TagData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TagDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TagID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TagSeq" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TAG_INFO" nillable="true" type="tns:TAG_INFO" />
+  <xs:complexType name="FLAG">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FSYSTEM">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Flag" nillable="true" type="ser:char" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FLAG" nillable="true" type="tns:FLAG" />
+  <xs:complexType name="FSYSTEM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SysDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SysUser" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FSYSTEM" nillable="true" type="tns:FSYSTEM" />
+  <xs:complexType name="ArrayOfP_IMAGE_FILE_NAME">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="P_IMAGE_FILE_NAME" nillable="true" type="tns:P_IMAGE_FILE_NAME" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfP_IMAGE_FILE_NAME" nillable="true" type="tns:ArrayOfP_IMAGE_FILE_NAME" />
+  <xs:complexType name="P_IMAGE_FILE_NAME">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FILE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="P_IMAGE_FILE_NAME" nillable="true" type="tns:P_IMAGE_FILE_NAME" />
+  <xs:simpleType name="EnumContractServerType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NON" />
+      <xs:enumeration value="DEV" />
+      <xs:enumeration value="UAT" />
+      <xs:enumeration value="PRD" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnumContractServerType" nillable="true" type="tns:EnumContractServerType" />
+  <xs:complexType name="ArrayOfIMAGE_INFO_BY_POLICY">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMAGE_INFO_BY_POLICY" nillable="true" type="tns:IMAGE_INFO_BY_POLICY" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMAGE_INFO_BY_POLICY" nillable="true" type="tns:ArrayOfIMAGE_INFO_BY_POLICY" />
+  <xs:complexType name="IMAGE_INFO_BY_POLICY">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:IMAGE_INFO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ChannelDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ChannelType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="JobInfo" nillable="true" type="tns:JOB_INFO" />
+          <xs:element minOccurs="0" name="Policy" nillable="true" type="tns:FSYSTEM" />
+          <xs:element minOccurs="0" name="PolicyInfo" nillable="true" type="tns:POLICY_INFO" />
+          <xs:element minOccurs="0" name="PolicyTMN" nillable="true" type="tns:FLAG" />
+          <xs:element minOccurs="0" name="PolicyUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubJobInfo" nillable="true" type="tns:SUBJOB_INFO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IMAGE_INFO_BY_POLICY" nillable="true" type="tns:IMAGE_INFO_BY_POLICY" />
+  <xs:complexType name="IMAGE_INFO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FSYSTEM">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DMS" nillable="true" type="tns:FLAG" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImageID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="TMN" nillable="true" type="tns:FLAG" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IMAGE_INFO" nillable="true" type="tns:IMAGE_INFO" />
+  <xs:complexType name="JOB_INFO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JobCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JOB_INFO" nillable="true" type="tns:JOB_INFO" />
+  <xs:complexType name="POLICY_INFO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CertID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChannelTypeInfo" nillable="true" type="tns:CHANNEL_TYPE_INFO" />
+      <xs:element minOccurs="0" name="Policy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="POLICY_INFO" nillable="true" type="tns:POLICY_INFO" />
+  <xs:complexType name="CHANNEL_TYPE_INFO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChannelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyType" nillable="true" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CHANNEL_TYPE_INFO" nillable="true" type="tns:CHANNEL_TYPE_INFO" />
+  <xs:complexType name="SUBJOB_INFO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SubJob" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubJobCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SUBJOB_INFO" nillable="true" type="tns:SUBJOB_INFO" />
+  <xs:complexType name="ArrayOfIMAGE_INFO_BY_TAG">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMAGE_INFO_BY_TAG" nillable="true" type="tns:IMAGE_INFO_BY_TAG" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMAGE_INFO_BY_TAG" nillable="true" type="tns:ArrayOfIMAGE_INFO_BY_TAG" />
+  <xs:complexType name="IMAGE_INFO_BY_TAG">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:IMAGE_INFO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="PathID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="Tag" nillable="true" type="tns:FSYSTEM" />
+          <xs:element minOccurs="0" name="TagInfo" nillable="true" type="tns:TAG_INFO" />
+          <xs:element minOccurs="0" name="TagTMN" nillable="true" type="tns:FLAG" />
+          <xs:element minOccurs="0" name="TagUser" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IMAGE_INFO_BY_TAG" nillable="true" type="tns:IMAGE_INFO_BY_TAG" />
+  <xs:complexType name="TAG_DETAIL_Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TAG_DETAIL" nillable="true" type="tns:TAG_DETAIL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TAG_DETAIL_Collection" nillable="true" type="tns:TAG_DETAIL_Collection" />
+  <xs:complexType name="TAG_DETAIL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APPLICATION_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="APP_IMG_CATEGORY_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="APP_IMG_TYPE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="CATEGORY_DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CATEGORY_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSYSTEM_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FSYSTEM_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IMG_TAG_Collection" nillable="true" type="tns:P_IMG_TAG_Collection" />
+      <xs:element minOccurs="0" name="IMG_TAG_DETAIL_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PATH_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEQ" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TAG_DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TAG_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TMN" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="TMN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TMN_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TAG_DETAIL" nillable="true" type="tns:TAG_DETAIL" />
+  <xs:complexType name="P_IMG_TAG_Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="P_IMG_TAG" nillable="true" type="tns:P_IMG_TAG" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="P_IMG_TAG_Collection" nillable="true" type="tns:P_IMG_TAG_Collection" />
+  <xs:complexType name="P_IMG_TAG">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FSYSTEM_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FSYSTEM_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IMG_TAG_DETAIL_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IMG_TAG_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IMG_TAG_LOG_Collection" nillable="true" type="tns:P_IMG_TAG_LOG_Collection" />
+      <xs:element minOccurs="0" name="TAG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TMN" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="TMN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TMN_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="P_IMG_TAG" nillable="true" type="tns:P_IMG_TAG" />
+  <xs:complexType name="P_IMG_TAG_LOG_Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="P_IMG_TAG_LOG" nillable="true" type="tns:P_IMG_TAG_LOG" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="P_IMG_TAG_LOG_Collection" nillable="true" type="tns:P_IMG_TAG_LOG_Collection" />
+  <xs:complexType name="P_IMG_TAG_LOG">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IMG_TAG_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="LOG_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LOG_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LOG_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PITL_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="P_IMG_TAG_LOG" nillable="true" type="tns:P_IMG_TAG_LOG" />
+  <xs:complexType name="TAG_INFO_Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TAG_INFO" nillable="true" type="tns:TAG_INFO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TAG_INFO_Collection" nillable="true" type="tns:TAG_INFO_Collection" />
+  <xs:complexType name="SPECIFIC_IMAGE_INFO_BY_POLICY_Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SPECIFIC_IMAGE_INFO_BY_POLICY" nillable="true" type="tns:SPECIFIC_IMAGE_INFO_BY_POLICY" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SPECIFIC_IMAGE_INFO_BY_POLICY_Collection" nillable="true" type="tns:SPECIFIC_IMAGE_INFO_BY_POLICY_Collection" />
+  <xs:complexType name="SPECIFIC_IMAGE_INFO_BY_POLICY">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUser" nillable="true" type="tns:SPECIFIC_USER" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ModifyDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifyUser" nillable="true" type="tns:SPECIFIC_USER" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SPECIFIC_IMAGE_INFO_BY_POLICY" nillable="true" type="tns:SPECIFIC_IMAGE_INFO_BY_POLICY" />
+  <xs:complexType name="SPECIFIC_USER">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserPass" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SPECIFIC_USER" nillable="true" type="tns:SPECIFIC_USER" />
+  <xs:complexType name="SPECIFIC_IMAGE_INFO_BY_TAG_Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SPECIFIC_IMAGE_INFO_BY_TAG" nillable="true" type="tns:SPECIFIC_IMAGE_INFO_BY_TAG" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SPECIFIC_IMAGE_INFO_BY_TAG_Collection" nillable="true" type="tns:SPECIFIC_IMAGE_INFO_BY_TAG_Collection" />
+  <xs:complexType name="SPECIFIC_IMAGE_INFO_BY_TAG">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreateUser" nillable="true" type="tns:SPECIFIC_USER" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ModifyDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifyUser" nillable="true" type="tns:SPECIFIC_USER" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SPECIFIC_IMAGE_INFO_BY_TAG" nillable="true" type="tns:SPECIFIC_IMAGE_INFO_BY_TAG" />
+  <xs:complexType name="U_APPPLICATION_ID">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REGISTER_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="REGISTER_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REQUEST_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="REQUEST_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUBSTATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WORK_GROUP" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="U_APPPLICATION_ID" nillable="true" type="tns:U_APPPLICATION_ID" />
+  <xs:simpleType name="EnumContractTMNFlag">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Yes">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="No">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnumContractTMNFlag" nillable="true" type="tns:EnumContractTMNFlag" />
+  <xs:complexType name="ArrayOfIMSDataFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMSDataFile" nillable="true" type="tns:IMSDataFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMSDataFile" nillable="true" type="tns:ArrayOfIMSDataFile" />
+  <xs:complexType name="IMSDataFile">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="DataFile" nillable="true" type="q1:DataFile" />
+      <xs:element minOccurs="0" name="ImageID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMSDataFile" nillable="true" type="tns:IMSDataFile" />
+  <xs:complexType name="FILE_TRANSFER_INFO">
+    <xs:sequence>
+      <xs:element name="FileName" nillable="true" type="xs:string" />
+      <xs:element name="MD5" nillable="true" type="xs:string" />
+      <xs:element name="CheckMD5" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ContentType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FILE_TRANSFER_INFO" nillable="true" type="tns:FILE_TRANSFER_INFO" />
+  <xs:complexType name="SEND_INFO_BY_POLICY">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SEND_INFO">
+        <xs:sequence>
+          <xs:element name="PolicyID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="JobCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SubJobCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SEND_INFO_BY_POLICY" nillable="true" type="tns:SEND_INFO_BY_POLICY" />
+  <xs:complexType name="SEND_INFO">
+    <xs:sequence>
+      <xs:element name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PathID" nillable="true" type="xs:long" />
+      <xs:element name="ApplicationID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SEND_INFO" nillable="true" type="tns:SEND_INFO" />
+  <xs:complexType name="SEND_INFO_BY_TAG">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SEND_INFO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ObjectTag" nillable="true" type="tns:ArrayOfTAG_INFO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SEND_INFO_BY_TAG" nillable="true" type="tns:SEND_INFO_BY_TAG" />
+  <xs:complexType name="GET_INFO">
+    <xs:sequence>
+      <xs:element name="UserID" nillable="true" type="xs:string" />
+      <xs:element name="ImageID" nillable="true" type="xs:long" />
+      <xs:element name="ApplicationID" nillable="true" type="xs:long" />
+      <xs:element name="DownloadType" type="tns:EnumContractDownloadType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GET_INFO" nillable="true" type="tns:GET_INFO" />
+  <xs:complexType name="ArrayOfZTB_SUBMARKETING_TYPE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZTB_SUBMARKETING_TYPE" nillable="true" type="tns:ZTB_SUBMARKETING_TYPE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZTB_SUBMARKETING_TYPE" nillable="true" type="tns:ArrayOfZTB_SUBMARKETING_TYPE" />
+  <xs:complexType name="ZTB_SUBMARKETING_TYPE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BROKER_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EFF_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="E_DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MARKETING_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUBMARKETING_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TMN" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="TMN_DT" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZTB_SUBMARKETING_TYPE" nillable="true" type="tns:ZTB_SUBMARKETING_TYPE" />
+  <xs:complexType name="ArrayOfZTB_MARKETING_TYPE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZTB_MARKETING_TYPE" nillable="true" type="tns:ZTB_MARKETING_TYPE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZTB_MARKETING_TYPE" nillable="true" type="tns:ArrayOfZTB_MARKETING_TYPE" />
+  <xs:complexType name="ZTB_MARKETING_TYPE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MARKETING_GROUP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MARKETING_TYPE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZTB_MARKETING_TYPE" nillable="true" type="tns:ZTB_MARKETING_TYPE" />
+  <xs:complexType name="U_RE_APP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FULL_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRENAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SURNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UAPP_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="U_RE_APP" nillable="true" type="tns:U_RE_APP" />
+  <xs:complexType name="REG_SEARCH">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FULL_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDCARD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PASSPORT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REGISTER_DT" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="REGISTER_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REGISTER_OFC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SURNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UAPP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UNS_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="WORK_GROUP" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="REG_SEARCH" nillable="true" type="tns:REG_SEARCH" />
+  <xs:complexType name="ArrayOfREG_SEARCH">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="REG_SEARCH" nillable="true" type="tns:REG_SEARCH" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfREG_SEARCH" nillable="true" type="tns:ArrayOfREG_SEARCH" />
+  <xs:complexType name="ArrayOfU_NEWBIS_SCAN">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="U_NEWBIS_SCAN" nillable="true" type="tns:U_NEWBIS_SCAN" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfU_NEWBIS_SCAN" nillable="true" type="tns:ArrayOfU_NEWBIS_SCAN" />
+  <xs:complexType name="ArrayOfU_APPROVED">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="U_APPROVED" nillable="true" type="tns:U_APPROVED" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfU_APPROVED" nillable="true" type="tns:ArrayOfU_APPROVED" />
+  <xs:complexType name="U_APPROVED">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:U_NEWBIS_SCAN">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="APPROVE_DT" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="APP_CHANNEL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CLICK_SORT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DMS_CHANGE" nillable="true" type="ser:char" />
+          <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INSTALL_DT" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="INSTALL_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NAME_SURNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="POLICY_DT" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="REGISTER_DT" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SORT_STATUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SORT_STATUS_FINISH" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SORT_STATUS_STR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UAPP_ID" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="U_APPROVED" nillable="true" type="tns:U_APPROVED" />
+  <xs:complexType name="user_model">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="user_department" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="user_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="user_office" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="user_password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="user_model" nillable="true" type="tns:user_model" />
+  <xs:complexType name="P_POLICY_IDENTITY">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CERT_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="POLICY_NUMBER" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="P_POLICY_IDENTITY" nillable="true" type="tns:P_POLICY_IDENTITY" />
+  <xs:complexType name="UploadeFiles">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChannelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UAPP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cert_no" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="policy_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="policy_no" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UploadeFiles" nillable="true" type="tns:UploadeFiles" />
+  <xs:simpleType name="EnumContractTo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IMS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EASY">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EASYWINAPP">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnumContractTo" nillable="true" type="tns:EnumContractTo" />
+  <xs:complexType name="ArrayOfAUTB_APP_CHANNEL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AUTB_APP_CHANNEL" nillable="true" type="tns:AUTB_APP_CHANNEL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAUTB_APP_CHANNEL" nillable="true" type="tns:ArrayOfAUTB_APP_CHANNEL" />
+  <xs:complexType name="AUTB_APP_CHANNEL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AAC_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="APP_PREFIX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TMN" type="ser:char" />
+      <xs:element minOccurs="0" name="TMN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPD_DT" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPD_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WORK_GROUP" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AUTB_APP_CHANNEL" nillable="true" type="tns:AUTB_APP_CHANNEL" />
+  <xs:complexType name="IS_BBL_REF">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IBBL_APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IBBL_ID_NO" type="xs:long" />
+      <xs:element minOccurs="0" name="IBBL_ID_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IBBL_LASTNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IBBL_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IBBL_TITLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="is_ID_Card" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IS_BBL_REF" nillable="true" type="tns:IS_BBL_REF" />
+  <xs:complexType name="ArrayOfSORT_DETAIL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SORT_DETAIL" nillable="true" type="tns:SORT_DETAIL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSORT_DETAIL" nillable="true" type="tns:ArrayOfSORT_DETAIL" />
+  <xs:complexType name="SORT_DETAIL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORY_DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PAGE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SCAN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TAG" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SORT_DETAIL" nillable="true" type="tns:SORT_DETAIL" />
+  <xs:complexType name="ArrayOfIMS_TO_EDM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMS_TO_EDM" nillable="true" type="tns:IMS_TO_EDM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMS_TO_EDM" nillable="true" type="tns:ArrayOfIMS_TO_EDM" />
+  <xs:complexType name="IMS_TO_EDM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_ID" type="xs:long" />
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CERT_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IMAGE_ID" type="xs:long" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="POLICY_NO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMS_TO_EDM" nillable="true" type="tns:IMS_TO_EDM" />
+  <xs:complexType name="IMS_POLICY_JOBCODE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DATE_OF_FILE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FSYSTEM_ID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="File" nillable="true" type="q2:DataFile" />
+      <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="JOB_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SUB_JOB_CODE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMS_POLICY_JOBCODE" nillable="true" type="tns:IMS_POLICY_JOBCODE" />
+  <xs:complexType name="IMS_SECURITY">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AUTHORIZE_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="N_USER_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PASSWORD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMS_SECURITY" nillable="true" type="tns:IMS_SECURITY" />
+  <xs:complexType name="ArrayOfIMS_POLICY_JOBCODE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMS_POLICY_JOBCODE" nillable="true" type="tns:IMS_POLICY_JOBCODE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMS_POLICY_JOBCODE" nillable="true" type="tns:ArrayOfIMS_POLICY_JOBCODE" />
+  <xs:complexType name="LBDU_IMAGE_ID">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORY_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOC_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FSYSTEM_DT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSYSTEM_DT_END" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSYSTEM_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FUNCCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRENAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SURNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TAG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TAG_NAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LBDU_IMAGE_ID" nillable="true" type="tns:LBDU_IMAGE_ID" />
+  <xs:complexType name="ArrayOfLBDU_IMAGE_ID">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LBDU_IMAGE_ID" nillable="true" type="tns:LBDU_IMAGE_ID" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLBDU_IMAGE_ID" nillable="true" type="tns:ArrayOfLBDU_IMAGE_ID" />
+  <xs:complexType name="ArrayOfLBDU_COUNT_UNIT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LBDU_COUNT_UNIT" nillable="true" type="tns:LBDU_COUNT_UNIT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLBDU_COUNT_UNIT" nillable="true" type="tns:ArrayOfLBDU_COUNT_UNIT" />
+  <xs:complexType name="LBDU_COUNT_UNIT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_IMG_TYPE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="CATEGORY_DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CATEGORY_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UNIT" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LBDU_COUNT_UNIT" nillable="true" type="tns:LBDU_COUNT_UNIT" />
+  <xs:complexType name="U_STATUS_ID">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="STATUS_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUBSTATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TMN" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="TMN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TMN_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UAPP_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="U_STATUS_ID" nillable="true" type="tns:U_STATUS_ID" />
+  <xs:complexType name="ArrayOfAPPLICATION_NEWBIS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="APPLICATION_NEWBIS" nillable="true" type="tns:APPLICATION_NEWBIS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAPPLICATION_NEWBIS" nillable="true" type="tns:ArrayOfAPPLICATION_NEWBIS" />
+  <xs:complexType name="APPLICATION_NEWBIS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TAG_DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TAG_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TYPE_DOCUMENT" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="APPLICATION_NEWBIS" nillable="true" type="tns:APPLICATION_NEWBIS" />
+</xs:schema>

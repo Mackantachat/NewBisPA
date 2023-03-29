@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="87b77dd6-7735-48af-8567-bf4afb31b75a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ImagemanagementWcf1.disco" MetadataType="Disco" ID="ecfbfe8c-a199-47a3-bba2-c744916aebaf" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?disco" />
+    <MetadataFile FileName="ImagemanagementWcf7.xsd" MetadataType="Schema" ID="254c69c8-2c25-4ff7-9f90-469725eda0ce" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="ImagemanagementWcf71.xsd" MetadataType="Schema" ID="72853f66-7bc0-4754-b5f0-e46d5687dd78" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="ImagemanagementWcf72.xsd" MetadataType="Schema" ID="2e0943c4-83e1-4198-a1ff-3d35539e23a3" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd5" />
+    <MetadataFile FileName="ImagemanagementWcf73.xsd" MetadataType="Schema" ID="e888bdd9-fd95-4ead-8cfd-9ac431aeddca" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="ImagemanagementWcf74.xsd" MetadataType="Schema" ID="120c85e0-743f-479a-9e17-20af993599f4" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd6" />
+    <MetadataFile FileName="ImagemanagementWcf75.xsd" MetadataType="Schema" ID="6de19cbc-c746-4899-a67f-2ba712a03a31" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="ImagemanagementSvc1.wsdl" MetadataType="Wsdl" ID="148aaf55-09ac-498f-bca7-1b8154354773" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?wsdl" />
+    <MetadataFile FileName="ImagemanagementWcf76.xsd" MetadataType="Schema" ID="b662b5ba-ffde-4916-815d-48e01c9f7245" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

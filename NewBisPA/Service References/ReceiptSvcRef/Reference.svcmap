@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="95a76acd-da53-41b1-91fb-a79e05929611" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranetuat.bla.co.th:88/ReceiptWcfSvc/Service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="a96d461c-37d3-48af-a7a7-4a17709bb0f0" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ReceiptWcfSvc/Service.svc?disco" />
+    <MetadataFile FileName="Service2.wsdl" MetadataType="Wsdl" ID="08c2530c-fb42-4d82-9b88-edb2321fc68d" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ReceiptWcfSvc/Service.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="dca1ad67-db83-4957-b47c-f55ddd77fa55" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ReceiptWcfSvc/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service21.wsdl" MetadataType="Wsdl" ID="83e3d348-d5c2-4f2a-8a84-2d2eaa3d94d0" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ReceiptWcfSvc/Service.svc?wsdl" />
+    <MetadataFile FileName="Service31.xsd" MetadataType="Schema" ID="8ed61c6f-ac72-4e2f-832c-477be15737ff" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ReceiptWcfSvc/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service32.xsd" MetadataType="Schema" ID="0ef26f24-5990-48f9-b705-79fceb25ffe3" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ReceiptWcfSvc/Service.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

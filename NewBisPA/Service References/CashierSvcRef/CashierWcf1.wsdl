@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CashierWcf" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://intranettest/CashierWcfSvc/CashierWcf.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://intranettest/CashierWcfSvc/CashierWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://intranettest/CashierWcfSvc/CashierWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Cashier.DataContract" />
+      <xsd:import schemaLocation="http://intranettest/CashierWcfSvc/CashierWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICashierWcf_GetBLA_V_SUSPENSE_ByAppNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBLA_V_SUSPENSE_ByAppNo" />
+  </wsdl:message>
+  <wsdl:message name="ICashierWcf_GetBLA_V_SUSPENSE_ByAppNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBLA_V_SUSPENSE_ByAppNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICashierWcf_GetBLA_V_SUSPENSE_ByIsisAppRegId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBLA_V_SUSPENSE_ByIsisAppRegId" />
+  </wsdl:message>
+  <wsdl:message name="ICashierWcf_GetBLA_V_SUSPENSE_ByIsisAppRegId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBLA_V_SUSPENSE_ByIsisAppRegIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICashierWcf_ImportSuspenseFromISIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportSuspenseFromISIS" />
+  </wsdl:message>
+  <wsdl:message name="ICashierWcf_ImportSuspenseFromISIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportSuspenseFromISISResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICashierWcf_GetSuspenseAmountSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuspenseAmountSummary" />
+  </wsdl:message>
+  <wsdl:message name="ICashierWcf_GetSuspenseAmountSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuspenseAmountSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICashierWcf_GetSuspenseLastPayInDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuspenseLastPayInDate" />
+  </wsdl:message>
+  <wsdl:message name="ICashierWcf_GetSuspenseLastPayInDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuspenseLastPayInDateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICashierWcf">
+    <wsdl:operation name="GetBLA_V_SUSPENSE_ByAppNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICashierWcf/GetBLA_V_SUSPENSE_ByAppNo" message="tns:ICashierWcf_GetBLA_V_SUSPENSE_ByAppNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICashierWcf/GetBLA_V_SUSPENSE_ByAppNoResponse" message="tns:ICashierWcf_GetBLA_V_SUSPENSE_ByAppNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBLA_V_SUSPENSE_ByIsisAppRegId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICashierWcf/GetBLA_V_SUSPENSE_ByIsisAppRegId" message="tns:ICashierWcf_GetBLA_V_SUSPENSE_ByIsisAppRegId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICashierWcf/GetBLA_V_SUSPENSE_ByIsisAppRegIdResponse" message="tns:ICashierWcf_GetBLA_V_SUSPENSE_ByIsisAppRegId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportSuspenseFromISIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICashierWcf/ImportSuspenseFromISIS" message="tns:ICashierWcf_ImportSuspenseFromISIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICashierWcf/ImportSuspenseFromISISResponse" message="tns:ICashierWcf_ImportSuspenseFromISIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSuspenseAmountSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICashierWcf/GetSuspenseAmountSummary" message="tns:ICashierWcf_GetSuspenseAmountSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICashierWcf/GetSuspenseAmountSummaryResponse" message="tns:ICashierWcf_GetSuspenseAmountSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSuspenseLastPayInDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICashierWcf/GetSuspenseLastPayInDate" message="tns:ICashierWcf_GetSuspenseLastPayInDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICashierWcf/GetSuspenseLastPayInDateResponse" message="tns:ICashierWcf_GetSuspenseLastPayInDate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICashierWcf" type="tns:ICashierWcf">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBLA_V_SUSPENSE_ByAppNo">
+      <soap:operation soapAction="http://tempuri.org/ICashierWcf/GetBLA_V_SUSPENSE_ByAppNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBLA_V_SUSPENSE_ByIsisAppRegId">
+      <soap:operation soapAction="http://tempuri.org/ICashierWcf/GetBLA_V_SUSPENSE_ByIsisAppRegId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportSuspenseFromISIS">
+      <soap:operation soapAction="http://tempuri.org/ICashierWcf/ImportSuspenseFromISIS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuspenseAmountSummary">
+      <soap:operation soapAction="http://tempuri.org/ICashierWcf/GetSuspenseAmountSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuspenseLastPayInDate">
+      <soap:operation soapAction="http://tempuri.org/ICashierWcf/GetSuspenseLastPayInDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CashierWcf">
+    <wsdl:port name="BasicHttpBinding_ICashierWcf" binding="tns:BasicHttpBinding_ICashierWcf">
+      <soap:address location="http://intranettest/CashierWcfSvc/CashierWcf.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

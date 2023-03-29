@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CenterService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CenterProvider" />
+      <xsd:import schemaLocation="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICenterService_getUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUser" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_getUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_getUserCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserCollection" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_getUserCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_GetUserByIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIds" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_GetUserByIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_getOrganizationCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrganizationCollection" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_getOrganizationCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrganizationCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_getOrganizationByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrganizationByCode" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_getOrganizationByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrganizationByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_getOrganizationById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrganizationById" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_getOrganizationById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrganizationByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_GetOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOffice" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_GetOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_GetOfficeByIsoRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfficeByIsoRegion" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_GetOfficeByIsoRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfficeByIsoRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_GetOfficeByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfficeByCode" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_GetOfficeByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfficeByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_GetOrganization_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganization" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_GetOrganization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_GetOfficeByCodeArray_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfficeByCodeArray" />
+  </wsdl:message>
+  <wsdl:message name="ICenterService_GetOfficeByCodeArray_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfficeByCodeArrayResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICenterService">
+    <wsdl:operation name="getUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICenterService/getUser" message="tns:ICenterService_getUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICenterService/getUserResponse" message="tns:ICenterService_getUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICenterService/getUserCollection" message="tns:ICenterService_getUserCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICenterService/getUserCollectionResponse" message="tns:ICenterService_getUserCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByIds">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICenterService/GetUserByIds" message="tns:ICenterService_GetUserByIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICenterService/GetUserByIdsResponse" message="tns:ICenterService_GetUserByIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrganizationCollection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICenterService/getOrganizationCollection" message="tns:ICenterService_getOrganizationCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICenterService/getOrganizationCollectionResponse" message="tns:ICenterService_getOrganizationCollection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrganizationByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICenterService/getOrganizationByCode" message="tns:ICenterService_getOrganizationByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICenterService/getOrganizationByCodeResponse" message="tns:ICenterService_getOrganizationByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrganizationById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICenterService/getOrganizationById" message="tns:ICenterService_getOrganizationById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICenterService/getOrganizationByIdResponse" message="tns:ICenterService_getOrganizationById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICenterService/GetOffice" message="tns:ICenterService_GetOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICenterService/GetOfficeResponse" message="tns:ICenterService_GetOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOfficeByIsoRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICenterService/GetOfficeByIsoRegion" message="tns:ICenterService_GetOfficeByIsoRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICenterService/GetOfficeByIsoRegionResponse" message="tns:ICenterService_GetOfficeByIsoRegion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOfficeByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICenterService/GetOfficeByCode" message="tns:ICenterService_GetOfficeByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICenterService/GetOfficeByCodeResponse" message="tns:ICenterService_GetOfficeByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganization">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICenterService/GetOrganization" message="tns:ICenterService_GetOrganization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICenterService/GetOrganizationResponse" message="tns:ICenterService_GetOrganization_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOfficeByCodeArray">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICenterService/GetOfficeByCodeArray" message="tns:ICenterService_GetOfficeByCodeArray_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICenterService/GetOfficeByCodeArrayResponse" message="tns:ICenterService_GetOfficeByCodeArray_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICenterService" type="tns:ICenterService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getUser">
+      <soap:operation soapAction="http://tempuri.org/ICenterService/getUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserCollection">
+      <soap:operation soapAction="http://tempuri.org/ICenterService/getUserCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByIds">
+      <soap:operation soapAction="http://tempuri.org/ICenterService/GetUserByIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrganizationCollection">
+      <soap:operation soapAction="http://tempuri.org/ICenterService/getOrganizationCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrganizationByCode">
+      <soap:operation soapAction="http://tempuri.org/ICenterService/getOrganizationByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrganizationById">
+      <soap:operation soapAction="http://tempuri.org/ICenterService/getOrganizationById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOffice">
+      <soap:operation soapAction="http://tempuri.org/ICenterService/GetOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfficeByIsoRegion">
+      <soap:operation soapAction="http://tempuri.org/ICenterService/GetOfficeByIsoRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfficeByCode">
+      <soap:operation soapAction="http://tempuri.org/ICenterService/GetOfficeByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganization">
+      <soap:operation soapAction="http://tempuri.org/ICenterService/GetOrganization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOfficeByCodeArray">
+      <soap:operation soapAction="http://tempuri.org/ICenterService/GetOfficeByCodeArray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CenterService">
+    <wsdl:port name="BasicHttpBinding_ICenterService" binding="tns:BasicHttpBinding_ICenterService">
+      <soap:address location="http://ws2.bla.co.th/CenterWcfSvc/CenterWcf.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

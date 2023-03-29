@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="89a79004-3ffb-4d0f-a2e7-310ad92c1df9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NewBisPAWcf4.xsd" MetadataType="Schema" ID="8350073e-5c39-4fc6-bb84-8f0c4cb66df4" SourceId="1" SourceUrl="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd4" />
+    <MetadataFile FileName="NewBisPASvc2.wsdl" MetadataType="Wsdl" ID="b26ecae8-f1e9-4835-9125-50eff367d1db" SourceId="1" SourceUrl="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?wsdl" />
+    <MetadataFile FileName="NewBisPAWcf10.xsd" MetadataType="Schema" ID="62562c90-f82d-4723-9d62-86b6cad053cb" SourceId="1" SourceUrl="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd6" />
+    <MetadataFile FileName="NewBisPAWcf6.xsd" MetadataType="Schema" ID="b0797664-7874-414e-96a0-bf25999ca98c" SourceId="1" SourceUrl="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="NewBisPAWcf9.xsd" MetadataType="Schema" ID="6c74e3b5-7ef3-4cfa-b9ab-ac0ae2c85ded" SourceId="1" SourceUrl="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="NewBisPAWcf7.xsd" MetadataType="Schema" ID="45e32019-2830-4e3f-a00c-931fbeb4037d" SourceId="1" SourceUrl="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="NewBisPAWcf8.xsd" MetadataType="Schema" ID="715a8f40-252a-4230-a6a3-25bb36e758f6" SourceId="1" SourceUrl="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="NewBisPAWcf12.xsd" MetadataType="Schema" ID="664893ad-e36f-4522-9f27-132575bc20bc" SourceId="1" SourceUrl="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd8" />
+    <MetadataFile FileName="NewBisPAWcf5.xsd" MetadataType="Schema" ID="ad186deb-4f74-4cf9-8246-17669b7d07e0" SourceId="1" SourceUrl="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd5" />
+    <MetadataFile FileName="NewBisPAWcf2.disco" MetadataType="Disco" ID="85ac8db4-25b9-435e-a7f0-5d5e4425ebb2" SourceId="1" SourceUrl="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?disco" />
+    <MetadataFile FileName="NewBisPAWcf11.xsd" MetadataType="Schema" ID="67821611-2e4b-45a4-b00e-d328a466ab66" SourceId="1" SourceUrl="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd7" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

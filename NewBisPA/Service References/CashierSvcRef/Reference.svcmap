@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="32307af4-e1e9-42ed-a411-27a17303a79e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranetuat.bla.co.th:88/CashierWcfSvc/CashierWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CashierWcf11.disco" MetadataType="Disco" ID="433ab8bb-2a8e-460f-ab56-6dd7de32283c" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/CashierWcfSvc/CashierWcf.svc?disco" />
+    <MetadataFile FileName="CashierWcf44.xsd" MetadataType="Schema" ID="ac49f807-34a8-430c-9093-5f4bda07ce4c" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/CashierWcfSvc/CashierWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="CashierWcf45.xsd" MetadataType="Schema" ID="7644a6bd-5921-4ffe-82e4-1afc6b869541" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/CashierWcfSvc/CashierWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="CashierWcf46.xsd" MetadataType="Schema" ID="a2b503f6-e6fc-4461-a93e-687576418e5d" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/CashierWcfSvc/CashierWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="CashierWcf47.xsd" MetadataType="Schema" ID="736bbbcd-17cb-45db-a37d-96c8d58d3442" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/CashierWcfSvc/CashierWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="CashierWcf11.wsdl" MetadataType="Wsdl" ID="c55e100b-0ade-40f0-a0a2-8581a11fb882" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/CashierWcfSvc/CashierWcf.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

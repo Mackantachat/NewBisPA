@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AccountService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Account.DataContract" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAccountService_INS_AC_WAITPAY_InputMessage">
+    <wsdl:part name="parameters" element="tns:INS_AC_WAITPAY" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_INS_AC_WAITPAY_OutputMessage">
+    <wsdl:part name="parameters" element="tns:INS_AC_WAITPAYResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_INS_AC_WAITPAY_ACCCODE_InputMessage">
+    <wsdl:part name="parameters" element="tns:INS_AC_WAITPAY_ACCCODE" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_INS_AC_WAITPAY_ACCCODE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:INS_AC_WAITPAY_ACCCODEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_GetAccountPayOption_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountPayOption" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_GetAccountPayOption_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountPayOptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_GET_AC_OPTPAY_BYREFID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_AC_OPTPAY_BYREFID" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_GET_AC_OPTPAY_BYREFID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_AC_OPTPAY_BYREFIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_GET_AC_OPTPAY_BYREFID_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_AC_OPTPAY_BYREFID_V2" />
+  </wsdl:message>
+  <wsdl:message name="IAccountService_GET_AC_OPTPAY_BYREFID_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_AC_OPTPAY_BYREFID_V2Response" />
+  </wsdl:message>
+  <wsdl:portType name="IAccountService">
+    <wsdl:operation name="INS_AC_WAITPAY">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/INS_AC_WAITPAY" message="tns:IAccountService_INS_AC_WAITPAY_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/INS_AC_WAITPAYResponse" message="tns:IAccountService_INS_AC_WAITPAY_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="INS_AC_WAITPAY_ACCCODE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/INS_AC_WAITPAY_ACCCODE" message="tns:IAccountService_INS_AC_WAITPAY_ACCCODE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/INS_AC_WAITPAY_ACCCODEResponse" message="tns:IAccountService_INS_AC_WAITPAY_ACCCODE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountPayOption">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/GetAccountPayOption" message="tns:IAccountService_GetAccountPayOption_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/GetAccountPayOptionResponse" message="tns:IAccountService_GetAccountPayOption_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_AC_OPTPAY_BYREFID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/GET_AC_OPTPAY_BYREFID" message="tns:IAccountService_GET_AC_OPTPAY_BYREFID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/GET_AC_OPTPAY_BYREFIDResponse" message="tns:IAccountService_GET_AC_OPTPAY_BYREFID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_AC_OPTPAY_BYREFID_V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountService/GET_AC_OPTPAY_BYREFID_V2" message="tns:IAccountService_GET_AC_OPTPAY_BYREFID_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountService/GET_AC_OPTPAY_BYREFID_V2Response" message="tns:IAccountService_GET_AC_OPTPAY_BYREFID_V2_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAccountService" type="tns:IAccountService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="INS_AC_WAITPAY">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/INS_AC_WAITPAY" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="INS_AC_WAITPAY_ACCCODE">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/INS_AC_WAITPAY_ACCCODE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountPayOption">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/GetAccountPayOption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_AC_OPTPAY_BYREFID">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/GET_AC_OPTPAY_BYREFID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_AC_OPTPAY_BYREFID_V2">
+      <soap:operation soapAction="http://tempuri.org/IAccountService/GET_AC_OPTPAY_BYREFID_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccountService">
+    <wsdl:port name="BasicHttpBinding_IAccountService" binding="tns:BasicHttpBinding_IAccountService">
+      <soap:address location="http://intranetuat.bla.co.th:88/AccountWcfSvc/AccountWcf.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

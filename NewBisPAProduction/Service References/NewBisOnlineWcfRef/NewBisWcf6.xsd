@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.CustomContact" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.CustomContact" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ws7.bla.co.th:88/NewBisOnlineWcf/NewBisWcf.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://ws7.bla.co.th:88/NewBisOnlineWcf/NewBisWcf.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" />
+  <xs:import schemaLocation="http://ws7.bla.co.th:88/NewBisOnlineWcf/NewBisWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfCustomerConsentItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerConsentItem" nillable="true" type="tns:CustomerConsentItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerConsentItem" nillable="true" type="tns:ArrayOfCustomerConsentItem" />
+  <xs:complexType name="CustomerConsentItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CONSENT_FLAG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONSENT_TYPE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerConsentItem" nillable="true" type="tns:CustomerConsentItem" />
+  <xs:complexType name="EmailMessageInfo">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AgentEmails" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="AssuredEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TrackingURL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmailMessageInfo" nillable="true" type="tns:EmailMessageInfo" />
+  <xs:complexType name="SMSMessageInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Receipent" nillable="true" type="tns:ArrayOfSMSMessageReceipent" />
+      <xs:element minOccurs="0" name="TrackingURL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SMSMessageInfo" nillable="true" type="tns:SMSMessageInfo" />
+  <xs:complexType name="ArrayOfSMSMessageReceipent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SMSMessageReceipent" nillable="true" type="tns:SMSMessageReceipent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSMSMessageReceipent" nillable="true" type="tns:ArrayOfSMSMessageReceipent" />
+  <xs:complexType name="SMSMessageReceipent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsCustomer" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobilePhone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SMSMessageReceipent" nillable="true" type="tns:SMSMessageReceipent" />
+  <xs:complexType name="AgentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AGNameCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateofBirth" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdCardNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobilePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgentInfo" nillable="true" type="tns:AgentInfo" />
+  <xs:complexType name="ReceiptInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BILL_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BILL_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CERTIFICATE_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUM_PREMIUM" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReceiptInfo" nillable="true" type="tns:ReceiptInfo" />
+  <xs:complexType name="SuspenseInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateOfTempReceiptAccount" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FirstPayDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FreeWaivedAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IsPayCreditCard" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastPayDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SuspenseAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SuspenseItems" nillable="true" type="tns:ArrayOfSuspenseDetail" />
+      <xs:element minOccurs="0" name="TempReceiptDateInfo" nillable="true" type="tns:TempReceiptDateInfo" />
+      <xs:element minOccurs="0" name="TotalSuspenseAmount" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SuspenseInfo" nillable="true" type="tns:SuspenseInfo" />
+  <xs:complexType name="ArrayOfSuspenseDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SuspenseDetail" nillable="true" type="tns:SuspenseDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSuspenseDetail" nillable="true" type="tns:ArrayOfSuspenseDetail" />
+  <xs:complexType name="SuspenseDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AmountFree" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CraditCardNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsCancel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsClearing" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PayOption" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayOptionDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferenceId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuspenseDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SuspenseNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TR_DATE" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SuspenseDetail" nillable="true" type="tns:SuspenseDetail" />
+  <xs:complexType name="TempReceiptDateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateOfTempReceipt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DayCountOfLetterReceive" type="xs:double" />
+      <xs:element minOccurs="0" name="DayCountOfNewBisImportApp" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TempReceiptDateInfo" nillable="true" type="tns:TempReceiptDateInfo" />
+  <xs:complexType name="ArrayOfPayModeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PayModeInfo" nillable="true" type="tns:PayModeInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPayModeInfo" nillable="true" type="tns:ArrayOfPayModeInfo" />
+  <xs:complexType name="PayModeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SumMax" type="xs:int" />
+      <xs:element minOccurs="0" name="SumMin" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PayModeInfo" nillable="true" type="tns:PayModeInfo" />
+  <xs:complexType name="ApplicationFraudInfo">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="DeathFraud" nillable="true" type="q2:U_APPLICATION_FRAUD" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="FraudModel" nillable="true" type="q3:U_APPLICATION_FRAUD_MODEL" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="RiderFraud" nillable="true" type="q4:U_APPLICATION_FRAUD" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplicationFraudInfo" nillable="true" type="tns:ApplicationFraudInfo" />
+  <xs:complexType name="BBLRefBancInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BBLAgentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BBLProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasBBLRef" type="xs:boolean" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="U_LIFE_ID" nillable="true" type="q5:U_LIFE_ID" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="U_NAME_IDs" nillable="true" type="q6:ArrayOfU_NAME_ID" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BBLRefBancInfo" nillable="true" type="tns:BBLRefBancInfo" />
+  <xs:complexType name="EmailReciptentInfo">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="BCC" nillable="true" type="q7:ArrayOfstring" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CC" nillable="true" type="q8:ArrayOfstring" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="To" nillable="true" type="q9:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmailReciptentInfo" nillable="true" type="tns:EmailReciptentInfo" />
+  <xs:complexType name="ArrayOfZTBPlanItemInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZTBPlanItemInfo" nillable="true" type="tns:ZTBPlanItemInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZTBPlanItemInfo" nillable="true" type="tns:ArrayOfZTBPlanItemInfo" />
+  <xs:complexType name="ZTBPlanItemInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppNameId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CustomerTypeForPlan" nillable="true" type="xs:string" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="MarketingType" nillable="true" type="q10:ZTB_PLAN_MARKETING_TYPE" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="Plan" nillable="true" type="q11:ZTB_PLAN" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="PlanPackage" nillable="true" type="q12:PL_PACKAGE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZTBPlanItemInfo" nillable="true" type="tns:ZTBPlanItemInfo" />
+  <xs:complexType name="QuestionUnderwriteParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppnameId" type="xs:decimal" />
+      <xs:element minOccurs="0" name="items" nillable="true" type="tns:ArrayOfQuestionUnderwriteAnswerItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuestionUnderwriteParam" nillable="true" type="tns:QuestionUnderwriteParam" />
+  <xs:complexType name="ArrayOfQuestionUnderwriteAnswerItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QuestionUnderwriteAnswerItem" nillable="true" type="tns:QuestionUnderwriteAnswerItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQuestionUnderwriteAnswerItem" nillable="true" type="tns:ArrayOfQuestionUnderwriteAnswerItem" />
+  <xs:complexType name="QuestionUnderwriteAnswerItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Answer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuestionId" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuestionUnderwriteAnswerItem" nillable="true" type="tns:QuestionUnderwriteAnswerItem" />
+  <xs:complexType name="ArrayOfSpecialRiderResultInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpecialRiderResultInfo" nillable="true" type="tns:SpecialRiderResultInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpecialRiderResultInfo" nillable="true" type="tns:ArrayOfSpecialRiderResultInfo" />
+  <xs:complexType name="SpecialRiderResultInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADJUST_PREM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="APL_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CTMDSC_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DEPOSIT_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EM_PERCENT" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ENDS_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ENDS_TRN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FIRST_ISU_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FREE_FLG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSYSTEM_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ISU_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LASTPAY_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LOAN_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MAT_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MAT_TERM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MAX_RD" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NAMECODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NXTDUE_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PAY_TERM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PLAN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_CODE2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PRM_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PR_ST_AGE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RDSTATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RDSTATUS_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RDSTATUS_TRN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RD_LT" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RD_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RD_YR" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="REMAIN_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RNO" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RNWL_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SEQ" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ST_AGE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SUMM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SpecialRDSUMMs" nillable="true" type="tns:ArrayOfSpecialRDSUMM" />
+      <xs:element minOccurs="0" name="UPD_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPD_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XTR_FLG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XTR_LASTPAY_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="XTR_PAY_TERM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="XTR_PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="XTR_RATE" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpecialRiderResultInfo" nillable="true" type="tns:SpecialRiderResultInfo" />
+  <xs:complexType name="ArrayOfSpecialRDSUMM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpecialRDSUMM" nillable="true" type="tns:SpecialRDSUMM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpecialRDSUMM" nillable="true" type="tns:ArrayOfSpecialRDSUMM" />
+  <xs:complexType name="SpecialRDSUMM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AGE_MAX" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AGE_MIN" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LFSUM_MAX" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LFSUM_MIN" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RDPLAN_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RDSUM_MAX" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RDSUM_MIN" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SPECIFY_RDSUM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpecialRDSUMM" nillable="true" type="tns:SpecialRDSUMM" />
+  <xs:complexType name="ArrayOfIMSAppDocumentUploadError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IMSAppDocumentUploadError" nillable="true" type="tns:IMSAppDocumentUploadError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIMSAppDocumentUploadError" nillable="true" type="tns:ArrayOfIMSAppDocumentUploadError" />
+  <xs:complexType name="IMSAppDocumentUploadError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EXCEPTION_MSG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FILE_SEQ" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="FSYSTEM_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IMAGE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="LOG_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_HOLDING" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REF_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REF_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEND_AMOUNT" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SEND_EDM_FLG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEND_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUB_STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UAPP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UPD_DT" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IMSAppDocumentUploadError" nillable="true" type="tns:IMSAppDocumentUploadError" />
+  <xs:complexType name="MinimumRiderParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ISU_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LIFE_PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LIFE_SUMM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LIFE_XPREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PLAN_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RIDER_PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RIDER_XPREMIUM" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MinimumRiderParam" nillable="true" type="tns:MinimumRiderParam" />
+  <xs:complexType name="MinimumRiderResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMesage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasError" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MinimumRiderResult" nillable="true" type="tns:MinimumRiderResult" />
+  <xs:complexType name="CampaignBundleFeeParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Age" type="xs:int" />
+      <xs:element minOccurs="0" name="AppDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ChannelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketingType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PlBlock" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlCode2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Summ" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CampaignBundleFeeParam" nillable="true" type="tns:CampaignBundleFeeParam" />
+  <xs:complexType name="AgentSaleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgentCardExpireDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AgentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentUplineCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentUplineName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseOfAgenCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseOfAgentCardExpire" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LicenseOfAgentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseOfAgentOffice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseOfAgentPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseValidate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MDOInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MDOPhoneNUmber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfficeOfAgent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfficeOfAgentUpline" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumberOfAgent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumberOfAgentUpline" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UplineCardExpireDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgentSaleInfo" nillable="true" type="tns:AgentSaleInfo" />
+  <xs:complexType name="InfoOfCustomer">
+    <xs:sequence>
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="BackListInfo" nillable="true" type="q13:ArrayOfP_YELLOW_CARD" />
+      <xs:element minOccurs="0" name="HistoryRemarkInfo" nillable="true" type="tns:ArrayOfCustomerHistoryRemarkInfo" />
+      <xs:element minOccurs="0" name="MoneyLaunderingInfo" nillable="true" type="tns:ArrayOfMoneyLaunderingInfo" />
+      <xs:element minOccurs="0" name="PolicyInfo" nillable="true" type="tns:PolicyInfoOfCustomerGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoOfCustomer" nillable="true" type="tns:InfoOfCustomer" />
+  <xs:complexType name="ArrayOfCustomerHistoryRemarkInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerHistoryRemarkInfo" nillable="true" type="tns:CustomerHistoryRemarkInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerHistoryRemarkInfo" nillable="true" type="tns:ArrayOfCustomerHistoryRemarkInfo" />
+  <xs:complexType name="CustomerHistoryRemarkInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AUDIT_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AUDIT_RCV_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AUDIT_REF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BirthDay" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderPeraon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentBenefit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Policy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcessFlag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceivePremium" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemarkFlag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark_TRN_Date" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerHistoryRemarkInfo" nillable="true" type="tns:CustomerHistoryRemarkInfo" />
+  <xs:complexType name="ArrayOfMoneyLaunderingInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MoneyLaunderingInfo" nillable="true" type="tns:MoneyLaunderingInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMoneyLaunderingInfo" nillable="true" type="tns:ArrayOfMoneyLaunderingInfo" />
+  <xs:complexType name="MoneyLaunderingInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AMLO_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AMLO_SEND" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AppNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BNF_PAY" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BSC_PRM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BirthDay" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ChannelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerFlag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOUBT_CAUSE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayMode" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PolLot" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PolYear" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Policy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyHolding" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RDR_PRM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RISK_CLASS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUMM" type="xs:long" />
+      <xs:element minOccurs="0" name="UPD_DT" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MoneyLaunderingInfo" nillable="true" type="tns:MoneyLaunderingInfo" />
+  <xs:complexType name="PolicyInfoOfCustomerGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DirectMailPersonalAccident" nillable="true" type="tns:PolicyInfoOfCustomer" />
+      <xs:element minOccurs="0" name="GroupMortgage" nillable="true" type="tns:PolicyInfoOfCustomer" />
+      <xs:element minOccurs="0" name="Health1st" nillable="true" type="tns:PolicyInfoOfCustomer" />
+      <xs:element minOccurs="0" name="KwanBualuang" nillable="true" type="tns:PolicyInfoOfCustomer" />
+      <xs:element minOccurs="0" name="Ordinary" nillable="true" type="tns:PolicyInfoOfCustomer" />
+      <xs:element minOccurs="0" name="OrdinaryPersonalAccident" nillable="true" type="tns:PolicyInfoOfCustomer" />
+      <xs:element minOccurs="0" name="OrdinaryTypeBanc" nillable="true" type="tns:PolicyInfoOfCustomer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PolicyInfoOfCustomerGroup" nillable="true" type="tns:PolicyInfoOfCustomerGroup" />
+  <xs:complexType name="PolicyInfoOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfPolicyInfoOfCustomerItem" />
+      <xs:element minOccurs="0" name="TotalSumm" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PolicyInfoOfCustomer" nillable="true" type="tns:PolicyInfoOfCustomer" />
+  <xs:complexType name="ArrayOfPolicyInfoOfCustomerItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PolicyInfoOfCustomerItem" nillable="true" type="tns:PolicyInfoOfCustomerItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPolicyInfoOfCustomerItem" nillable="true" type="tns:ArrayOfPolicyInfoOfCustomerItem" />
+  <xs:complexType name="PolicyInfoOfCustomerItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BANC_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLAIM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUSTOMER_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EXCLUDE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INFSUMM" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ISU_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PLAN_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PLAN_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_BLOCK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_CODE2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PRODUCT_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductTypeCodeDescroption" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STANDARD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STANDARD_DESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS_DESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUMM" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UnderwriteFlag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnderwriteFlagDescription" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PolicyInfoOfCustomerItem" nillable="true" type="tns:PolicyInfoOfCustomerItem" />
+  <xs:complexType name="CalculatePremiumResultInfo">
+    <xs:sequence>
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="Assured" nillable="true" type="q14:P_NAME" />
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="Medicals" nillable="true" type="q15:ArrayOfAUTB_MEDICAL" />
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="PULP_LIFE" nillable="true" type="q16:PULP_LIFE" />
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="Parent" nillable="true" type="q17:P_OPARENT" />
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="Policy" nillable="true" type="q18:P_POLICY" />
+      <xs:element minOccurs="0" name="Premium" nillable="true" type="tns:CalculatePremiumResult" />
+      <xs:element minOccurs="0" name="Rate" nillable="true" type="tns:CalculateRateResult" />
+      <xs:element minOccurs="0" name="UNIT_LINK_CHARGE_VAR" nillable="true" type="tns:V_UNIT_LINK_CHARGE_VAR" />
+      <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="WarningMessages" nillable="true" type="q19:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CalculatePremiumResultInfo" nillable="true" type="tns:CalculatePremiumResultInfo" />
+  <xs:complexType name="CalculatePremiumResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LifeExtraPremium" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LifePremium" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RiderExtraPremium" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RiderPremium" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalPremium" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CalculatePremiumResult" nillable="true" type="tns:CalculatePremiumResult" />
+  <xs:complexType name="CalculateRateResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LF_CTM_DISCOUNT_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LF_DISCOUNT_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LF_RATE" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CalculateRateResult" nillable="true" type="tns:CalculateRateResult" />
+  <xs:complexType name="V_UNIT_LINK_CHARGE_VAR">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AT_ADMIN_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AT_ADMIN_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AT_ALLOCATE_PRM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AT_BCCOI_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AT_BOM_AV" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AT_EOM_AV" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AT_MONTHLY_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AT_PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AT_PRM_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AT_PRM_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_ADMIN_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_ADMIN_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_ALLOCATE_PRM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_BOM_AV" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_COI_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_COI_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_EFCOI_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_EFCOI_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_EMCOI_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_EMCOI_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_EOM_AV" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_MONTHLY_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_POLICY_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_POLICY_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_PRM_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_PRM_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_SUMM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_XOCPCOI_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BC_XOCPCOI_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DUE_AGE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="INS_POL_LT" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="INS_POL_YR" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="INVEST_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LOAN" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MONTHLY_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MONTHLY_LT" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PPR_PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PREMIUM_HOLIDAY_FLG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RT_ADMIN_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RT_ADMIN_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RT_ALLOCATE_PRM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RT_BCCOI_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RT_BOM_AV" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RT_EOM_AV" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RT_MONTHLY_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RT_PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RT_PRM_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RT_PRM_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UDR_ADMIN_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UDR_ALLOCATE_PRM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UDR_COR_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UDR_COR_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UDR_EMCOR_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UDR_PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UDR_PRM_FEE" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="V_UNIT_LINK_CHARGE_VAR" nillable="true" type="tns:V_UNIT_LINK_CHARGE_VAR" />
+  <xs:complexType name="PlanInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppNameId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CustomerTypeForPlan" nillable="true" type="xs:string" />
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="MarketingType" nillable="true" type="q20:ZTB_PLAN_MARKETING_TYPE" />
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="Plan" nillable="true" type="q21:ZTB_PLAN" />
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="PlanPackage" nillable="true" type="q22:PL_PACKAGE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlanInfo" nillable="true" type="tns:PlanInfo" />
+  <xs:complexType name="CSTempPaymentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PayDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PolicyId" type="xs:long" />
+      <xs:element minOccurs="0" name="PremiumReceive" type="xs:long" />
+      <xs:element minOccurs="0" name="PremiumRequest" type="xs:long" />
+      <xs:element minOccurs="0" name="RenewCaseDatetime" nillable="true" type="xs:dateTime" />
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="Transections" nillable="true" type="q23:ArrayOfCS_TEMP_PAYMENT_ABSOLUTE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CSTempPaymentInfo" nillable="true" type="tns:CSTempPaymentInfo" />
+  <xs:complexType name="DateInfoOfInfourceResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MarketingDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PolicyDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StrDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SusprenseLastPayInDate" nillable="true" type="xs:dateTime" />
+      <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="YearControl" nillable="true" type="q24:AUTB_APPLICATION_YEAR_CNTRL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DateInfoOfInfourceResult" nillable="true" type="tns:DateInfoOfInfourceResult" />
+  <xs:complexType name="LossRatioStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EffectiveFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EffectiveTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LossRatioStatus" nillable="true" type="tns:LossRatioStatus" />
+  <xs:complexType name="DeferRatioStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeferFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DerferBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DerferDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DerferTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeferRatioStatus" nillable="true" type="tns:DeferRatioStatus" />
+  <xs:complexType name="ArrayOfUnderwriteStatusHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UnderwriteStatusHistory" nillable="true" type="tns:UnderwriteStatusHistory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUnderwriteStatusHistory" nillable="true" type="tns:ArrayOfUnderwriteStatusHistory" />
+  <xs:complexType name="UnderwriteStatusHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="COMMITEE_FLG" nillable="true" type="xs:string" />
+      <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.DBContact" minOccurs="0" name="DetailItems" nillable="true" type="q25:ArrayOfW_SUMMARY_DETAIL" />
+      <xs:element minOccurs="0" name="FORWARD_CAUSE_DESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FORWARD_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSYSTEM_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RECEIVE_CASE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RECEIVE_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS_CAUSE_DESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS_DESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUBSTATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUBSTATUS_DESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUMMARY_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UND_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPD_NAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnderwriteStatusHistory" nillable="true" type="tns:UnderwriteStatusHistory" />
+  <xs:complexType name="ApplicationResultInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ISISApplicationStatusItem" nillable="true" type="tns:ArrayOfISISApplicationStatusChange" />
+      <xs:element minOccurs="0" name="LetterReferenceNO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Policy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyHolding" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ReceiptBillDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ULetterId" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplicationResultInfo" nillable="true" type="tns:ApplicationResultInfo" />
+  <xs:complexType name="ArrayOfISISApplicationStatusChange">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ISISApplicationStatusChange" nillable="true" type="tns:ISISApplicationStatusChange" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfISISApplicationStatusChange" nillable="true" type="tns:ArrayOfISISApplicationStatusChange" />
+  <xs:complexType name="ISISApplicationStatusChange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnswerLimitDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="AppId" type="xs:long" />
+      <xs:element minOccurs="0" name="GUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsisDocId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="LetterDetail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ISISApplicationStatusChange" nillable="true" type="tns:ISISApplicationStatusChange" />
+  <xs:complexType name="CalculateAllSummResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SumOfApproved" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SumOfMedical" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SumOfReInsure" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CalculateAllSummResult" nillable="true" type="tns:CalculateAllSummResult" />
+  <xs:complexType name="FlagStatusInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HasChangeDMS" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSendSMS" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlagStatusInfo" nillable="true" type="tns:FlagStatusInfo" />
+</xs:schema>

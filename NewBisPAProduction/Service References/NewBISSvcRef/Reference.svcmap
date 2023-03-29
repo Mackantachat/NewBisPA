@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f99dfb83-8892-4d18-9193-7682efeda2f1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws7.bla.co.th:88/NewbisWcfSvc2/NewBisWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NewBISSvc.wsdl" MetadataType="Wsdl" ID="fb89d480-2de4-499a-8b6a-f7e769e7d3e1" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/NewBisWcfSvc2/NewBisWcf.svc?wsdl" />
+    <MetadataFile FileName="NewBisWcf.xsd" MetadataType="Schema" ID="b6660abf-577d-4d7d-9ff2-930284de2c99" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/NewBisWcfSvc2/NewBisWcf.svc?xsd=xsd9" />
+    <MetadataFile FileName="NewBisWcf1.xsd" MetadataType="Schema" ID="9b2853ba-7ba8-46df-9a87-e29ebbbc0382" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/NewBisWcfSvc2/NewBisWcf.svc?xsd=xsd7" />
+    <MetadataFile FileName="NewBisWcf2.xsd" MetadataType="Schema" ID="5a1ea84f-bf2b-4318-b5b6-6237370554bb" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/NewBisWcfSvc2/NewBisWcf.svc?xsd=xsd5" />
+    <MetadataFile FileName="NewBisWcf3.xsd" MetadataType="Schema" ID="1137281d-3610-4695-9a9c-1997a4647e06" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/NewBisWcfSvc2/NewBisWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="NewBisWcf4.xsd" MetadataType="Schema" ID="28487f6f-daf5-49fe-b5bd-216745907319" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/NewBisWcfSvc2/NewBisWcf.svc?xsd=xsd10" />
+    <MetadataFile FileName="NewBisWcf5.xsd" MetadataType="Schema" ID="acf38fe9-1da4-49da-bf14-e6ed4c632736" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/NewBisWcfSvc2/NewBisWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="NewBisWcf6.xsd" MetadataType="Schema" ID="8909b4c3-8f42-44c3-923b-38b287ff0931" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/NewBisWcfSvc2/NewBisWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="NewBisWcf7.xsd" MetadataType="Schema" ID="0fe21c3d-b8ca-4dec-9989-16488eba18d4" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/NewBisWcfSvc2/NewBisWcf.svc?xsd=xsd8" />
+    <MetadataFile FileName="NewBisWcf.disco" MetadataType="Disco" ID="db705071-316b-4faf-a60c-6917fdffb944" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/NewBisWcfSvc2/NewBisWcf.svc?disco" />
+    <MetadataFile FileName="NewBisWcf8.xsd" MetadataType="Schema" ID="a1da18a3-fe72-4c82-b5d3-785074f1b516" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/NewBisWcfSvc2/NewBisWcf.svc?xsd=xsd4" />
+    <MetadataFile FileName="NewBisWcf9.xsd" MetadataType="Schema" ID="b2884d9d-0326-4059-9e69-52071722a421" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/NewBisWcfSvc2/NewBisWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="NewBisWcf10.xsd" MetadataType="Schema" ID="bdd8582d-f07c-4c17-8bf9-2431efb77b65" SourceId="1" SourceUrl="http://ws7.bla.co.th:88/NewBisWcfSvc2/NewBisWcf.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

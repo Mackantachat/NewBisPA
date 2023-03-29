@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PolicyService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PolicyService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ws3.bla.co.th:88/PolicyWcfSvc/PolicyWcf.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfZTB_CONSTANT1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZTB_CONSTANT1" nillable="true" type="tns:ZTB_CONSTANT1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZTB_CONSTANT1" nillable="true" type="tns:ArrayOfZTB_CONSTANT1" />
+  <xs:complexType name="ZTB_CONSTANT1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ABBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODE2" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="COL_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="E_ABBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="E_DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSYSTEM_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPD_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPD_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZTB_CONSTANT1" nillable="true" type="tns:ZTB_CONSTANT1" />
+</xs:schema>

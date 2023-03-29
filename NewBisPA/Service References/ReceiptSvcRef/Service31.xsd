@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/ReceiptWcfSvc/Service.svc?xsd=xsd2" namespace="urn:ReceiptWcfSvc" />
+  <xs:element name="GetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="urn:ReceiptWcfSvc" minOccurs="0" name="composite" nillable="true" type="q1:MyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="urn:ReceiptWcfSvc" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:MyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateReceipt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appRegID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PolicyNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PolicyHolder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="billingDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="PK_UAPP_ID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateReceiptNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appRegID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PolicyNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PolicyHolder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="billingDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="PK_UAPP_ID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="LackPremium" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateReceiptHalfProcess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appRegID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PolicyNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PolicyHolder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="billingDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="PK_UAPP_ID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendStatusToIsis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appRegisterID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="statusCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subStatusCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="detail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="responseDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="gracePeriod" type="xs:int" />
+        <xs:element minOccurs="0" name="isisDocID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

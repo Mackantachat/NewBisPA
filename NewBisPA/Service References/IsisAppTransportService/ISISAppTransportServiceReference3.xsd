@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/AppTransport.DataContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AppTransport.DataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://owssvr.bla.co.th/ISISAppTransportService.Test/ISISAppTransportServiceReference.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="OrdBilling">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Amphur" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillID" type="xs:long" />
+      <xs:element minOccurs="0" name="BillingDues" nillable="true" type="tns:ArrayOfOrdBillingDue" />
+      <xs:element minOccurs="0" name="BillingPayBy" nillable="true" type="tns:OrdBillingPayBy" />
+      <xs:element minOccurs="0" name="CertificateNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDCardNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstallDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IssueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mooh" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NeedToRearrangeContent" type="xs:int" />
+      <xs:element minOccurs="0" name="PassportNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayMode" type="xs:int" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PolicyNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Province" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Road" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Soi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tambol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="OrdBilling" nillable="true" type="tns:OrdBilling" />
+  <xs:complexType name="ArrayOfOrdBillingDue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrdBillingDue" nillable="true" type="tns:OrdBillingDue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrdBillingDue" nillable="true" type="tns:ArrayOfOrdBillingDue" />
+  <xs:complexType name="OrdBillingDue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BillDueID" type="xs:long" />
+      <xs:element minOccurs="0" name="BillNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingCancel" nillable="true" type="tns:OrdBillingCancel" />
+      <xs:element minOccurs="0" name="BillingPlans" nillable="true" type="tns:ArrayOfOrdBillingPlan" />
+      <xs:element minOccurs="0" name="BillingRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PolicyLot" type="xs:int" />
+      <xs:element minOccurs="0" name="PolicyYear" type="xs:int" />
+      <xs:element minOccurs="0" name="PremiumType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxRemark" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="OrdBillingDue" nillable="true" type="tns:OrdBillingDue" />
+  <xs:complexType name="OrdBillingCancel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CancelType" type="xs:int" />
+      <xs:element minOccurs="0" name="ReasonCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="OrdBillingCancel" nillable="true" type="tns:OrdBillingCancel" />
+  <xs:complexType name="ArrayOfOrdBillingPlan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrdBillingPlan" nillable="true" type="tns:OrdBillingPlan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrdBillingPlan" nillable="true" type="tns:ArrayOfOrdBillingPlan" />
+  <xs:complexType name="OrdBillingPlan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssureYear" type="xs:int" />
+      <xs:element minOccurs="0" name="BillPlanID" type="xs:long" />
+      <xs:element minOccurs="0" name="EFPremium" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EMPremium" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PayYear" type="xs:int" />
+      <xs:element minOccurs="0" name="PlanBlock" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlanCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlanCode2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlanType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Premium" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Summ" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TaxPremium" type="xs:decimal" />
+      <xs:element minOccurs="0" name="XOCPPremium" type="xs:decimal" />
+      <xs:element minOccurs="0" name="XTRPremium" type="xs:decimal" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="OrdBillingPlan" nillable="true" type="tns:OrdBillingPlan" />
+  <xs:complexType name="OrdBillingPayBy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDCardNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PassportNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreName" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="OrdBillingPayBy" nillable="true" type="tns:OrdBillingPayBy" />
+</xs:schema>

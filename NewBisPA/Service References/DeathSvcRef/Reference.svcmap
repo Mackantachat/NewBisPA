@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="87f755f1-ba47-443b-b3fa-3a951dc12851" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.1.1.50/DopaIdCardService/IdCard.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IdCard.disco" MetadataType="Disco" ID="5f3f2edf-9c5b-4ced-b4b1-6f1e91b89b95" SourceId="1" SourceUrl="http://10.1.1.50/DopaIdCardService/IdCard.svc?disco" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="d6377e6c-638d-4b93-b101-e6ef29c8891a" SourceId="1" SourceUrl="http://10.1.1.50/DopaIdCardService/IdCard.svc?wsdl" />
+    <MetadataFile FileName="IdCard.xsd" MetadataType="Schema" ID="b1929b33-e968-4bb2-9487-89ff165d9b2c" SourceId="1" SourceUrl="http://10.1.1.50/DopaIdCardService/IdCard.svc?xsd=xsd3" />
+    <MetadataFile FileName="IdCard1.xsd" MetadataType="Schema" ID="9606a5d2-9b98-416e-aa6e-abf5fde7fac7" SourceId="1" SourceUrl="http://10.1.1.50/DopaIdCardService/IdCard.svc?xsd=xsd2" />
+    <MetadataFile FileName="IdCard2.xsd" MetadataType="Schema" ID="7839268d-0ddd-405f-a2df-8f9e5bee2f0c" SourceId="1" SourceUrl="http://10.1.1.50/DopaIdCardService/IdCard.svc?xsd=xsd1" />
+    <MetadataFile FileName="IdCard3.xsd" MetadataType="Schema" ID="d0aab4ba-b1cf-4b7f-8387-3e6ac632356b" SourceId="1" SourceUrl="http://10.1.1.50/DopaIdCardService/IdCard.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

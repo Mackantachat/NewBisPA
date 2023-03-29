@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fe410f1c-841f-4650-865c-4dfc7b5d6c24" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://owssvr.bla.co.th/ISISAppTransportService.test/ISISAppTransportServiceReference.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ISISAppTransportServiceReference3.xsd" MetadataType="Schema" ID="153f3ec8-c54b-49aa-9de5-ab5a92012405" SourceId="1" SourceUrl="http://owssvr.bla.co.th/ISISAppTransportService.Test/ISISAppTransportServiceReference.svc?xsd=xsd2" />
+    <MetadataFile FileName="ISISAppTransportServiceReference31.xsd" MetadataType="Schema" ID="d0fba6e3-d36d-4a54-99a1-4db4a22829ea" SourceId="1" SourceUrl="http://owssvr.bla.co.th/ISISAppTransportService.Test/ISISAppTransportServiceReference.svc?xsd=xsd1" />
+    <MetadataFile FileName="ISISAppTransportServiceReference32.xsd" MetadataType="Schema" ID="22872b31-f07f-4b4a-9332-d06d5bfaf1e4" SourceId="1" SourceUrl="http://owssvr.bla.co.th/ISISAppTransportService.Test/ISISAppTransportServiceReference.svc?xsd=xsd0" />
+    <MetadataFile FileName="ISISAppTransportServiceReference1.disco" MetadataType="Disco" ID="982a6577-d1e2-4e8f-852e-1346c37092e7" SourceId="1" SourceUrl="http://owssvr.bla.co.th/ISISAppTransportService.Test/ISISAppTransportServiceReference.svc?disco" />
+    <MetadataFile FileName="ISISAppTransportService1.wsdl" MetadataType="Wsdl" ID="324d9084-8a59-4a5d-8a8f-194429ffe5f0" SourceId="1" SourceUrl="http://owssvr.bla.co.th/ISISAppTransportService.Test/ISISAppTransportServiceReference.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

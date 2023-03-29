@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ctDocSvc.Model/2011/cdDocModel" elementFormDefault="qualified" targetNamespace="http://ctDocSvc.Model/2011/cdDocModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="InsertImgReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocImg" nillable="true" type="tns:DocImg" />
+        <xs:element minOccurs="0" name="PassKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocImg">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DOC_IMG_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IMAGE_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="DOC_TYPE_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="DataInfo" nillable="true" type="tns:DataInfo" />
+      <xs:element minOccurs="0" name="IMAGE" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="CONTENT_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOCTYPE_TITLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FILENAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocImg" nillable="true" type="tns:DocImg" />
+  <xs:complexType name="DataInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FsystemDt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateDt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataInfo" nillable="true" type="tns:DataInfo" />
+  <xs:element name="InsertImgRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocimgID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteImgReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocumentTerminate" nillable="true" type="tns:DocumentTerminate" />
+        <xs:element minOccurs="0" name="PassKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocumentTerminate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IMAGE_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="REMARK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TmnInfo" nillable="true" type="tns:TmnInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentTerminate" nillable="true" type="tns:DocumentTerminate" />
+  <xs:complexType name="TmnInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TmndateDt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateDt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdateID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TmnInfo" nillable="true" type="tns:TmnInfo" />
+  <xs:element name="DeleteImgRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocimgID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDepartReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Department" nillable="true" type="tns:Department" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Department">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DEPARTMENT_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="DEPARTMENT_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataInfo" nillable="true" type="tns:DataInfo" />
+      <xs:element minOccurs="0" name="LinkDepartment" nillable="true" type="tns:LinkDepartment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Department" nillable="true" type="tns:Department" />
+  <xs:complexType name="LinkDepartment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ORG_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EFF_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ORN_NAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LinkDepartment" nillable="true" type="tns:LinkDepartment" />
+  <xs:element name="InserDepartRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepartID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepartReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepartName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PassKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepartRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepartCollection" nillable="true" type="tns:DepartmentCollection" />
+        <xs:element minOccurs="0" name="ProcessResult" nillable="true" type="tns:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DepartmentCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Department" nillable="true" type="tns:Department" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DepartmentCollection" nillable="true" type="tns:DepartmentCollection" />
+  <xs:complexType name="ProcessResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Successed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcessResult" nillable="true" type="tns:ProcessResult" />
+  <xs:element name="GetDepartByIDReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepartID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepartByIDRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepartCollection" nillable="true" type="tns:DepartmentCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditDepartReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Department" nillable="true" type="tns:Department" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditDepartRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepartID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDepartReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepartmentTmn" nillable="true" type="tns:DepartmentTmn" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DepartmentTmn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DEPARTMENT_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TmnInfo" nillable="true" type="tns:TmnInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DepartmentTmn" nillable="true" type="tns:DepartmentTmn" />
+  <xs:element name="DeleteDepartRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DepartID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertCategoryReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Category" nillable="true" type="tns:Category" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Category">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORY_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="DEPARTMENT_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataInfo" nillable="true" type="tns:DataInfo" />
+      <xs:element minOccurs="0" name="DEPARTMENT_NAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Category" nillable="true" type="tns:Category" />
+  <xs:element name="InsertCategoryRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PassKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryCollection" nillable="true" type="tns:CategoryCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CategoryCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:Category" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CategoryCollection" nillable="true" type="tns:CategoryCollection" />
+  <xs:element name="GetCategoryByIDReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryByIDRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryCollection" nillable="true" type="tns:CategoryCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditCategoryReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Category" nillable="true" type="tns:Category" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditCategoryRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCategoryReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryTmn" nillable="true" type="tns:CategoryTmn" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CategoryTmn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CATEGORY_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TmnInfo" nillable="true" type="tns:TmnInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CategoryTmn" nillable="true" type="tns:CategoryTmn" />
+  <xs:element name="DeleteCategoryRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDoctypeReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Doctype" nillable="true" type="tns:DocType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DOCTYPE_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="CATEGORY_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TITLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPPER_LEVEL_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DataInfo" nillable="true" type="tns:DataInfo" />
+      <xs:element minOccurs="0" name="CATEGORY_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPARTMENT_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPPERLEVEL_TITLE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocType" nillable="true" type="tns:DocType" />
+  <xs:element name="InsertDoctypeRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DoctypeID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctypeReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PassKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctypeRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DoctypeCollection" nillable="true" type="tns:DocTypeCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocTypeCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocType" nillable="true" type="tns:DocType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocTypeCollection" nillable="true" type="tns:DocTypeCollection" />
+  <xs:element name="GetDoctypeByIDReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doctypeID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctypeByIDRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Doctype" nillable="true" type="tns:DocType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditDoctypeReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Doctype" nillable="true" type="tns:DocType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditDoctypeRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doctypeID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDoctypeReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doctypeTmn" nillable="true" type="tns:DocTypeTmn" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocTypeTmn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DOCTYPE_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TmnInfo" nillable="true" type="tns:TmnInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocTypeTmn" nillable="true" type="tns:DocTypeTmn" />
+  <xs:element name="DeleteDoctypeRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doctypeID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctypeByCateReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctypeID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctypeByCateRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DoctypeCollection" nillable="true" type="tns:DocTypeCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryByNameReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryByNameRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryCollection" nillable="true" type="tns:CategoryCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertAuthorityReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Authority" nillable="true" type="tns:Authority" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Authority">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AUTHORITY_IO" type="xs:int" />
+      <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CATEGORY_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="AUTHORITY_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EFF_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DataInfo" nillable="true" type="tns:DataInfo" />
+      <xs:element minOccurs="0" name="USER_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CATEGORY_DESCRIPTION" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Authority" nillable="true" type="tns:Authority" />
+  <xs:element name="InsertAuthorityRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthorityID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuthorityByIDReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authorityID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuthorityByIDRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthorityCollection" nillable="true" type="tns:AuthorityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AuthorityCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Authority" nillable="true" type="tns:Authority" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthorityCollection" nillable="true" type="tns:AuthorityCollection" />
+  <xs:element name="DeleteAuthorityReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authorityTmn" nillable="true" type="tns:AuthorityTmn" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AuthorityTmn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AUTHORITY_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TmnInfo" nillable="true" type="tns:TmnInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AuthorityTmn" nillable="true" type="tns:AuthorityTmn" />
+  <xs:element name="DeleteAuthorityRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="authorityID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDocRefDetailReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocRefDetail" nillable="true" type="tns:DocRefDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocRefDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DOC_REF_DETAIL_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="FIELD_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEQ" type="xs:int" />
+      <xs:element minOccurs="0" name="DOC_TYPE_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="ACTIVE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataInfo" nillable="true" type="tns:DataInfo" />
+      <xs:element minOccurs="0" name="DOCTYPE_TITLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPART_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CATEGORY_NAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocRefDetail" nillable="true" type="tns:DocRefDetail" />
+  <xs:element name="InsertDocRefDetailRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocRefDetailID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocRefDetailReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PassKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocRefDetailRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocRefDetailCollection" nillable="true" type="tns:DocRefDetailCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocRefDetailCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocRefDetail" nillable="true" type="tns:DocRefDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocRefDetailCollection" nillable="true" type="tns:DocRefDetailCollection" />
+  <xs:element name="GetDocRefDetailByIDReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocRefDetailID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocRefDetailByIDRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocRefDetail" nillable="true" type="tns:DocRefDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditDocRefDetailReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocRefDetail" nillable="true" type="tns:DocRefDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditDocRefDetailRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocRefDetailID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryByDepartReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DepartID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryByDepartRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryCollection" nillable="true" type="tns:CategoryCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctypeByCateDocandTitleReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categoryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctypeTitle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctypeByCateDocandTitleRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DoctypeCollection" nillable="true" type="tns:DocTypeCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocRefDetailByDoctypeReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DoctypID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PassKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocRefDetailByDoctypeRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocRefDetailCollection" nillable="true" type="tns:DocRefDetailCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHierarchyReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthorityType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHierarchyRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HierachyViewCollectionEntity" nillable="true" type="tns:HierachyViewCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="HierachyViewCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HierarchyView" nillable="true" type="tns:HierarchyView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HierachyViewCollection" nillable="true" type="tns:HierachyViewCollection" />
+  <xs:complexType name="HierarchyView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NODE_DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NODE_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UNDER_PARENT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LEVEL_DEPTH" type="xs:int" />
+      <xs:element minOccurs="0" name="DEPARTMENT_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HierarchyView" nillable="true" type="tns:HierarchyView" />
+  <xs:element name="InsertDocrefReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocRef" nillable="true" type="tns:DocRef" />
+        <xs:element minOccurs="0" name="PassKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocRef">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DOC_IMG_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="DOC_REF_DETAIL_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="REF_VALUE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataInfo" nillable="true" type="tns:DataInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocRef" nillable="true" type="tns:DocRef" />
+  <xs:element name="InsertDocrefRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocimgID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDocrefReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocimgID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDocrefRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocImageSearchReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocImgSearchCollection" nillable="true" type="tns:DocImgSearchCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocImgSearchCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocImageSearch" nillable="true" type="tns:DocImageSearch" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocImgSearchCollection" nillable="true" type="tns:DocImgSearchCollection" />
+  <xs:complexType name="DocImageSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="REF_DETAILID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REF_VALUE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOC_TYPE_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocImageSearch" nillable="true" type="tns:DocImageSearch" />
+  <xs:element name="DocImageSearchRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocImgCollection" nillable="true" type="tns:DocImgCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocImgCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocImg" nillable="true" type="tns:DocImg" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocImgCollection" nillable="true" type="tns:DocImgCollection" />
+  <xs:element name="GetImageByIDReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImageID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PassKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageByIDRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocImg" nillable="true" type="tns:DocImg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertDocLogReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocumentLog" nillable="true" type="tns:DocumentLog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocumentLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LOG_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="DOCSCAN_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="LOG_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LOG_DT" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentLog" nillable="true" type="tns:DocumentLog" />
+  <xs:element name="InsertDocLogRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LogID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocrefByIDReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocimgID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocrefByIDRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocRefCollection" nillable="true" type="tns:DocRefCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocRefCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocRef" nillable="true" type="tns:DocRef" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocRefCollection" nillable="true" type="tns:DocRefCollection" />
+  <xs:element name="EditImageReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocImg" nillable="true" type="tns:DocImg" />
+        <xs:element minOccurs="0" name="PassKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditImageRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocimgID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuthorityByUserIDReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthorityType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DoctypeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuthorityByUserIDRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Authority" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertHighAuthorityReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HighAuthority" nillable="true" type="tns:HighAuthority" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="HighAuthority">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HIGHAUTHORITY_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="ORG_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="AUTHORITY_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EFF_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DataInfo" nillable="true" type="tns:DataInfo" />
+      <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ORG_DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USER_NAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HighAuthority" nillable="true" type="tns:HighAuthority" />
+  <xs:element name="InsertHighAuthorityRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HighAuthorityID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHighAuthorityByIDReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="highAuthorityID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHighAuthorityByIDRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HighAuthorityCollection" nillable="true" type="tns:HighAuthorityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="HighAuthorityCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HighAuthority" nillable="true" type="tns:HighAuthority" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HighAuthorityCollection" nillable="true" type="tns:HighAuthorityCollection" />
+  <xs:element name="DeleteHighAuthorityReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="highAuthorityTmn" nillable="true" type="tns:HighAuthorityTmn" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="HighAuthorityTmn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HIGHAUTHORITY_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="TmnInfo" nillable="true" type="tns:TmnInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HighAuthorityTmn" nillable="true" type="tns:HighAuthorityTmn" />
+  <xs:element name="DeleteHighAuthorityRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="highAuthorityID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocImgTemp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FILE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FILE_DATA" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="CONTENT_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATE_DATE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPDATE_BY" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocImgTemp" nillable="true" type="tns:DocImgTemp" />
+  <xs:element name="DocImgFilename" nillable="true" type="xs:string" />
+  <xs:element name="GetImageTempByNameReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImgTempName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageTempByNameRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocImgTemp" nillable="true" type="tns:DocImgTemp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteImgTempReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteImgTempRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResultProcess" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChkImgFromCounterReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GroupNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RegNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChkImgFromCounterRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocImagefixSearchReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocImgSearchCollection" nillable="true" type="tns:DocImgSearchCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocImagefixSearchRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocImgCollection" nillable="true" type="tns:DocImgCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChkImgByRegReq">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChkImgByRegRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

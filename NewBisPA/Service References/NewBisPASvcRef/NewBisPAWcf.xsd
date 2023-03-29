@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/NewBISService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NewBISService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" />
+  <xs:complexType name="U_APPLICATION_FRAUD">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="FRAUD_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RESULT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RESULT_DESC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SYSTEM_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TMN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TMN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UAF_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="U_APPLICATION_FRAUD" nillable="true" type="tns:U_APPLICATION_FRAUD" />
+  <xs:complexType name="U_APPLICATION_FRAUD_MODEL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FRAUD_MODEL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UAPP_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="U_APPLICATION_FRAUD_MODEL" nillable="true" type="tns:U_APPLICATION_FRAUD_MODEL" />
+  <xs:complexType name="ArrayOfP_DOC_TRACKING">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="P_DOC_TRACKING" nillable="true" type="tns:P_DOC_TRACKING" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfP_DOC_TRACKING" nillable="true" type="tns:ArrayOfP_DOC_TRACKING" />
+  <xs:complexType name="P_DOC_TRACKING">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="DOC_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOC_SRC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FSYSTEM_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IMAGE_ID_EDM" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IMAGE_ID_IMS" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PDT_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="RECEIVE_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="TMN" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="TMN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPD_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="P_DOC_TRACKING" nillable="true" type="tns:P_DOC_TRACKING" />
+  <xs:complexType name="ArrayOfU_POLICY_BUNDLE_CAMPAIGN">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="U_POLICY_BUNDLE_CAMPAIGN" nillable="true" type="tns:U_POLICY_BUNDLE_CAMPAIGN" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfU_POLICY_BUNDLE_CAMPAIGN" nillable="true" type="tns:ArrayOfU_POLICY_BUNDLE_CAMPAIGN" />
+  <xs:complexType name="U_POLICY_BUNDLE_CAMPAIGN">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BUNDLE_STATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BundleCampaign" nillable="true" type="tns:ZTB_BUNDLE_FREE_CAMPAIGN" />
+      <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SYSTEM_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TMN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TMN_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="UAPP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UND_ID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="U_POLICY_BUNDLE_PACKs" nillable="true" type="q1:ArrayOfU_POLICY_BUNDLE_PACK" />
+      <xs:element minOccurs="0" name="ZBC_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="U_POLICY_BUNDLE_CAMPAIGN" nillable="true" type="tns:U_POLICY_BUNDLE_CAMPAIGN" />
+  <xs:complexType name="ZTB_BUNDLE_FREE_CAMPAIGN">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BundlePlans" nillable="true" type="tns:ArrayOfZTB_BUNDLE_FREE_PLAN" />
+      <xs:element minOccurs="0" name="EFF_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="END_APP_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="END_EFF_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="END_POLICY_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="START_APP_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="START_POLICY_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TITLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TMN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TMN_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="ZBC_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZTB_BUNDLE_FREE_CAMPAIGN" nillable="true" type="tns:ZTB_BUNDLE_FREE_CAMPAIGN" />
+  <xs:complexType name="ArrayOfZTB_BUNDLE_FREE_PLAN">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZTB_BUNDLE_FREE_PLAN" nillable="true" type="tns:ZTB_BUNDLE_FREE_PLAN" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZTB_BUNDLE_FREE_PLAN" nillable="true" type="tns:ArrayOfZTB_BUNDLE_FREE_PLAN" />
+  <xs:complexType name="ZTB_BUNDLE_FREE_PLAN">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AGENT_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_BLOCK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_CODE2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUMM" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="WORK_GROUP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZBC_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ZTB_BUNDLE_FREE_CAMPAIGN" nillable="true" type="tns:ZTB_BUNDLE_FREE_CAMPAIGN" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="ZTB_PLAN" nillable="true" type="q2:ZTB_PLAN" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZTB_BUNDLE_FREE_PLAN" nillable="true" type="tns:ZTB_BUNDLE_FREE_PLAN" />
+  <xs:complexType name="U_OUTSIDE_SERVICE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="OUTSIDE_SERVICE" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="UPD_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPD_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="U_OUTSIDE_SERVICE" nillable="true" type="tns:U_OUTSIDE_SERVICE" />
+</xs:schema>

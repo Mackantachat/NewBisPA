@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="SendSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="param" type="tns:Param_SMS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Param_SMS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_SMS_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_ORG_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="OFFICE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SEND_DT" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SEND_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SENDING_STATUS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UPD_DT" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERR_CODE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_SMS_TYPE_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="SENDER_NAME" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="APPLICATION_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERR_MESSAGE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SMS_POLICY_SENDING" type="tns:SMS_POLICY_SENDING" />
+          <s:element minOccurs="0" maxOccurs="1" name="SMS_RECIPIENT_PERSON_Collection" type="tns:ArrayOfSMS_RECIPIENT_PERSON" />
+          <s:element minOccurs="0" maxOccurs="1" name="SMS_REFERENCE_Collection" type="tns:ArrayOfSMS_REFERENCE" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SMS_POLICY_SENDING">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_SMS_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="POLICY_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="JOB_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SUBJOB_CODE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DUE_DT" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="POL_YR" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="POL_LT" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SEND_TYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SEND_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SMSTYPE_CODE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSMS_RECIPIENT_PERSON">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SMS_RECIPIENT_PERSON" nillable="true" type="tns:SMS_RECIPIENT_PERSON" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SMS_RECIPIENT_PERSON">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_SMS_RECIPIENT_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_SMS_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECIPIENT_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MOBILE_NO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECIPIENT_REF" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RECIPIENT_TYPE" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SURNAME" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BIRTH_DT" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDCARD_NO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRIPTION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_TYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REF_TABLE_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REF_COLUMN_NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="B_SMS_PERSON" type="tns:ZTB_SMS_PERSON" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZTB_SMS_PERSON">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_SMS_RECIPIENT_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="NAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SURNAME" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BIRTH_DT" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDCARD_NO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSMS_REFERENCE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SMS_REFERENCE" nillable="true" type="tns:SMS_REFERENCE" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SMS_REFERENCE">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ZTB_SMS_REFERENCE">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="DESCRIPTION" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DATA_TYPE" nillable="true" type="s1:char" />
+              <s:element minOccurs="0" maxOccurs="1" name="REF_TABLE_NAME" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="REF_COLUMN_NAME" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ZTB_SMS_REFERENCE">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_SMS_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="REFERENCE_CODE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="REFERENCE_TYPE" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendSMSResult" type="tns:ProcessResult" />
+            <s:element minOccurs="0" maxOccurs="1" name="param" type="tns:Param_SMS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ProcessResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Successed" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSMS_Send_Result">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get" type="tns:SMS_Get_Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SMS_Get_Result">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SMS_REFERENCE">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Sender" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Job" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SubJob" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PolicyID" nillable="true" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="PolicyNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CertificateNo" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="StartDate" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="EndDate" nillable="true" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="PhoneNo" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetSMS_Send_ResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSMS_Send_ResultResult" type="tns:ArrayOfSMS_Send_Result" />
+            <s:element minOccurs="0" maxOccurs="1" name="pr" type="tns:ProcessResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSMS_Send_Result">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SMS_Send_Result" nillable="true" type="tns:SMS_Send_Result" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SMS_Send_Result">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sender" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PolicyID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="PolicyNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CertNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SMS_RECIPIENT_PERSON_Collection" type="tns:ArrayOfSMS_RECIPIENT_PERSON" />
+          <s:element minOccurs="0" maxOccurs="1" name="SendStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SendDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Job" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubJob" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Job_Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubJob_Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZTB_SMS_ERROR" type="tns:ZTB_SMS_ERROR" />
+          <s:element minOccurs="0" maxOccurs="1" name="SMS_REFERENCE" type="tns:SMS_REFERENCE" />
+          <s:element minOccurs="0" maxOccurs="1" name="SMS_TYPE_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SMS_TYPE_DESCRIPTION" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZTB_SMS_ERROR">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ERR_CODE" nillable="true" type="s1:char" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERR_DESC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERR_DESC_TH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="B_SMS_Collection" type="tns:ArrayOfZTB_SMS" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfZTB_SMS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ZTB_SMS" nillable="true" type="tns:ZTB_SMS" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZTB_SMS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_SMS_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_ORG_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="OFFICE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SEND_DT" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SEND_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SENDING_STATUS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UPD_DT" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERR_CODE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_SMS_TYPE_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="SENDER_NAME" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="APPLICATION_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="B_SMS_POLICY" type="tns:ZTB_SMS_POLICY" />
+          <s:element minOccurs="0" maxOccurs="1" name="B_SMS_RECIPIENT_Collection" type="tns:ArrayOfZTB_SMS_RECIPIENT" />
+          <s:element minOccurs="0" maxOccurs="1" name="B_SMS_REFERENCE" type="tns:ZTB_SMS_REFERENCE" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZTB_SMS_POLICY">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_SMS_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="POLICY_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="JOB_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SUBJOB_CODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JOB_DESCRIPTION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SUBJOB_DESCRIPTION" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DUE_DT" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="POL_YR" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="POL_LT" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SEND_TYPE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SEND_CODE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfZTB_SMS_RECIPIENT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ZTB_SMS_RECIPIENT" nillable="true" type="tns:ZTB_SMS_RECIPIENT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ZTB_SMS_RECIPIENT">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_SMS_RECIPIENT_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZTB_SMS_ID" nillable="true" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECIPIENT_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MOBILE_NO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RECIPIENT_REF" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RECIPIENT_TYPE" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="B_SMS_PERSON" type="tns:ZTB_SMS_PERSON" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSMS_Send_ResultSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSMS_Send_Result" />
+  </wsdl:message>
+  <wsdl:message name="GetSMS_Send_ResultSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSMS_Send_ResultResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Sms_SvcSoap">
+    <wsdl:operation name="SendSMS">
+      <wsdl:input message="tns:SendSMSSoapIn" />
+      <wsdl:output message="tns:SendSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSMS_Send_Result">
+      <wsdl:input message="tns:GetSMS_Send_ResultSoapIn" />
+      <wsdl:output message="tns:GetSMS_Send_ResultSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Sms_SvcSoap" type="tns:Sms_SvcSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendSMS">
+      <soap:operation soapAction="http://tempuri.org/SendSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMS_Send_Result">
+      <soap:operation soapAction="http://tempuri.org/GetSMS_Send_Result" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Sms_SvcSoap12" type="tns:Sms_SvcSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendSMS">
+      <soap12:operation soapAction="http://tempuri.org/SendSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSMS_Send_Result">
+      <soap12:operation soapAction="http://tempuri.org/GetSMS_Send_Result" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Sms_Svc">
+    <wsdl:port name="Sms_SvcSoap" binding="tns:Sms_SvcSoap">
+      <soap:address location="http://mvcsvc.bla.co.th:88/SMS_Wsvc/SMS_Wsvc.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Sms_SvcSoap12" binding="tns:Sms_SvcSoap12">
+      <soap12:address location="http://mvcsvc.bla.co.th:88/SMS_Wsvc/SMS_Wsvc.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

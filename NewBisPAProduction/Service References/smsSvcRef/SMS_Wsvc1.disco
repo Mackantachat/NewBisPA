@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://mvcsvc.bla.co.th:88/SMS_Wsvc/SMS_Wsvc.asmx?wsdl" docRef="http://mvcsvc.bla.co.th:88/SMS_Wsvc/SMS_Wsvc.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://mvcsvc.bla.co.th:88/SMS_Wsvc/SMS_Wsvc.asmx" xmlns:q1="http://tempuri.org/" binding="q1:Sms_SvcSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://mvcsvc.bla.co.th:88/SMS_Wsvc/SMS_Wsvc.asmx" xmlns:q2="http://tempuri.org/" binding="q2:Sms_SvcSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="db6ba717-020b-44ed-8f47-769f9a746cd2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws2.bla.co.th/LetterServiceWcfSvc/LetterServiceWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LetterServiceWcf.xsd" MetadataType="Schema" ID="9fe2ec2b-b2cf-4df9-a8bd-c338f53cedb6" SourceId="1" SourceUrl="http://ws2.bla.co.th/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="LetterServiceWcf1.xsd" MetadataType="Schema" ID="c7e93f44-4a3c-4ff0-86fc-23c36e8b6f13" SourceId="1" SourceUrl="http://ws2.bla.co.th/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="LetterServiceWcf2.xsd" MetadataType="Schema" ID="83080886-7458-408c-81c8-b7f7bc924355" SourceId="1" SourceUrl="http://ws2.bla.co.th/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="LetterServiceWcf3.xsd" MetadataType="Schema" ID="e9f20e36-8595-4aae-8e81-d5d0808b9624" SourceId="1" SourceUrl="http://ws2.bla.co.th/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="LetterServiceWcf.disco" MetadataType="Disco" ID="39eb96d7-3691-4db4-a38e-a7ec0c9c8533" SourceId="1" SourceUrl="http://ws2.bla.co.th/LetterServiceWcfSvc/LetterServiceWcf.svc?disco" />
+    <MetadataFile FileName="LetterServiceWcf5.xsd" MetadataType="Schema" ID="66f58090-e124-4e1f-9b2e-793098e96cb7" SourceId="1" SourceUrl="http://ws2.bla.co.th/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd5" />
+    <MetadataFile FileName="LetterServiceWcf4.xsd" MetadataType="Schema" ID="d91c4fe0-cd00-4e2e-9b08-12713973aaf5" SourceId="1" SourceUrl="http://ws2.bla.co.th/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd4" />
+    <MetadataFile FileName="LetterService.wsdl" MetadataType="Wsdl" ID="1b4d2deb-9997-4bec-a203-f9625c08457f" SourceId="1" SourceUrl="http://ws2.bla.co.th/LetterServiceWcfSvc/LetterServiceWcf.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

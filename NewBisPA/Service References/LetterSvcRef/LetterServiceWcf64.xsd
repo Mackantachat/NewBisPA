@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LetterService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LetterService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfLS_FILE_CONTROL_LOG">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LS_FILE_CONTROL_LOG" nillable="true" type="tns:LS_FILE_CONTROL_LOG" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLS_FILE_CONTROL_LOG" nillable="true" type="tns:ArrayOfLS_FILE_CONTROL_LOG" />
+  <xs:complexType name="LS_FILE_CONTROL_LOG">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ACCESS_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="APPLICATION_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="CONTENT_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONTROL_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="CREATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOWNLOADED" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FILE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FILE_PATH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OFFICE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ORG_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="UPDATE_BY" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LS_FILE_CONTROL_LOG" nillable="true" type="tns:LS_FILE_CONTROL_LOG" />
+  <xs:complexType name="DocumentFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileData" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifyDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentFile" nillable="true" type="tns:DocumentFile" />
+  <xs:complexType name="LS_FILE_CONTROL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APPLICATION_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="APPLICATION_ID2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONTENT_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONTROL_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="CONTROL_ID2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATE_BY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CREATE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FILE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FILE_PATH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OFFICE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ORG_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ORG_ID2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATE_BY" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LS_FILE_CONTROL" nillable="true" type="tns:LS_FILE_CONTROL" />
+  <xs:complexType name="ArrayOfLS_SETTING">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LS_SETTING" nillable="true" type="tns:LS_SETTING" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLS_SETTING" nillable="true" type="tns:ArrayOfLS_SETTING" />
+  <xs:complexType name="LS_SETTING">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ROOT_DIRECTORY" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LS_SETTING" nillable="true" type="tns:LS_SETTING" />
+  <xs:complexType name="Mail">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="AttachFileCollection" nillable="true" type="q1:DataFileCollection" />
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Cc" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Encoding" type="tns:MailEncoding" />
+      <xs:element minOccurs="0" name="From" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsBodyHtml" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="To" nillable="true" type="q3:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Mail" nillable="true" type="tns:Mail" />
+  <xs:simpleType name="MailEncoding">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Windows874" />
+      <xs:enumeration value="UTF8" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MailEncoding" nillable="true" type="tns:MailEncoding" />
+  <xs:complexType name="ArrayOfRecipient">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Recipient" nillable="true" type="tns:Recipient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecipient" nillable="true" type="tns:ArrayOfRecipient" />
+  <xs:complexType name="Recipient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MobilePhoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Recipient" nillable="true" type="tns:Recipient" />
+  <xs:complexType name="ArrayOfSMS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SMS" nillable="true" type="tns:SMS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSMS" nillable="true" type="tns:ArrayOfSMS" />
+  <xs:complexType name="SMS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MESSAGE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OFFICE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PASSKEY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Recipient_Collection" nillable="true" type="tns:Recipient_Collection" />
+      <xs:element minOccurs="0" name="SEND_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SEND_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZTB_ORG_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ZTB_SMS_TYPE_ID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SMS" nillable="true" type="tns:SMS" />
+  <xs:complexType name="Recipient_Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Recipient" nillable="true" type="tns:Recipient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Recipient_Collection" nillable="true" type="tns:Recipient_Collection" />
+</xs:schema>

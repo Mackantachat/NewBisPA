@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://BankruptServices.Model/2011/BankruptServiceModel" elementFormDefault="qualified" targetNamespace="http://BankruptServices.Model/2011/BankruptServiceModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="NewBankruptRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Bankrupt" nillable="true" type="tns:Bankrupt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Bankrupt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SysID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JudgmentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedNote" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankruptStatus" nillable="true" type="tns:BankruptStatus" />
+      <xs:element minOccurs="0" name="RegisterCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegisterType" type="xs:int" />
+      <xs:element minOccurs="0" name="KeyCreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="KeyCreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KeyCreatedNote" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankruptLogCollection" nillable="true" type="tns:BankruptLogCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bankrupt" nillable="true" type="tns:Bankrupt" />
+  <xs:complexType name="BankruptStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StatusCode" type="xs:int" />
+      <xs:element minOccurs="0" name="Detail" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BankruptStatus" nillable="true" type="tns:BankruptStatus" />
+  <xs:complexType name="BankruptLogCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BankruptLog" nillable="true" type="tns:BankruptLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BankruptLogCollection" nillable="true" type="tns:BankruptLogCollection" />
+  <xs:complexType name="BankruptLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TxnID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SysID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JudgmentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedNote" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankruptStatus" nillable="true" type="tns:BankruptStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BankruptLog" nillable="true" type="tns:BankruptLog" />
+  <xs:element name="NewBankruptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreatedOn" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBankruptRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Bankrupt" nillable="true" type="tns:Bankrupt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBankruptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModifiedOn" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankruptByRegIDRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankruptByRegIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Bankrupt" nillable="true" type="tns:Bankrupt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadBankruptByNameRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchLname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SearchName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SearchType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadBankruptByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BankruptCollection" nillable="true" type="tns:BankruptCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BankruptCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Bankrupt" nillable="true" type="tns:Bankrupt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BankruptCollection" nillable="true" type="tns:BankruptCollection" />
+  <xs:element name="LoadBankruptLogBySysIDRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SysID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadBankruptLogBySysIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BankruptLogCollection" nillable="true" type="tns:BankruptLogCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSysIDByRegIDRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSysIDByRegIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SysID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadBankruptLogByNameRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchLname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SearchName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SearchType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadBankruptLogByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BankruptCollection" nillable="true" type="tns:BankruptCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadBankruptLogByRegIDRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchRegisterCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadBankruptLogByRegIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BankruptCollection" nillable="true" type="tns:BankruptCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifiedOn" type="xs:dateTime" />
+  <xs:element name="LoadBankruptRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadBankruptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BankruptCollection" nillable="true" type="tns:BankruptCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankruptRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankruptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Bankrupt" nillable="true" type="tns:Bankrupt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

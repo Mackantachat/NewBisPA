@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranettest/CashierWcfSvc/CashierWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Cashier.DataContract" />
+  <xs:import schemaLocation="http://intranettest/CashierWcfSvc/CashierWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+  <xs:element name="GetBLA_V_SUSPENSE_ByAppNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="APP_NUMBER" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBLA_V_SUSPENSE_ByAppNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Cashier.DataContract" minOccurs="0" name="GetBLA_V_SUSPENSE_ByAppNoResult" nillable="true" type="q1:ArrayOfBLA_V_SUSPENSE" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pr" nillable="true" type="q2:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBLA_V_SUSPENSE_ByIsisAppRegId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="APP_REGISTER_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBLA_V_SUSPENSE_ByIsisAppRegIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Cashier.DataContract" minOccurs="0" name="GetBLA_V_SUSPENSE_ByIsisAppRegIdResult" nillable="true" type="q3:ArrayOfBLA_V_SUSPENSE" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pr" nillable="true" type="q4:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportSuspenseFromISIS">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportSuspenseFromISISResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ImportSuspenseFromISISResult" nillable="true" type="q5:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuspenseAmountSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="refDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuspenseAmountSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSuspenseAmountSummaryResult" nillable="true" type="xs:decimal" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pr" nillable="true" type="q6:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuspenseLastPayInDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuspenseLastPayInDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSuspenseLastPayInDateResult" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pr" nillable="true" type="q7:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

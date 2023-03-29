@@ -1,0 +1,2117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/PolicyService.DataContract" />
+  <xs:element name="GetAgentBehaviourLoss">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentcode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgentBehaviourLossResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgentBehaviourLossResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q1:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckIsAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="policyId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckIsAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="CheckIsAccountResult" nillable="true" type="q2:ProcessResult" />
+        <xs:element minOccurs="0" name="checkSmart" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="checkAssignment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="checkOnceSmart" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckIsParrentAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="policyId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckIsParrentAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="CheckIsParrentAccountResult" nillable="true" type="q3:ProcessResult" />
+        <xs:element minOccurs="0" name="checkSmart" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="checkAssignment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="checkOnceSmart" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sendMiniByLot">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sendMiniByLotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="sendMiniByLotResult" nillable="true" type="q4:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TerminateSuspenseConnect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ctpaId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TerminateSuspenseConnectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="TerminateSuspenseConnectResult" nillable="true" type="q5:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChannelTypeByBlock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plBlock" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChannelTypeByBlockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetChannelTypeByBlockResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q6:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMKTName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMKTNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMKTNameResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q7:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertOldStructurePolicy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appId" type="xs:long" />
+        <xs:element minOccurs="0" name="updId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertOldStructurePolicyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="InsertOldStructurePolicyResult" nillable="true" type="q8:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StampSendOldStruct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StampSendOldStructResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="StampSendOldStructResult" nillable="true" type="q9:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageMigration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DOC_TYPE" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageMigrationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetImageMigrationResult" nillable="true" type="q10:U_IMAGE_MIGRATION_Collection" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q11:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUImageMigration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UIM_ID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUImageMigrationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="UpdateUImageMigrationResult" nillable="true" type="q12:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePayerPageAmount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uAppId" type="xs:long" />
+        <xs:element minOccurs="0" name="page" type="xs:int" />
+        <xs:element minOccurs="0" name="appnameId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePayerPageAmountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="UpdatePayerPageAmountResult" nillable="true" type="q13:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckHealthFirstIsu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cardNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isuDt" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckHealthFirstIsuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckHealthFirstIsuResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q14:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveSuspense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AppNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveSuspenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="MoveSuspenseResult" nillable="true" type="q15:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUNewbisScanForAccept">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUNewbisScanForAcceptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUNewbisScanForAcceptResult" nillable="true" type="xs:long" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pr" nillable="true" type="q16:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddU_APP_ISIS_DOCUMENT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="addObject" nillable="true" type="q17:U_APP_ISIS_DOCUMENT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddU_APP_ISIS_DOCUMENTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="AddU_APP_ISIS_DOCUMENTResult" nillable="true" type="q18:ProcessResult" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="addObject" nillable="true" type="q19:U_APP_ISIS_DOCUMENT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUNewbisScanInfoForAcceptFix">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUNewbisScanInfoForAcceptFixResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetUNewbisScanInfoForAcceptFixResult" nillable="true" type="q20:ProcessResult" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="substatus" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCsSuupenseAllByAppNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCsSuupenseAllByAppNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetCsSuupenseAllByAppNoResult" nillable="true" type="q21:CS_SUSPENSE_COLLECTION" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q22:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCalPremiumByAppNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="premium" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="statusCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCalPremiumByAppNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCalPremiumByAppNoResult" type="xs:decimal" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q23:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuspenseNbrFmt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="suspenseId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSuspenseNbrFmtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSuspenseNbrFmtResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q24:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFSDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFSDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFSDetailResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q25:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCTPAIDForBillPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="amount" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCTPAIDForBillPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCTPAIDForBillPaymentResult" nillable="true" type="xs:long" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q26:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="suspenseMigration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDt" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDt" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="suspenseMigrationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="suspenseMigrationResult" nillable="true" type="q27:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstall_Policy_detail_New">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReportType_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ChannelType_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WorkGroup_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stInsDate_in" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endInsDate_in" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="stPolDate_in" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endPolDate_in" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="stPolNo_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endPolNo_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PayOption_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stStrDate_in" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endStrDate_in" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="stApprDate_in" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endApprDate_in" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Appr_flg_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="policy_holding_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appSource" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstall_Policy_detail_NewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetInstall_Policy_detail_NewResult" nillable="true" type="q28:REPORT_INSTALL_POLICY_COLLECTION" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q29:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRejectApp_Detail_New">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReportType_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ChannelType_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WorkGroup_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RejStDate_in" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="RejEndDate_in" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="RejStAppNo_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RejEndAppNo_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RejStPrem_in" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="RejEndPrem_in" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="PayOption_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stApprDate_in" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endApprDate_in" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Appr_flg_in" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appSource" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRejectApp_Detail_NewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetRejectApp_Detail_NewResult" nillable="true" type="q30:REPORT_REJECT_APP_COLLECTION" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q31:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppInProcess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appno_src" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appno_dest" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idcard" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="channel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workgroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appofc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="substatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="calprem_src" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="calprem_dest" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status_w" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateAppwait" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="und_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="forward_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="receive_case" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="und_flg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="summ_src" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="summ_des" nillable="true" type="xs:string" />
+        <xs:element xmlns:q32="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lifeplan" nillable="true" type="q32:ArrayOfstring" />
+        <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="riderplan" nillable="true" type="q33:ArrayOfstring" />
+        <xs:element minOccurs="0" name="regdt_src" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="regdt_des" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="register_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appreceive" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="chkdocnoret" type="xs:boolean" />
+        <xs:element minOccurs="0" name="scandocbrn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sddoc" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="eddoc" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="process_flg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sStatusdt" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="eStatusdt" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="apptype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appgroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dmsscan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="remarkproblem" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="suspense" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="assignment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parent_surname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="etcDoc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="smartStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reasonSmart" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="marketingType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="renewalFlg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="broker" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="autounderwriting" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endMo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppInProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetAppInProcessResult" nillable="true" type="q34:APP_IN_PROCESS_COLLECION" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q35:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUapplicationLock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UPD_IDs" nillable="true" type="q36:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUapplicationLockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetUapplicationLockResult" nillable="true" type="q37:ProcessResult" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q38:ArrayOfU_APPLICATION_LOCK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastU_APPLICATION_LOCK">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UAPP_ID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastU_APPLICATION_LOCKResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetLastU_APPLICATION_LOCKResult" nillable="true" type="q39:ProcessResult" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="applicationUpdate" nillable="true" type="q40:U_APPLICATION_LOCK" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditLock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="transaction_flg" nillable="true" type="xs:string" />
+        <xs:element xmlns:q41="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="uapp_id" nillable="true" type="q41:ArrayOflong" />
+        <xs:element minOccurs="0" name="update_flg" nillable="true" type="xs:string" />
+        <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="upd_id" nillable="true" type="q42:ArrayOfstring" />
+        <xs:element minOccurs="0" name="upd_dt" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditLockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="EditLockResult" nillable="true" type="q43:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveLock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="uapp_id" nillable="true" type="q44:ArrayOflong" />
+        <xs:element minOccurs="0" name="update_flg" nillable="true" type="xs:string" />
+        <xs:element xmlns:q45="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="upd_id" nillable="true" type="q45:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveLockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="RemoveLockResult" nillable="true" type="q46:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppInProcessByUappID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="UAPP_IDs" nillable="true" type="q47:ArrayOflong" />
+        <xs:element minOccurs="0" name="userid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppInProcessByUappIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetAppInProcessByUappIDResult" nillable="true" type="q48:APP_IN_PROCESS_COLLECION" />
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q49:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRenewalApplication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="renewalDet" nillable="true" type="q50:V_RENEWAL_DET_Collection" />
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="updId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRenewalApplicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="AddRenewalApplicationResult" nillable="true" type="q51:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckVIPbyNamecode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="unamecode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckVIPbyNamecodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckVIPbyNamecodeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVIPDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVIPDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetVIPDocumentResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEkyc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEkycResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEkycResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnameCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnameCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUnameCodeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckAppNoValid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckAppNoValidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="CheckAppNoValidResult" nillable="true" type="q52:ProcessResult" />
+        <xs:element minOccurs="0" name="checkResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTempPaymentAbsolute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTempPaymentAbsoluteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetTempPaymentAbsoluteResult" nillable="true" type="q53:ArrayOfCS_TEMP_PAYMENT_ABSOLUTE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddApproveFlag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="payMentApprovedColl" nillable="true" type="q54:PAYMENT_APPROVED_Collection" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddApproveFlagResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="AddApproveFlagResult" nillable="true" type="q55:ProcessResult" />
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="payMentApprovedColl" nillable="true" type="q56:PAYMENT_APPROVED_Collection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelNewCS_ORD_BILL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="INPOLICY" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="INHOLDING" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="INBILLNO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="INUSERID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PMODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="REASON_CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="REASON_DETAIL" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="POLICY_TYPE" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DelNewCS_ORD_BILLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="DelNewCS_ORD_BILLResult" nillable="true" type="q57:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckAgentBlackList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="param" nillable="true" type="q58:V_AG_WATCHLIST" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckAgentBlackListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckAgentBlackListResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q59:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAgentWarning">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAgentWarningResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="getAgentWarningResult" nillable="true" type="q60:V_AGENT_WARINIG" />
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q61:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkAppnameId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="param" nillable="true" type="q62:V_APPNAME_PARAM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkAppnameIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="checkAppnameIdResult" nillable="true" type="q63:AUTB_APPNAME_BY_PLAN" />
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q64:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPayerAppPage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appnameId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="uappId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPayerAppPageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getPayerAppPageResult" nillable="true" type="xs:int" />
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q65:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getGMNotInAppOldStruct">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getGMNotInAppOldStructResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="getGMNotInAppOldStructResult" nillable="true" type="q66:ArrayOfV_GM_OLDSTRUCT" />
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q67:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkParPayYearly">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plBlock" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="plCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="plCode2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkParPayYearlyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="checkParPayYearlyResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q68:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEKYCDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEKYCDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEKYCDateResult" nillable="true" type="xs:dateTime" />
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q69:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkTrainingAMLO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkTrainingAMLOResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="checkTrainingAMLOResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q70:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForSendOldStructure">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForSendOldStructureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetForSendOldStructureResult" nillable="true" type="q71:V_SEND_OLD_STRUCT_Collection" />
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q72:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMarketingTypeAllPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="planId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMarketingTypeAllPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="getMarketingTypeAllPlanResult" nillable="true" type="q73:V_MARKETING_TYPE" />
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q74:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMarketingTypeByAppNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getMarketingTypeByAppNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="getMarketingTypeByAppNoResult" nillable="true" type="q75:V_MARKETING_TYPE" />
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q76:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecialMEMO">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="APPNO" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecialMEMOResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetSpecialMEMOResult" nillable="true" type="q77:ProcessResult" />
+        <xs:element minOccurs="0" name="hasTEL" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hasOtherNotTEL" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPensionData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPensionDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetPensionDataResult" nillable="true" type="q78:ProcessResult" />
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="uappunit" nillable="true" type="q79:U_APPLICATION_UNIT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditP_POLPRINTING_EXCEPTION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="updateObject" nillable="true" type="q80:P_POLPRINTING_EXCEPTION" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditP_POLPRINTING_EXCEPTIONResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="EditP_POLPRINTING_EXCEPTIONResult" nillable="true" type="q81:ProcessResult" />
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="updateObject" nillable="true" type="q82:P_POLPRINTING_EXCEPTION" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckNdid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckNdidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckNdidResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pr" nillable="true" type="q83:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataU_AUTO_INFORCE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataU_AUTO_INFORCEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetDataU_AUTO_INFORCEResult" nillable="true" type="q84:ProcessResult" />
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q85:ArrayOfU_AUTO_INFORCE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAbsoluteProcessStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ctpa_id" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="payOption" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAbsoluteProcessStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="UpdateAbsoluteProcessStatusResult" nillable="true" type="q86:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UPDATE_U_NEWBIS_SCAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="uns" nillable="true" type="q87:U_NEWBIS_SCAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UPDATE_U_NEWBIS_SCANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="UPDATE_U_NEWBIS_SCANResult" nillable="true" type="q88:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateInforceComplete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateInforceCompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="updateInforceCompleteResult" nillable="true" type="q89:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clearAutoInforceRemain">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clearAutoInforceRemainResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="clearAutoInforceRemainResult" nillable="true" type="q90:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveP_POLPRINTING_EXCEPTION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="removedObject" nillable="true" type="q91:P_POLPRINTING_EXCEPTION" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveP_POLPRINTING_EXCEPTIONResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="RemoveP_POLPRINTING_EXCEPTIONResult" nillable="true" type="q92:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataP_POLPRINTING_EXCEPTION">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="POLICY_IDs" nillable="true" type="q93:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataP_POLPRINTING_EXCEPTIONResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetDataP_POLPRINTING_EXCEPTIONResult" nillable="true" type="q94:ProcessResult" />
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q95:ArrayOfP_POLPRINTING_EXCEPTION" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPolicy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="policy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="channel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="policyHolding" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPolicyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="CheckPolicyResult" nillable="true" type="q96:ArrayOfP_POLICY_ID" />
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q97:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PUPD_SRM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IN_AGENTCODE" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PUPD_SRMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q98:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddP_ORA_TRANSACTION_RECEIPT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="addObject" nillable="true" type="q99:P_ORA_TRANSACTION_RECEIPT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddP_ORA_TRANSACTION_RECEIPTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="AddP_ORA_TRANSACTION_RECEIPTResult" nillable="true" type="q100:ProcessResult" />
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="addObject" nillable="true" type="q101:P_ORA_TRANSACTION_RECEIPT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPayMentAccountNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="payMentApprovedColl" nillable="true" type="q102:PAYMENT_APPROVED_Collection" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPayMentAccountNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="AddPayMentAccountNewResult" nillable="true" type="q103:ProcessResult" />
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="payMentApprovedColl" nillable="true" type="q104:PAYMENT_APPROVED_Collection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNewBisDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="app_id" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNewBisDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="UpdateNewBisDateResult" nillable="true" type="q105:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOtherAppCampaign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOtherAppCampaignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOtherAppCampaignResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q106:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPOraInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPOraInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetPOraInformationResult" nillable="true" type="q107:P_ORA_TRANSACTION_DET" />
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q108:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddP_SUSPENSE_CONNECT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pSuspenseConnect" nillable="true" type="q109:P_SUSPENSE_CONNECT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddP_SUSPENSE_CONNECTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="AddP_SUSPENSE_CONNECTResult" nillable="true" type="q110:ProcessResult" />
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pSuspenseConnect" nillable="true" type="q111:P_SUSPENSE_CONNECT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCS_TEMP_PAYMENT_ABSOLUTE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="ctpaIds" nillable="true" type="q112:ArrayOfNullableOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCS_TEMP_PAYMENT_ABSOLUTEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetCS_TEMP_PAYMENT_ABSOLUTEResult" nillable="true" type="q113:ArrayOfCS_TEMP_PAYMENT_ABSOLUTE" />
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q114:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registerHappyLifeClub">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nameId" type="xs:long" />
+        <xs:element minOccurs="0" name="src" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registerHappyLifeClubResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="registerHappyLifeClubResult" nillable="true" type="q115:P_NAME_HAPPY_LIFE" />
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q116:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isHappyLifeMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nameId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isHappyLifeMemberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isHappyLifeMemberResult" type="xs:boolean" />
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pr" nillable="true" type="q117:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataP_NAME_HAPPY_LIFE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="NAME_IDs" nillable="true" type="q118:ArrayOflong" />
+        <xs:element xmlns:q119="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="MEMBER_NOs" nillable="true" type="q119:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataP_NAME_HAPPY_LIFEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetDataP_NAME_HAPPY_LIFEResult" nillable="true" type="q120:ProcessResult" />
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q121:ArrayOfP_NAME_HAPPY_LIFE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountNotUsedCreditCardForReturn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountNotUsedCreditCardForReturnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDiscountNotUsedCreditCardForReturnResult" nillable="true" type="xs:long" />
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q122:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMedicalByPlan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="pl_block" nillable="true" type="q123:char" />
+        <xs:element minOccurs="0" name="pl_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pl_code2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMedicalByPlanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/PolicyService.DataContract" minOccurs="0" name="pMedList" nillable="true" type="q124:ArrayOfAUTB_MEDICAL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INS_OVER_NEW">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PPOLID" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="PCODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PDATE" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="PYR" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PLT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PAMOUNT" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="PREMARK" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PUSER" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INS_OVER_NEWResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillFromISIS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="POLICY_HOLDING" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="P_MODE" type="xs:int" />
+        <xs:element minOccurs="0" name="YEAR" type="xs:int" />
+        <xs:element minOccurs="0" name="LOT" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillFromISISResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetBillFromISISResult" nillable="true" type="q125:ProcessResult" />
+        <xs:element minOccurs="0" name="bill_number_fmt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bill_remark" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataForRerunReceipt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="channel_type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="in_policy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="in_holding" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataForRerunReceiptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="GetDataForRerunReceiptResult" nillable="true" type="q126:ProcessResult" />
+        <xs:element minOccurs="0" name="policy_id" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="policy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="policy_holding" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isu_dt" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="custname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="guid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="uapp_id" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rerunLetterRunno">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rerunLetterRunnoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="rerunLetterRunnoResult" nillable="true" type="q127:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UPDATE_U_APP_ISIS_DOCUMENT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imageId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="office" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UPDATE_U_APP_ISIS_DOCUMENTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="UPDATE_U_APP_ISIS_DOCUMENTResult" nillable="true" type="q128:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ADD_NEW_ABS_TRAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="vAbsoluteUsed" nillable="true" type="q129:V_ABSOLUTE_USED" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ADD_NEW_ABS_TRANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="ADD_NEW_ABS_TRANResult" nillable="true" type="q130:ProcessResult" />
+        <xs:element minOccurs="0" name="ERROR_FLG" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ERROR_MSG" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckBillNoV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="POLICYHOLDING" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="POLICY_TYPE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="YR" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="LT" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckBillNoV2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckBillNoV2Result" nillable="true" type="xs:string" />
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q131:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkAgentCanSale">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AGENTCODE" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkAgentCanSaleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="checkAgentCanSaleResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q132:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fixCsReceiptOption">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rcp_id" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="policy_id" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="appno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="paymode" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="channeltype" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fixCsReceiptOptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="fixCsReceiptOptionResult" nillable="true" type="q133:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateNewBisODPremium">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="APPNO" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateNewBisODPremiumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="CalculateNewBisODPremiumResult" nillable="true" type="q134:ProcessResult" />
+        <xs:element minOccurs="0" name="LF_RATE" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="LFDSC_RATE" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="LFCTMDSC_RATE" nillable="true" type="xs:decimal" />
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/PolicyService.DataContract" minOccurs="0" name="pMedList" nillable="true" type="q135:ArrayOfAUTB_MEDICAL" />
+        <xs:element minOccurs="0" name="T_PREM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="L_PREM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="LX_PREM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="R_PREM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="RX_PREM" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalPremiumForQuotation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="customer" nillable="true" type="q136:QUOTATION_CUSTOMER_DETAIL" />
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="parent" nillable="true" type="q137:QUOTATION_PARENT_DETAIL" />
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="riders" nillable="true" type="q138:QUOTATION_RIDER_Collection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalPremiumForQuotationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="CalPremiumForQuotationResult" nillable="true" type="q139:ProcessResult" />
+        <xs:element minOccurs="0" name="LF_RATE" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="LFDSC_RATE" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="LFCTMDSC_RATE" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="T_PREM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="L_PREM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="LX_PREM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="R_PREM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="RX_PREM" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertACDebt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="YR" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="LT" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="AGENTCODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LACKPREMIUM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="ISU_DT" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="PL_BLOCK" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PL_CODE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PL_CODE2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertACDebtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="InsertACDebtResult" nillable="true" type="q140:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ADD_PD_BILLING">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HOLDING" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ISU_DT" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="YR" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="LT" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="PREM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="USER" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ADD_PD_BILLINGResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="ADD_PD_BILLINGResult" nillable="true" type="q141:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddHealth1stRenewalApplication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="renewalDet" nillable="true" type="q142:V_RENEWAL_DET_Collection" />
+        <xs:element minOccurs="0" name="updId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddHealth1stRenewalApplicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="AddHealth1stRenewalApplicationResult" nillable="true" type="q143:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="collectDataBillingV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="POLICY_HOLDING" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UAPP_ID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="BILLING_DT" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="UPD_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="system_flg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="collectDataBillingV2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="collectDataBillingV2Result" nillable="true" type="q144:ProcessResult" />
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="dataObject" nillable="true" type="q145:OrdBilling" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsRenewalByUappId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uappId" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsRenewalByUappIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsRenewalByUappIdResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pr" nillable="true" type="q146:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailCancelBillV3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BILLNO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CHANNEL_TYPE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TYPE_OF_CHANNEL" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HOLDING" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailCancelBillV3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetDetailCancelBillV3Result" nillable="true" type="q147:DETAIL_CANCEL_BILL_COLLECTION" />
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q148:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillCancelInformationV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="POLICY_ID" nillable="true" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillCancelInformationV2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetBillCancelInformationV2Result" nillable="true" type="q149:BILL_CANCEL_INFORMATION" />
+        <xs:element xmlns:q150="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q150:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewReceipt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="policy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="certNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="channelType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="receiptDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="receiptPremium" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewReceiptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="AddNewReceiptResult" nillable="true" type="q151:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateStampImageLetter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="vLetterImageCollection" nillable="true" type="q152:V_LETTER_IMAGE_Collection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateStampImageLetterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="UpdateStampImageLetterResult" nillable="true" type="q153:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCapturePrivilege">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idcardno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="birthDt" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="plBlock" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="plCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="plCode2" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCapturePrivilegeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getCapturePrivilegeResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q154:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataU_APPLICATION_SIGN_VOICE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataU_APPLICATION_SIGN_VOICEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q155="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetDataU_APPLICATION_SIGN_VOICEResult" nillable="true" type="q155:U_APPLICATION_SIGN_VOICE" />
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q156:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PCL_ALLSUM_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q157="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pcl" nillable="true" type="q157:V_PCL_ALLSUM" />
+        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/PolicyService.DataContract" minOccurs="0" name="pRiderColl" nillable="true" type="q158:P_RIDER_Collection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PCL_ALLSUM_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="PCL_ALLSUM_V2Result" nillable="true" type="q159:ProcessResult" />
+        <xs:element minOccurs="0" name="V_MED_SUM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="V_RE_SUM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="V_AUTHORIZE_SUM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="V_PRMED_SUM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="V_PRMED_FLG" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="warning" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PCL_ALLSUM_GM_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="V_IDCARD_NO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="V_APP_NO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="V_POLICYHOLDING" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PCL_ALLSUM_GM_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="PCL_ALLSUM_GM_V2Result" nillable="true" type="q160:ProcessResult" />
+        <xs:element minOccurs="0" name="V_MED_SUM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="V_RE_SUM" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="V_AUTHORIZE_SUM" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="manageAbsoluteTrans">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="manageAbsoluteTransResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="manageAbsoluteTransResult" nillable="true" type="q161:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkBankCallStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkBankCallStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="checkBankCallStatusResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q162:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLoanPromotion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCardNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isuDt" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLoanPromotionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getLoanPromotionResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q163="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q163:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendAtBranch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sendTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="agentcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendAtBranchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetSendAtBranchResult" nillable="true" type="q164:V_SENDAT_BRANCH_Collection" />
+        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q165:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TranferToAppOFGM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="app_id" type="xs:long" />
+        <xs:element minOccurs="0" name="updid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="process" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TranferToAppOFGMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q166="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="TranferToAppOFGMResult" nillable="true" type="q166:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INS_ABSOLUTE">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="obj" nillable="true" type="q167:INS_ABSOLUTE_PARAM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INS_ABSOLUTEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="INS_ABSOLUTEResult" nillable="true" type="q168:ProcessResult" />
+        <xs:element minOccurs="0" name="CTPA_ID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="MESSAGE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ERROR_FLG" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INS_ABSOLUTE_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q169="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="obj" nillable="true" type="q169:INS_ABSOLUTE_PARAM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="INS_ABSOLUTE_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="INS_ABSOLUTE_V2Result" nillable="true" type="q170:ProcessResult" />
+        <xs:element minOccurs="0" name="CTPA_ID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="CTPR_ID" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="MESSAGE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ERROR_FLG" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBLA_V_SUSPENSE_Collection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBLA_V_SUSPENSE_CollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetBLA_V_SUSPENSE_CollectionResult" nillable="true" type="q171:ArrayOfBLA_V_SUSPENSE" />
+        <xs:element xmlns:q172="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q172:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANCEL_ABS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="vAbsolute" nillable="true" type="q173:V_ABSOLUTE_CANCEL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CANCEL_ABSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="CANCEL_ABSResult" nillable="true" type="q174:ProcessResult" />
+        <xs:element minOccurs="0" name="ERROR_FLG" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ERROR_MSG" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppUpdateSuspense">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppUpdateSuspenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q175="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetAppUpdateSuspenseResult" nillable="true" type="q175:ProcessResult" />
+        <xs:element xmlns:q176="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="appNos" nillable="true" type="q176:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataP_SUSPENSE_CONNECT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q177="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CTPA_IDs" nillable="true" type="q177:ArrayOflong" />
+        <xs:element xmlns:q178="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SUSPENSE_IDs" nillable="true" type="q178:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataP_SUSPENSE_CONNECTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q179="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetDataP_SUSPENSE_CONNECTResult" nillable="true" type="q179:ProcessResult" />
+        <xs:element xmlns:q180="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="dataObjects" nillable="true" type="q180:ArrayOfP_SUSPENSE_CONNECT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportPolicyPrinting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="channel_type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workgroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sInstallDt" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="eInstallDt" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="sPolicyDt" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ePolicyDt" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="sPolicy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ePolicy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sSumm" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="eSumm" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="dmsChg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="statusID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="assignAgent" nillable="true" type="xs:string" />
+        <xs:element xmlns:q181="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="provinceArr" nillable="true" type="q181:ArrayOfstring" />
+        <xs:element minOccurs="0" name="sendTo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q182="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="branchArr" nillable="true" type="q182:ArrayOfstring" />
+        <xs:element minOccurs="0" name="policyHolding" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="remark" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pension" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appSource" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="epolicyBook" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="packplan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mktType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="freePol" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="broker" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isUnitLink" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="printPolFlg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="purchaseLetterFlg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportPolicyPrintingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q183="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetReportPolicyPrintingResult" nillable="true" type="q183:REPORT_POLICY_PRINTING_Collection" />
+        <xs:element xmlns:q184="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q184:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAppIDResult" nillable="true" type="xs:long" />
+        <xs:element xmlns:q185="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q185:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckFileProtect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckFileProtectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckFileProtectResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q186="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q186:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkMBPhoneDuplicate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mbPhone" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="checkMBPhoneDuplicateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q187="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="checkMBPhoneDuplicateResult" nillable="true" type="q187:ArrayOfV_POLICY" />
+        <xs:element xmlns:q188="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q188:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDataForNewBisSystem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q189="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="appTimeWorkColl" nillable="true" type="q189:APPLICATION_TIME_WORK_COLL" />
+        <xs:element xmlns:q190="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="uApplicationIDObj" nillable="true" type="q190:U_APPLICATION_ID" />
+        <xs:element xmlns:q191="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="uAccountIDArr" nillable="true" type="q191:ArrayOfU_ACCOUNT_ID" />
+        <xs:element xmlns:q192="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="uAddressIDArr" nillable="true" type="q192:ArrayOfU_ADDRESS_ID" />
+        <xs:element xmlns:q193="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="uBenefitIDArr" nillable="true" type="q193:ArrayOfU_BENEFIT_ID" />
+        <xs:element xmlns:q194="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="wUnderWriteIDObj" nillable="true" type="q194:W_UNDERWRITE_ID" />
+        <xs:element xmlns:q195="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="uMedicalIDArr" nillable="true" type="q195:ArrayOfU_MEDICAL_ID" />
+        <xs:element minOccurs="0" name="statusCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="suspensePremium" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="totalPremium" nillable="true" type="xs:decimal" />
+        <xs:element xmlns:q196="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="uLetterSendtoColl" nillable="true" type="q196:U_LETTER_SENDTO_Collection" />
+        <xs:element minOccurs="0" name="signatureID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="referenceNo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q197="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="newBisFlag" nillable="true" type="q197:char" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDataForNewBisSystemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q198="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="AddDataForNewBisSystemResult" nillable="true" type="q198:ProcessResult" />
+        <xs:element xmlns:q199="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="appTimeWorkColl" nillable="true" type="q199:APPLICATION_TIME_WORK_COLL" />
+        <xs:element xmlns:q200="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="uApplicationIDObj" nillable="true" type="q200:U_APPLICATION_ID" />
+        <xs:element xmlns:q201="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="uAccountIDArr" nillable="true" type="q201:ArrayOfU_ACCOUNT_ID" />
+        <xs:element xmlns:q202="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="uAddressIDArr" nillable="true" type="q202:ArrayOfU_ADDRESS_ID" />
+        <xs:element xmlns:q203="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="uBenefitIDArr" nillable="true" type="q203:ArrayOfU_BENEFIT_ID" />
+        <xs:element xmlns:q204="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="wUnderWriteIDObj" nillable="true" type="q204:W_UNDERWRITE_ID" />
+        <xs:element xmlns:q205="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="uMedicalIDArr" nillable="true" type="q205:ArrayOfU_MEDICAL_ID" />
+        <xs:element minOccurs="0" name="appRegID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dmsChage" nillable="true" type="xs:string" />
+        <xs:element xmlns:q206="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="changeAppFromStatusColl" nillable="true" type="q206:CHANGE_APP_FROM_STATUS_COLL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrokerOffice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrokerOfficeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q207="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetBrokerOfficeResult" nillable="true" type="q207:GBROKER_STRUCTURE_Collection" />
+        <xs:element xmlns:q208="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q208:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddU_NEWBIS_SCAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q209="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="addObject" nillable="true" type="q209:U_NEWBIS_SCAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddU_NEWBIS_SCANResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q210="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="AddU_NEWBIS_SCANResult" nillable="true" type="q210:ProcessResult" />
+        <xs:element xmlns:q211="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="addObject" nillable="true" type="q211:U_NEWBIS_SCAN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutoUnderwritingResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAutoUnderwritingResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q212="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetAutoUnderwritingResultResult" nillable="true" type="q212:U_AUTO_UND_RESULT" />
+        <xs:element xmlns:q213="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q213:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgentBehaviour">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentcode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgentBehaviourResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgentBehaviourResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q214="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q214:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgentBehaviourBad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentcode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgentBehaviourBadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgentBehaviourBadResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q215="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q215:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateMOBroker">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="updId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateMOBrokerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q216="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="updateMOBrokerResult" nillable="true" type="q216:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckGPFRegister">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agentcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="appDt" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckGPFRegisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckGPFRegisterResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="register_agent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workSiteType" nillable="true" type="xs:string" />
+        <xs:element xmlns:q217="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="processResult" nillable="true" type="q217:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataEV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idcardno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="refno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataEVResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q218="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="GetDataEVResult" nillable="true" type="q218:V_EVENT_DATA_Collection" />
+        <xs:element xmlns:q219="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="pr" nillable="true" type="q219:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

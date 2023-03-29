@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://BankruptServices.Model/2011/BankruptServiceModel" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BankruptService" targetNamespace="http://BankruptServices.Model/2011/BankruptServiceModel" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://BankruptServices.Model/2011/BankruptServiceModel/Imports">
+      <xsd:import schemaLocation="http://ws2.bla.co.th/BankruptServices/BankruptServiceReference.svc?xsd=xsd0" namespace="http://BankruptServices.Model/2011/BankruptServiceModel" />
+      <xsd:import schemaLocation="http://ws2.bla.co.th/BankruptServices/BankruptServiceReference.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="NewBankruptRequest">
+    <wsdl:part name="parameters" element="tns:NewBankruptRequest" />
+  </wsdl:message>
+  <wsdl:message name="NewBankruptResponse">
+    <wsdl:part name="parameters" element="tns:NewBankruptResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBankruptRequest">
+    <wsdl:part name="parameters" element="tns:UpdateBankruptRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBankruptResponse">
+    <wsdl:part name="parameters" element="tns:UpdateBankruptResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBankruptByRegIDRequest">
+    <wsdl:part name="parameters" element="tns:GetBankruptByRegIDRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetBankruptByRegIDResponse">
+    <wsdl:part name="parameters" element="tns:GetBankruptByRegIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadBankruptByNameRequest">
+    <wsdl:part name="parameters" element="tns:LoadBankruptByNameRequest" />
+  </wsdl:message>
+  <wsdl:message name="LoadBankruptByNameResponse">
+    <wsdl:part name="parameters" element="tns:LoadBankruptByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadBankruptLogBySysIDRequest">
+    <wsdl:part name="parameters" element="tns:LoadBankruptLogBySysIDRequest" />
+  </wsdl:message>
+  <wsdl:message name="LoadBankruptLogBySysIDResponse">
+    <wsdl:part name="parameters" element="tns:LoadBankruptLogBySysIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSysIDByRegIDRequest">
+    <wsdl:part name="parameters" element="tns:GetSysIDByRegIDRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetSysIDByRegIDResponse">
+    <wsdl:part name="parameters" element="tns:GetSysIDByRegIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadBankruptLogByNameRequest">
+    <wsdl:part name="parameters" element="tns:LoadBankruptLogByNameRequest" />
+  </wsdl:message>
+  <wsdl:message name="LoadBankruptLogByNameResponse">
+    <wsdl:part name="parameters" element="tns:LoadBankruptLogByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadBankruptLogByRegIDRequest">
+    <wsdl:part name="parameters" element="tns:LoadBankruptLogByRegIDRequest" />
+  </wsdl:message>
+  <wsdl:message name="LoadBankruptLogByRegIDResponse">
+    <wsdl:part name="parameters" element="tns:LoadBankruptLogByRegIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditBankruptRequest">
+    <wsdl:part name="Bankrupt" element="tns:Bankrupt" />
+  </wsdl:message>
+  <wsdl:message name="EditBankruptResponse">
+    <wsdl:part name="ModifiedOn" element="tns:ModifiedOn" />
+  </wsdl:message>
+  <wsdl:message name="LoadBankruptRequest">
+    <wsdl:part name="parameters" element="tns:LoadBankruptRequest" />
+  </wsdl:message>
+  <wsdl:message name="LoadBankruptResponse">
+    <wsdl:part name="parameters" element="tns:LoadBankruptResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBankruptRequest">
+    <wsdl:part name="parameters" element="tns:GetBankruptRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetBankruptResponse">
+    <wsdl:part name="parameters" element="tns:GetBankruptResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BankruptServiceContract">
+    <wsdl:operation name="NewBankrupt">
+      <wsdl:input wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/NewBankrupt" name="NewBankruptRequest" message="tns:NewBankruptRequest" />
+      <wsdl:output wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/NewBankruptResponse" name="NewBankruptResponse" message="tns:NewBankruptResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBankrupt">
+      <wsdl:input wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/UpdateBankrupt" name="UpdateBankruptRequest" message="tns:UpdateBankruptRequest" />
+      <wsdl:output wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/UpdateBankruptResponse" name="UpdateBankruptResponse" message="tns:UpdateBankruptResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankruptByRegID">
+      <wsdl:input wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/GetBankruptByRegID" name="GetBankruptByRegIDRequest" message="tns:GetBankruptByRegIDRequest" />
+      <wsdl:output wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/GetBankruptByRegIDResponse" name="GetBankruptByRegIDResponse" message="tns:GetBankruptByRegIDResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadBankruptByName">
+      <wsdl:input wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankruptByName" name="LoadBankruptByNameRequest" message="tns:LoadBankruptByNameRequest" />
+      <wsdl:output wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankruptByNameResponse" name="LoadBankruptByNameResponse" message="tns:LoadBankruptByNameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadBankruptLogBySysID">
+      <wsdl:input wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankruptLogBySysID" name="LoadBankruptLogBySysIDRequest" message="tns:LoadBankruptLogBySysIDRequest" />
+      <wsdl:output wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankruptLogBySysIDResponse" name="LoadBankruptLogBySysIDResponse" message="tns:LoadBankruptLogBySysIDResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSysIDByRegID">
+      <wsdl:input wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/GetSysIDByRegID" name="GetSysIDByRegIDRequest" message="tns:GetSysIDByRegIDRequest" />
+      <wsdl:output wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/GetSysIDByRegIDResponse" name="GetSysIDByRegIDResponse" message="tns:GetSysIDByRegIDResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadBankruptLogByName">
+      <wsdl:input wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankruptLogByName" name="LoadBankruptLogByNameRequest" message="tns:LoadBankruptLogByNameRequest" />
+      <wsdl:output wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankruptLogByNameResponse" name="LoadBankruptLogByNameResponse" message="tns:LoadBankruptLogByNameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadBankruptLogByRegID">
+      <wsdl:input wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankruptLogByRegID" name="LoadBankruptLogByRegIDRequest" message="tns:LoadBankruptLogByRegIDRequest" />
+      <wsdl:output wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankruptLogByRegIDResponse" name="LoadBankruptLogByRegIDResponse" message="tns:LoadBankruptLogByRegIDResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="EditBankrupt">
+      <wsdl:input wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/EditBankrupt" name="EditBankruptRequest" message="tns:EditBankruptRequest" />
+      <wsdl:output wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/EditBankruptResponse" name="EditBankruptResponse" message="tns:EditBankruptResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadBankrupt">
+      <wsdl:input wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankrupt" name="LoadBankruptRequest" message="tns:LoadBankruptRequest" />
+      <wsdl:output wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankruptResponse" name="LoadBankruptResponse" message="tns:LoadBankruptResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankrupt">
+      <wsdl:input wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/GetBankrupt" name="GetBankruptRequest" message="tns:GetBankruptRequest" />
+      <wsdl:output wsaw:Action="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/GetBankruptResponse" name="GetBankruptResponse" message="tns:GetBankruptResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Endpoint" type="tns:BankruptServiceContract">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NewBankrupt">
+      <soap:operation soapAction="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/NewBankrupt" style="document" />
+      <wsdl:input name="NewBankruptRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="NewBankruptResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBankrupt">
+      <soap:operation soapAction="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/UpdateBankrupt" style="document" />
+      <wsdl:input name="UpdateBankruptRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateBankruptResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankruptByRegID">
+      <soap:operation soapAction="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/GetBankruptByRegID" style="document" />
+      <wsdl:input name="GetBankruptByRegIDRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBankruptByRegIDResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadBankruptByName">
+      <soap:operation soapAction="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankruptByName" style="document" />
+      <wsdl:input name="LoadBankruptByNameRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LoadBankruptByNameResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadBankruptLogBySysID">
+      <soap:operation soapAction="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankruptLogBySysID" style="document" />
+      <wsdl:input name="LoadBankruptLogBySysIDRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LoadBankruptLogBySysIDResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSysIDByRegID">
+      <soap:operation soapAction="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/GetSysIDByRegID" style="document" />
+      <wsdl:input name="GetSysIDByRegIDRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetSysIDByRegIDResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadBankruptLogByName">
+      <soap:operation soapAction="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankruptLogByName" style="document" />
+      <wsdl:input name="LoadBankruptLogByNameRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LoadBankruptLogByNameResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadBankruptLogByRegID">
+      <soap:operation soapAction="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankruptLogByRegID" style="document" />
+      <wsdl:input name="LoadBankruptLogByRegIDRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LoadBankruptLogByRegIDResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditBankrupt">
+      <soap:operation soapAction="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/EditBankrupt" style="document" />
+      <wsdl:input name="EditBankruptRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="EditBankruptResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadBankrupt">
+      <soap:operation soapAction="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/LoadBankrupt" style="document" />
+      <wsdl:input name="LoadBankruptRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="LoadBankruptResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankrupt">
+      <soap:operation soapAction="http://BankruptServices.Model/2011/BankruptServiceModel/BankruptServiceContract/GetBankrupt" style="document" />
+      <wsdl:input name="GetBankruptRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBankruptResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BankruptService">
+    <wsdl:port name="Endpoint" binding="tns:Endpoint">
+      <soap:address location="http://ws2.bla.co.th/BankruptServices/BankruptServiceReference.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

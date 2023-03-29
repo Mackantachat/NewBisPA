@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NewBISService.DataContract.StructureModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NewBISService.DataContract.StructureModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/NewBisWcfSvc/NewBisWcf.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" />
+  <xs:complexType name="UserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ELastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EPrename" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobilePhoneNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfficeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfficeDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OldUserId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrgDescTH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrgID" type="xs:int" />
+      <xs:element minOccurs="0" name="PreName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserInfo" nillable="true" type="tns:UserInfo" />
+  <xs:complexType name="AgentRelatedApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompoundAgent" nillable="true" type="tns:AgentRelatedDescription" />
+      <xs:element minOccurs="0" name="LicenseAgent" nillable="true" type="tns:AgentRelatedDescription" />
+      <xs:element minOccurs="0" name="SaleAgent" nillable="true" type="tns:AgentRelatedDescription" />
+      <xs:element minOccurs="0" name="SaleAgentUpline" nillable="true" type="tns:AgentRelatedDescription" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgentRelatedApplication" nillable="true" type="tns:AgentRelatedApplication" />
+  <xs:complexType name="AgentRelatedDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgentStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Licensevalidate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgentRelatedDescription" nillable="true" type="tns:AgentRelatedDescription" />
+  <xs:complexType name="UAppQuestionRemarkAnswerInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChoicesInfo" nillable="true" type="tns:UAppQuestionRemarkChoiceGroup" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="Questionare" nillable="true" type="q1:U_APPLICATION_QUESTIONAIRE" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="RemarkInfos" nillable="true" type="q2:ArrayOfU_APPLICATION_QUEST_REMARK" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UAppQuestionRemarkAnswerInfo" nillable="true" type="tns:UAppQuestionRemarkAnswerInfo" />
+  <xs:complexType name="UAppQuestionRemarkChoiceGroup">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="ChoiceNotSelected" nillable="true" type="q3:ArrayOfU_APPLICATION_QUEST_CHOICE" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="ChoiceSelected" nillable="true" type="q4:ArrayOfU_APPLICATION_QUEST_CHOICE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UAppQuestionRemarkChoiceGroup" nillable="true" type="tns:UAppQuestionRemarkChoiceGroup" />
+  <xs:complexType name="LossRatioStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EffectiveFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EffectiveTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LossRatioStatus" nillable="true" type="tns:LossRatioStatus" />
+  <xs:complexType name="DeferRatioStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeferFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DerferBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DerferDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DerferTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeferRatioStatus" nillable="true" type="tns:DeferRatioStatus" />
+  <xs:complexType name="CSTempPaymentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PayDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PolicyId" type="xs:long" />
+      <xs:element minOccurs="0" name="PremiumReceive" type="xs:long" />
+      <xs:element minOccurs="0" name="PremiumRequest" type="xs:long" />
+      <xs:element minOccurs="0" name="RenewCaseDatetime" nillable="true" type="xs:dateTime" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="Transections" nillable="true" type="q5:ArrayOfCS_TEMP_PAYMENT_ABSOLUTE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CSTempPaymentInfo" nillable="true" type="tns:CSTempPaymentInfo" />
+  <xs:complexType name="MDOMailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BRANCH_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MDO_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MDO_EMAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REG_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SALECO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SALECO_EMAIL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MDOMailInfo" nillable="true" type="tns:MDOMailInfo" />
+</xs:schema>

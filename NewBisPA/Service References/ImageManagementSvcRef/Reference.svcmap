@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4af4baf7-c02b-4764-8b4e-e1910de29223" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranetuat.bla.co.th:88/ImageManagementWcfSvc/ImageManagementWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ImagemanagementWcf.xsd" MetadataType="Schema" ID="a2ef46c8-3cc0-46ca-b043-584905b5bf0e" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImageManagementWcfSvc/ImagemanagementWcf.svc?xsd=xsd5" />
+    <MetadataFile FileName="ImagemanagementWcf1.xsd" MetadataType="Schema" ID="ad51f57f-7e79-4531-b062-9bf0b561f43a" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImageManagementWcfSvc/ImagemanagementWcf.svc?xsd=xsd4" />
+    <MetadataFile FileName="ImagemanagementWcf.disco" MetadataType="Disco" ID="395b8ad0-7a88-4e89-9ea6-b7b9ff85330b" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImageManagementWcfSvc/ImagemanagementWcf.svc?disco" />
+    <MetadataFile FileName="ImagemanagementWcf2.xsd" MetadataType="Schema" ID="3d53d7b4-2e25-4bd9-b5bf-b3b2c0366343" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImageManagementWcfSvc/ImagemanagementWcf.svc?xsd=xsd6" />
+    <MetadataFile FileName="ImagemanagementSvc.wsdl" MetadataType="Wsdl" ID="d78483f3-35f6-4c76-be7e-81f9854daee2" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImageManagementWcfSvc/ImagemanagementWcf.svc?wsdl" />
+    <MetadataFile FileName="ImagemanagementWcf3.xsd" MetadataType="Schema" ID="653e8a37-a49c-4311-92d3-4a78c0767a8a" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImageManagementWcfSvc/ImagemanagementWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="ImagemanagementWcf4.xsd" MetadataType="Schema" ID="031ec597-621a-461c-a67b-ff70aa93a275" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImageManagementWcfSvc/ImagemanagementWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="ImagemanagementWcf5.xsd" MetadataType="Schema" ID="3428648c-f7e4-4b51-afc3-c5f7cee465b6" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImageManagementWcfSvc/ImagemanagementWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="ImagemanagementWcf6.xsd" MetadataType="Schema" ID="36e84a9c-5cfd-4dcd-9fd5-06fd8a778216" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImageManagementWcfSvc/ImagemanagementWcf.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

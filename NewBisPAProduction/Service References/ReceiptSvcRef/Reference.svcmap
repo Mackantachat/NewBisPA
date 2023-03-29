@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c7b5ac30-41cc-4e3e-838d-45efe46d0df7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws3.bla.co.th:88/ReceiptWcfSvc/Service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="6a85392b-a9c6-4d31-8520-77ab12f7b931" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/ReceiptWcfSvc/Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service2.wsdl" MetadataType="Wsdl" ID="e2aef014-046a-43e9-8dd4-04231af95135" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/ReceiptWcfSvc/Service.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Service31.xsd" MetadataType="Schema" ID="90f223d0-324b-473f-9015-988a242f8ba8" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/ReceiptWcfSvc/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service32.xsd" MetadataType="Schema" ID="fa1e6c25-c775-4c34-a7d7-0759396587ab" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/ReceiptWcfSvc/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service21.wsdl" MetadataType="Wsdl" ID="ac825d35-4f61-4cf6-8104-b5be09000bcd" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/ReceiptWcfSvc/Service.svc?wsdl" />
+    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="f09caf38-73e0-4dbb-baa8-8e15298cf68d" SourceId="1" SourceUrl="http://ws3.bla.co.th:88/ReceiptWcfSvc/Service.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

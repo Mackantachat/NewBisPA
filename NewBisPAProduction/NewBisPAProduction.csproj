@@ -1,0 +1,3701 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{331AEA8F-A999-4173-B099-B2B354CBC603}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewBisPA</RootNamespace>
+    <AssemblyName>NewBisPA</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <PublishUrl>D:\PublicWeb\NewBisPA\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://intranet.bla.co.th/newbispa/</InstallUrl>
+    <UpdateUrl>http://intranet.bla.co.th/newbispa/</UpdateUrl>
+    <ProductName>ระบบพิจารณารับประกันงาน PA และขวัญบัวหลวง</ProductName>
+    <PublisherName>ฝ่ายเทคโนโลยีสารสนเทศ บมจ.กรุงเทพประกันชีวิต</PublisherName>
+    <SuiteName>ระบบงานเทคโนโลยีสารสนเทศ</SuiteName>
+    <MinimumRequiredVersion>1.0.0.480</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>571</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>72B8741D1838F32A90714689E146AD1E58A75D7D</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>NewBisPAProduction_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CheckBoxComboBox">
+      <HintPath>..\..\NewBIS\ExpertUnderwriting\userControl\CheckBoxComboBox.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v18.2.Core">
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.2">
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.2.Core">
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.2.Core">
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.2.Core">
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.2.Core">
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Core">
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.2.Core">
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2">
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.2.UI">
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.2">
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard">
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.2">
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.2">
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v18.2">
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v18.2">
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.2.Export">
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.2">
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.2.Extensions">
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v18.2">
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.9.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.9\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.WinForms.12.0.2402.15\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfiumViewer, Version=2.13.0.0, Culture=neutral, PublicKeyToken=91e4789cfb0609e0, processorArchitecture=MSIL">
+      <HintPath>..\packages\PdfiumViewer.2.13.0.0\lib\net20\PdfiumViewer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationForm.BaseControlsData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForm.Designer.cs">
+      <DependentUpon>ApplicationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForm.Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForm.Parameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForm.Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForm.Validate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomClass\DOC_ISISSHOW.cs" />
+    <Compile Include="ExceptionHandleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExceptionHandleForm.Designer.cs">
+      <DependentUpon>ExceptionHandleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormApplicationSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormApplicationSelector.designer.cs">
+      <DependentUpon>FormApplicationSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormApplicationViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormApplicationViewer.designer.cs">
+      <DependentUpon>FormApplicationViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConcatOldAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConcatOldAddress.Designer.cs">
+      <DependentUpon>FormConcatOldAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCsSuspenseDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCsSuspenseDetail.designer.cs">
+      <DependentUpon>FormCsSuspenseDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerData.designer.cs">
+      <DependentUpon>FormCustomerData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKwanbualung_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKwanbualung_Report.Designer.cs">
+      <DependentUpon>FormKwanbualung_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMemo.Designer.cs">
+      <DependentUpon>FormMemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUAppRemark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUAppRemark.Designer.cs">
+      <DependentUpon>FormUAppRemark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUnlockApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUnlockApp.designer.cs">
+      <DependentUpon>FormUnlockApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUPaymentAuthority.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUPaymentAuthority.Designer.cs">
+      <DependentUpon>frmUPaymentAuthority.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Initial_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Initial_Form.Designer.cs">
+      <DependentUpon>Initial_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library\NewBisRepository.cs" />
+    <Compile Include="Library\RenewalRepository.cs" />
+    <Compile Include="Library\Repository.cs" />
+    <Compile Include="Library\Resource\SystemConstant.cs" />
+    <Compile Include="Library\Resource\WorkGroupConstant.cs" />
+    <Compile Include="Library\SMSProvideService.cs" />
+    <Compile Include="Model\APIResponseModels\SMSResponse.cs" />
+    <Compile Include="Model\ImageApplicationDocument.cs" />
+    <Compile Include="OldCustomerDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OldCustomerDataForm.Designer.cs">
+      <DependentUpon>OldCustomerDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanSearchForm.Designer.cs">
+      <DependentUpon>PlanSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportContract\REPORT_MEMO_DETAIL.cs" />
+    <Compile Include="ReportContract\REPORT_SELECT_PRINT.cs" />
+    <Compile Include="ReportForm\DlgEditLetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\DlgEditLetter.Designer.cs">
+      <DependentUpon>DlgEditLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmCallReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmCallReport.Designer.cs">
+      <DependentUpon>frmCallReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRejectionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRejectionReport.Designer.cs">
+      <DependentUpon>frmRejectionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmRejectReportPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmRejectReportPDF.designer.cs">
+      <DependentUpon>frmRejectReportPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportAPPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmReportAPPDF.designer.cs">
+      <DependentUpon>frmReportAPPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportAppList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmReportAppList.designer.cs">
+      <DependentUpon>frmReportAppList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportCOPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmReportCOPDF.designer.cs">
+      <DependentUpon>frmReportCOPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportMODetailDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmReportMODetailDoc.Designer.cs">
+      <DependentUpon>frmReportMODetailDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm\frmReportMOPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm\frmReportMOPDF.designer.cs">
+      <DependentUpon>frmReportMOPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport_KwanBuaLung_Cancel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReport_KwanBuaLung_Cancel.Designer.cs">
+      <DependentUpon>XtraReport_KwanBuaLung_Cancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport_KwanBuaLung_Close.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReport_KwanBuaLung_Close.Designer.cs">
+      <DependentUpon>XtraReport_KwanBuaLung_Close.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport_KwanBuaLung_Policy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReport_KwanBuaLung_Policy.Designer.cs">
+      <DependentUpon>XtraReport_KwanBuaLung_Policy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport_KwanBuaLung_Region.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReport_KwanBuaLung_Region.Designer.cs">
+      <DependentUpon>XtraReport_KwanBuaLung_Region.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport_KwanBuaLung_Status.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReport_KwanBuaLung_Status.Designer.cs">
+      <DependentUpon>XtraReport_KwanBuaLung_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AccountSvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BankruptSvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CashierSvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CenterSvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DeathSvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ImageManagementSvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ImproveNewBisSvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IsisAppTransportService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LetterSvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\NewBisOnlineWcfRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\NewBisPASvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\NewBISSvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PolicySvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ReceiptSvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SecuritySvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\smsSvcRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ShowOldAdrressByNameIDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowOldAdrressByNameIDForm.Designer.cs">
+      <DependentUpon>ShowOldAdrressByNameIDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsForm\AppNameForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsForm\AppNameForm.Designer.cs">
+      <DependentUpon>AppNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsForm\BenefitControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsForm\BenefitControl.Designer.cs">
+      <DependentUpon>BenefitControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsForm\DocumentMemoForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsForm\DocumentMemoForm.Designer.cs">
+      <DependentUpon>DocumentMemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsForm\HistoryForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsForm\HistoryForm.Designer.cs">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsForm\MemoDetailForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsForm\MemoDetailForm.Designer.cs">
+      <DependentUpon>MemoDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsForm\MemoMainForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsForm\MemoMainForm.Designer.cs">
+      <DependentUpon>MemoMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsForm\OldAddressDataForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsForm\OldAddressDataForm.Designer.cs">
+      <DependentUpon>OldAddressDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsForm\SummaryDetailForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsForm\SummaryDetailForm.Designer.cs">
+      <DependentUpon>SummaryDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDocumentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewDocumentForm.designer.cs">
+      <DependentUpon>ViewDocumentForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ApplicationForm.resx">
+      <DependentUpon>ApplicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExceptionHandleForm.resx">
+      <DependentUpon>ExceptionHandleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormApplicationSelector.resx">
+      <DependentUpon>FormApplicationSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormApplicationViewer.resx">
+      <DependentUpon>FormApplicationViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConcatOldAddress.resx">
+      <DependentUpon>FormConcatOldAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCsSuspenseDetail.resx">
+      <DependentUpon>FormCsSuspenseDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerData.resx">
+      <DependentUpon>FormCustomerData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKwanbualung_Report.resx">
+      <DependentUpon>FormKwanbualung_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMemo.resx">
+      <DependentUpon>FormMemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUAppRemark.resx">
+      <DependentUpon>FormUAppRemark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUnlockApp.resx">
+      <DependentUpon>FormUnlockApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUPaymentAuthority.resx">
+      <DependentUpon>frmUPaymentAuthority.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Initial_Form.resx">
+      <DependentUpon>Initial_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OldCustomerDataForm.resx">
+      <DependentUpon>OldCustomerDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanSearchForm.resx">
+      <DependentUpon>PlanSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportForm\DlgEditLetter.resx">
+      <DependentUpon>DlgEditLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmCallReport.resx">
+      <DependentUpon>frmCallReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRejectionReport.resx">
+      <DependentUpon>frmRejectionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmRejectReportPDF.resx">
+      <DependentUpon>frmRejectReportPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportAPPDF.resx">
+      <DependentUpon>frmReportAPPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportAppList.resx">
+      <DependentUpon>frmReportAppList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportCOPDF.resx">
+      <DependentUpon>frmReportCOPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportMODetailDoc.resx">
+      <DependentUpon>frmReportMODetailDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm\frmReportMOPDF.resx">
+      <DependentUpon>frmReportMOPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\appListReport.rdlc" />
+    <EmbeddedResource Include="Report\apReport.rdlc" />
+    <EmbeddedResource Include="Report\ccReport.rdlc" />
+    <EmbeddedResource Include="Report\coReport.rdlc" />
+    <EmbeddedResource Include="Report\coReportGM.rdlc" />
+    <EmbeddedResource Include="Report\dcReport.rdlc" />
+    <EmbeddedResource Include="Report\dcReportKB.rdlc" />
+    <EmbeddedResource Include="Report\exReport.rdlc" />
+    <EmbeddedResource Include="Report\ifReport.rdlc" />
+    <EmbeddedResource Include="Report\memoGroupReport.rdlc" />
+    <EmbeddedResource Include="Report\memoReport.rdlc" />
+    <EmbeddedResource Include="Report\memoReportGM.rdlc" />
+    <EmbeddedResource Include="Report\newTmnAccReport.rdlc" />
+    <EmbeddedResource Include="Report\ntReport.rdlc" />
+    <EmbeddedResource Include="Report\ppReport.rdlc" />
+    <EmbeddedResource Include="Report\XtraReport_KwanBuaLung_Cancel.resx">
+      <DependentUpon>XtraReport_KwanBuaLung_Cancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReport_KwanBuaLung_Close.resx">
+      <DependentUpon>XtraReport_KwanBuaLung_Close.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReport_KwanBuaLung_Policy.resx">
+      <DependentUpon>XtraReport_KwanBuaLung_Policy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReport_KwanBuaLung_Region.resx">
+      <DependentUpon>XtraReport_KwanBuaLung_Region.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReport_KwanBuaLung_Status.resx">
+      <DependentUpon>XtraReport_KwanBuaLung_Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowOldAdrressByNameIDForm.resx">
+      <DependentUpon>ShowOldAdrressByNameIDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsForm\AppNameForm.resx">
+      <DependentUpon>AppNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsForm\BenefitControl.resx">
+      <DependentUpon>BenefitControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsForm\DocumentMemoForm.resx">
+      <DependentUpon>DocumentMemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsForm\HistoryForm.resx">
+      <DependentUpon>HistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsForm\MemoDetailForm.resx">
+      <DependentUpon>MemoDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsForm\MemoMainForm.resx">
+      <DependentUpon>MemoMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsForm\OldAddressDataForm.resx">
+      <DependentUpon>OldAddressDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsForm\SummaryDetailForm.resx">
+      <DependentUpon>SummaryDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewDocumentForm.resx">
+      <DependentUpon>ViewDocumentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="images\Thumbs.db" />
+    <None Include="NewBisPAProduction.csproj.bak" />
+    <None Include="NewBisPAProduction_TemporaryKey.pfx" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\ITUtility.DataFile.datasource" />
+    <None Include="Properties\DataSources\ITUtility.ProcessResult.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\AccountSvcRef\AccountService.wsdl" />
+    <None Include="Service References\AccountSvcRef\AccountWcf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountSvcRef\AccountWcf1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountSvcRef\AccountWcf2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountSvcRef\AccountWcf3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountSvcRef\NewBisPA.AccountSvcRef.ACCOUNT_PAY_OPTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BankruptSvcRef\BankruptService.wsdl" />
+    <None Include="Service References\BankruptSvcRef\BankruptServiceReference.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BankruptSvcRef\BankruptServiceReference1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BankruptSvcRef\NewBisPA.BankruptSvcRef.Bankrupt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BankruptSvcRef\NewBisPA.BankruptSvcRef.BankruptCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BankruptSvcRef\NewBisPA.BankruptSvcRef.BankruptLogCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CashierSvcRef\CashierWcf.wsdl" />
+    <None Include="Service References\CashierSvcRef\CashierWcf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CashierSvcRef\CashierWcf1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CashierSvcRef\CashierWcf2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CashierSvcRef\CashierWcf3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CashierSvcRef\NewBisPA.CashierSvcRef.BLA_V_SUSPENSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CenterSvcRef\CenterService.wsdl" />
+    <None Include="Service References\CenterSvcRef\CenterWcf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CenterSvcRef\CenterWcf1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CenterSvcRef\CenterWcf2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CenterSvcRef\CenterWcf3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CenterSvcRef\CenterWcf4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CenterSvcRef\NewBisPA.CenterSvcRef.Office.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CenterSvcRef\NewBisPA.CenterSvcRef.Organization.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CenterSvcRef\NewBisPA.CenterSvcRef.ProcessResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CenterSvcRef\NewBisPA.CenterSvcRef.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DeathSvcRef\IdCard.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeathSvcRef\IdCard1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeathSvcRef\IdCard2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeathSvcRef\IdCard3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DeathSvcRef\NewBisPA.DeathSvcRef.POPOut.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DeathSvcRef\NewBisPA.DeathSvcRef.VerifyOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DeathSvcRef\Service1.wsdl" />
+    <None Include="Service References\ImageManagementSvcRef\ImagemanagementSvc1.wsdl" />
+    <None Include="Service References\ImageManagementSvcRef\ImagemanagementWcf7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\ImagemanagementWcf71.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\ImagemanagementWcf72.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\ImagemanagementWcf73.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\ImagemanagementWcf74.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\ImagemanagementWcf75.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\ImagemanagementWcf76.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.AUTB_APP_CHANNEL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.EnumContractServerType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.FILE_TRANSFER_INFO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.IMAGE_INFO_BY_POLICY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.IMAGE_INFO_BY_TAG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.IMSDataFile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.IMS_POLICY_JOBCODE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.IMS_TO_EDM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.IS_BBL_REF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.LBDU_IMAGE_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.P_POLICY_IDENTITY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.REG_SEARCH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.SORT_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.SPECIFIC_IMAGE_INFO_BY_POLICY_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.TAG_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.TAG_DETAIL_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.TAG_INFO_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.user_model.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.U_APPPLICATION_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.U_APPROVED.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\NewBisPA.ImageManagementSvcRef.U_NEWBIS_SCAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\ImproveNewBisSvc.wsdl" />
+    <None Include="Service References\ImproveNewBisSvcRef\ImproveNewBisWcf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\ImproveNewBisWcf1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\ImproveNewBisWcf2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\ImproveNewBisWcf3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\ImproveNewBisWcf4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\ImproveNewBisWcf5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\ImproveNewBisWcf6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.APP_IN_PROCESS_COLLECION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.AUTB_MEDICAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.BILL_CANCEL_INFORMATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.BLA_V_SUSPENSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.CS_SUSPENSE_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.CS_TEMP_PAYMENT_ABSOLUTE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.DETAIL_CANCEL_BILL_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.GBROKER_STRUCTURE_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.OrdBilling.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.PAYMENT_APPROVED_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.ProcessResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.ProcessResult1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.P_NAME_HAPPY_LIFE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.P_ORA_TRANSACTION_DET.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.P_ORA_TRANSACTION_RECEIPT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.P_POLICY_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.P_POLPRINTING_EXCEPTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.P_SUSPENSE_CONNECT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.REPORT_INSTALL_POLICY_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.REPORT_POLICY_PRINTING_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.REPORT_REJECT_APP_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.U_APPLICATION_LOCK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.U_APPLICATION_SIGN_VOICE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.U_APPLICATION_UNIT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.U_APP_ISIS_DOCUMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.U_AUTO_INFORCE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.U_AUTO_UND_RESULT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.U_IMAGE_MIGRATION_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.U_NEWBIS_SCAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.V_AGENT_WARINIG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.V_EVENT_DATA_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.V_GM_OLDSTRUCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.V_MARKETING_TYPE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.V_SENDAT_BRANCH_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\NewBisPA.ImproveNewBisSvcRef.V_SEND_OLD_STRUCT_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IsisAppTransportService\ISISAppTransportService.wsdl" />
+    <None Include="Service References\IsisAppTransportService\ISISAppTransportServiceReference.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IsisAppTransportService\ISISAppTransportServiceReference1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IsisAppTransportService\ISISAppTransportServiceReference2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IsisAppTransportService\NewBisPA.IsisAppTransportService.OrdBilling.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LetterSvcRef\LetterService.wsdl" />
+    <None Include="Service References\LetterSvcRef\LetterServiceWcf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LetterSvcRef\LetterServiceWcf1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LetterSvcRef\LetterServiceWcf2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LetterSvcRef\LetterServiceWcf3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LetterSvcRef\LetterServiceWcf4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LetterSvcRef\LetterServiceWcf5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LetterSvcRef\NewBisPA.LetterSvcRef.DocumentFile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LetterSvcRef\NewBisPA.LetterSvcRef.LS_FILE_CONTROL_LOG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LetterSvcRef\NewBisPA.LetterSvcRef.LS_SETTING.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.AgentInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.AgentSaleInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ApplicationResultInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.AUTB_APPNAME_BY_PLAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.AUTB_APP_CHANNEL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.CalculateAllSummResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.CalculatePremiumResultInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.CSTempPaymentInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.CustomerConsentItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.CustomerHistoryRemarkInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.DateInfoOfInfourceResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.DeferRatioStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.EmailMessageInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.EmailReciptentInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.FlagStatusInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.GBROKER_STRUCTURE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.IMSAppDocumentUploadError.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.InfoOfCustomer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.LossRatioStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.MinimumRiderResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.MoneyLaunderingInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.PayModeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.PlanInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.PL_PACKAGE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.P_ACCOUNT_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.P_ADDRESS_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.P_NAME_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.P_PARENT_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.P_POS_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.P_POS_PAYOPTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.P_YELLOW_CARD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.RDPRE_RIDER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.SMSMessageInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.SMS_DATA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.SpecialRiderResultInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.SuspenseInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.UnderwriteStatusHistory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_APPLICATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_APPLICATION_FRAUD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_APPLICATION_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_APPROVED.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_APP_ISIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_APP_ISIS_DOCUMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_APP_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_AP_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_AUTO_INFORCE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_EVENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_EXCLUSION_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_IAPP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_LETTER_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_LFEM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_LIFE_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_MEMO_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_NAME_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_NEWBIS_SCAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_NEWBIS_SEND_LOG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_POLPRINTING_EXCEPTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_REGISTER_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_RENEWAL_CASE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_STATUS_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.U_UNDERWRITE_DECISION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.V_CO_CHOICE_ULP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.W_SUMMARY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.W_SUMMARY_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.W_SUMMARY_LETTER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.W_UNDERWRITE_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTBPlanItemInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTBULP_SUM_INSURED_MULTIPLIER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_BUNDLE_FREE_CAMPAIGN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_BUNDLE_FREE_CHANNEL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_BUNDLE_FREE_PLAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_GM_AGENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_GM_POLICY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_GM_SENDING.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_MONTHLY_PAYTIMES.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_PA_RATE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_PLAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_PLAN_MARKETING_TYPE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_PLAN_SUBMARKETING_TYPE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_RDDEPEND_RIDER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_RDPRE_RIDER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisPA.NewBisOnlineWcfRef.ZTB_USER_OFFICE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisSvc.wsdl" />
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisWcf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisWcf1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisWcf2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisWcf3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisWcf4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisWcf5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisWcf6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisWcf7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisWcf8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisWcf9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_APPNAME_BY_PLAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_APPNAME_ID_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_CHANNEL_BLOCK_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_CHANNEL_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_DATADIC_DET_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_DOCUMENT_PEND_CODE_COLL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_LETTER_SCRIPT_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_PEND_REQM_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_PRENAME_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_RELATION_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_STATUS_CAUSE_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_STATUS_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_SUBSTATUS_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.AUTB_UNDERWRITER_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.BundlePolicyForReRunItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.CDC_DESCRIPTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.CHECK_DATA_CUSTOMER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.GET_LIST_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.LBDU_CUSTOMER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.OCCUPATION_DATA_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.PA_APPLICATION_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.POLICY_ALL_OF_SUMM_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.ProcessResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.P_ADDRESS_ID_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.P_NAME_ID_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.P_PARENT_ID_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.P_PF_RENEWAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.P_POS_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.QUESTION_DATA_COLL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.SALE_AGENT_DATA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.UPolicyBundleWaitExecuteItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.U_ACCOUNT_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.U_ADDRESS_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.U_APPLICATION_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.U_APPLICATION_LOCK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.U_APP_ISIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.U_APP_ISIS_DOCUMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.U_BENEFIT_ID_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.U_LETTER_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.U_LETTER_ID_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.U_NEWBIS_SCAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.U_POLICY_BUNDLE_PACK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.U_REGISTER_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.U_SPOUSE_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.W_SUMMARY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.W_SUMMARY_LETTER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.W_UNDERWRITE_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.W_UNDERWRITE_ID_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.ZTB_PLAN_PM_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.ZTB_PM_POLICY_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPA.NewBisPASvcRef.ZTB_POST_SUBDISTRICT_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPASvc.wsdl" />
+    <None Include="Service References\NewBisPASvcRef\NewBisPASvc2.wsdl" />
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.APPLICATION_TIME_WORK_COLL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.APP_ALL_DATA_COLLECION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.APP_IN_PROCESS_COLLECION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.APP_LOCK_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.APP_NO_ITEM_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ASSIGNMENT_LETTER_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_APPLICATION_CNTRL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_APPLICATION_CNTRL_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_APPLICATION_YEAR_CNTRL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_APPNAME_ID_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_ASSIGNMENT_NOTAPPROVE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_CHANNEL_BLOCK_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_CHANNEL_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_DATADIC_DET_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_DOCUMENT_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_DOC_TRACK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_FOLLOW_SMART.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_FOLLOW_SMART_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_GEN_REFERENCE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_LETTER_ID_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_LETTER_SCRIPT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_LETTER_SCRIPT_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_MARKETING_CNTRL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_MEDICAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_MEDICAL_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_MED_CHOICE_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_OCCUPATION_XTR_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_PEND_REQM_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_PEND_REQM_GROUP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_PEND_REQM_GROUP_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_POLICY_CNTRL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_PRENAME.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_PRENAME_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_QUESTIONAIRE_ID_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_REINSURANCE_LIMIT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_RELATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_RELATION_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_SMART_CONTACT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_STATUS_CAUSE_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_STATUS_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_STRUCTURE_CNTRL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_SUBSTATUS_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_UNDERWRITER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_UNDERWRITER_CHANNEL_Collection1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.AUTB_UNDERWRITER_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.BANK_BRANCH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.BILL_CANCEL_INFORMATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.BILL_INFO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.BILL_INFORMATION_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.CANCEL_BILL_REASON_CODE_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.CDC_DESCRIPTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.CHANGE_APP_FROM_STATUS_COLL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.CSTempPaymentInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.CS_SUSPENSE_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.DeferRatioStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.DETAIL_CANCEL_BILL_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.GAG_ADR.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.GAG_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.GAG_INACTIVE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.GAG_NAME.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.GAG_NAME_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.GBBL_STRUCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.GET_DATA_SCAN_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.GET_DATA_U_APPLICATION_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.GET_LIST_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ISIS_APPLICATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.KWBL_BRANCH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.KWBL_PLAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.LIFE_PLAN_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.LossRatioStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.MDOMailInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.MinimumRiderResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.OCCUPATION_DATA_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.OLD_POLICYAPP_INC_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.OrdBilling.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.PAYMENT_APPROVED_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.PolicyByNameCodeCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.POLICY_ALL_DATA_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.POLICY_ALL_OF_SUMM_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.POSTCODE_BANK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.PRENAME_DETAIL_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ProcessResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.PS_AUTHORIZATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.PTB_OPTPAY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.PTB_OPTPAY_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.PTB_XTRA_REINSURE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_ACCOUNT_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_ADDRESS_ID_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_AML_CTF_COLL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_CONFIRM_REVENUE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_INSTALL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_NAME_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_NAME_ID_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_ORA_TRANSACTION_DET.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_PARENT_ID_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_POLPRINTING_EXCEPTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_POS_APPROVE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_POS_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_REMARK_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_SUM_REGISTER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.P_YELLOW_CARD_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.QUESTION_DATA_COLL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.RatingsheetOldPolicyApp_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.RATINGSHEET_DETAIL_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.RATINGSHEET_MEDICAL_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.RECEIPT_INFORMATION_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_APPWT_DETAIL_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_AP_DETAILLIST_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_AP_DETAIL_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_CO_DETAIL_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_CO_EXCLUDE_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_CO_PLRD_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_DC_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_INSTALL_POLICY_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_KWANBUALUNG_CANCEL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_KWANBUALUNG_CLOSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_KWANBUALUNG_POLICY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_KWANBUALUNG_REGION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_KWANBUALUNG_STATUS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_MEMO_DETAILLIST_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_MEMO_DETAIL_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_POLICY_PRINTING_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_RATING_SHEETCustomer_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_RATING_SHEET_RIDER_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_REJECTION_SEARCH_LIST_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_REJECT_APP_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_SEARCH_LIST_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.REPORT_SHOWDETAILDOC_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.RIDER_PLAN_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.SALE_AGENT_DATA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.SMS_DATA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.SMS_MEMO_STATUS_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.STATUS_HISTORY_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.UAppQuestionRemarkAnswerInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.UNIT_PENSION_VIEW1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.UPolicyBundleWaitExecuteItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_ACCOUNT_DOCUMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_ACCOUNT_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_ACCOUNT_PERSONAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_ADDRESS_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_AGENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APPLICATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APPLICATION_HOLD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APPLICATION_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APPLICATION_LOCK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APPLICATION_NAME.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APPLICATION_NAME_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APPLICATION_QUESTIONAIRE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APPLICATION_SCAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APPLICATION_SCAN_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APPLICATION_SCAN_UPDATE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APPROVED.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APP_ADDRESS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APP_BENEFIT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APP_ISIS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APP_ISIS_DOCUMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APP_ISIS_FILE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APP_ISIS_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APP_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_APP_SCAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_AP_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_ASSIGNMENT_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_ASSIGNMENT_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_BENEFIT_HOLDER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_BENEFIT_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_BENEFIT_ID_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_BENEFIT_MESSAGE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_BENEFIT_PERSON.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_COMPOUND_AGENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_CREDIT_CARD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_CUSTNAME.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_DML_PA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_DML_PA_SPOUSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_DMSNB_LOG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_DMS_CHANGE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_EDOCUMENT_CUSREGISTER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_EMAIL_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_ENG_NAME_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_EVENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_EVENT_PLAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_EXCLUSION_BYPLAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_EXCLUSION_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_EXCLUSION_DETTMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_EXCLUSION_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_EXCLUSION_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_FIRST_DISCOUNT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_HIS_MODE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_HIS_PLAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_HIS_SUMM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_IAPP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_ISIS_OTHER_DOC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_ISIS_TRANSFER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LACKPREMIUM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LETTER_AGENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LETTER_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LETTER_PRINT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LETTER_RECEIVE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LETTER_SENDOFC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LETTER_SENDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LETTER_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LFEF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LFEF_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LFEM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LFEM_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LFXOCP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LFXOCP_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LIFE_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_LIFE_RIDER_PREMIUM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_MEDICAL_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_MEDICAL_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_MEMO_DESCRIPTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_MEMO_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_MEMO_DOCUMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_MEMO_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_MEMO_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_NAME_CODE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_NAME_DOCUMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_NAME_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_NAME_MIB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_NAME_RELATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_OADDRESS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_OCCUPATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_OCCUPATION_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_OCCUPATION_SPECIAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_ORD_PA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_PAYER_ADDRESS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_PAYER_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_PAYER_ORGANIZATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_PAYER_PERSONAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_PAYMENT_APPROVE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_PAYMENT_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_PAYMENT_REFERENCE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_POLICYHOLDING.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_POLICY_SENDING.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_POLPRINTING_EXCEPTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RDEF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RDEF_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RDEM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RDEM_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RDXOCP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RDXOCP_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RDXTR.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RDXTR_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RENEWAL_CASE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RETURN_NEXTDUE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RETURN_PRM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RETURN_PRMACCTRAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RETURN_PRMCARD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RETURN_PRMCHEQUE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RETURN_PRMDRAFT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RETURN_PRMNEWAPP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RIDER_HIS_SUMM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RIDER_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_RIDER_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_SEND_SMS_ERROR.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_SMART_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_SMART_ID_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_STATUS_CAUSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_STATUS_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.U_UNDERWRITE_DECISION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_CASE_STUDY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_FINANCIAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_FINANCIAL_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_IMPARMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_IMPARMENT_DISEASE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_IMPARMENT_DISEASE_EXC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_IMPARMENT_DISEASE_EXC_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_IMPARMENT_DISEASE_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_IMPARMENT_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_IMPARMENT_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_MIB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_OTH_APPLICATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_OTH_APPLICATION_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_OTH_POLICY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_OTH_POLICY_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_PAST_HISTORY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_POSTPONE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_PROTEST.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_RATINGSHEET.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_RTS_BP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_RTS_LIQUOR.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_RTS_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_RTS_SPCMEDICAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_RTS_SPCMED_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_RTS_STDMEDICAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUBUNDERWRITE_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUMMARY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUMMARY_BENEFIT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUMMARY_BENEFIT_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUMMARY_BYEF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUMMARY_BYEM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUMMARY_BYPERCENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUMMARY_BYPLAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUMMARY_BYXOCP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUMMARY_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUMMARY_FORWARD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUMMARY_LETTER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUMMARY_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_SUMMARY_UNDERWRITER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_TREATMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_TREATMENT_BP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_TREATMENT_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_UNDERWRITE_APPLICATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_UNDERWRITE_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.W_UNDERWRITE_POLICY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_BANK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_BUNDLE_FREE_CAMPAIGN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_BUNDLE_FREE_CHANNEL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_BUNDLE_FREE_PLAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_CONSTANT2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_EM_LFRATE_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_GM_POLICY_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_MARKETING_TYPE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_MONTHLY_PAYTIMES.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_OFFICE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_PLAN_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_PLAN_MARKETING_TYPE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_PLAN_SUBMARKETING_TYPE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_POLICYOWNER_PLAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_POST_SUBDISTRICT_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_RDDEPEND_RIDER_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_RDPRE_RIDER_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_SIGNATURE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_SMS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_USER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisPA.NewBISSvcRef.ZTB_USER_OFFICE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBISSvc.wsdl" />
+    <None Include="Service References\NewBISSvcRef\NewBisWcf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisWcf1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisWcf10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisWcf2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisWcf3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisWcf4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisWcf5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisWcf6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisWcf7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisWcf8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewBISSvcRef\NewBisWcf9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.Address.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ADVANCE_PREMIUM_INFO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ADVANCE_PREMIUM_REPORT_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ALLPREPRINT_DOCUMENTS_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.AUTB_CHANNEL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.AUTB_CHANNEL_BLOCK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.AUTB_DATADIC_DET.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.AUTB_MEDICAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.AUTB_OSTATUS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.AUTB_WORKGROUP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.BANK_BRANCH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.BCT_IMG_FILE_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.BCT_TB_JOB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.BCT_TB_SUBJOB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.BENEFIT_INFO_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.BILLREP_ADVANCE_PREMIUM_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.COVER_SHEET_ADDRESS_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.COVER_SHEET_BENEFIT_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.COVER_SHEET_BILL_DETAIL_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.COVER_SHEET_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.COVER_SHEET_PRE_POLICY_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.COVER_SHEET_RIDER_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.COVER_SHEET_SUSPENSE_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.CUSTOMER_REGISTER_INFO_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.CUST_PARENT_DETAIL_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ENDORSE_ASSIGNMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.EXCLUSION_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.GBBL_STRUCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.GET_BENEFIT_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APPL_BNF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APPL_BSC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APPL_CTOFE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APPL_CUS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APPL_MO2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APPL_RDR.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APPM_BNF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APPM_BSC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APPM_CTOFE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APPM_CUS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APPM_MO2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APPM_RDR.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APPS_BSC.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.IS_APP_REGION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.KWANBUALUNG_INFO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.KWANBUALUNG_INFO_CLOSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.LETTER_KWANBUALUNG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ONCESMART_ACCOUNT_HISTORY_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ONCESMART_CASE_SELECTOR_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ONCESMART_INFO_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ONCESMART_LETTER_LIST_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ONCESMART_STATUS_HISTORY_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ONCESMART_UPDATE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ONCESMART_USED_HISTORY_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PAY_TYPE_BENEFIT_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PAY_TYPE_HISTORY_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PAY_TYPE_LETTER_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PersonalData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PL_PACKAGE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PolicyPeriod.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.POLICY_PRINTINGPREPRINT_DATA_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.POLICY_PRINTING_AUTHORIZATIONSIGNATURE_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.POLICY_PRINTING_DATA_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.POLICY_PRINTING_GAGNAME_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PS_PAY_BNF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PTB_DEDUCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PTB_DEPOSIT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PTB_JOB_ONCEACCOUNT_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PTB_LETTER_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PTB_ONCESMART_STATUS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PTB_OPTPAY_DEDUCT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PTB_SMART_AUTHORITY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PTB_SMART_AUTHORIZE_TYPE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PTB_SMART_CAUSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PTB_SMART_DOCUMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.PTB_SMART_STATUS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ACCOUNT_DOCUMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ACCOUNT_HISTORY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ACCOUNT_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ACCOUNT_PERSON.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ACCOUNT_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ACCOUNT_TMN_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ADDRESS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ADDRESS_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ADVANCE_PRM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ADVANCE_TMN_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_AGENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_AML_CTF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_APPL_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ASSIGNMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ASSIGNMENT_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ASSIGNMENT_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ASSIGNMENT_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ASSIGNMENT_WAITING_AUDIT_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ASSIGN_ACCOUNT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ASSIGN_ACCOUNT_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ASSIGN_ACCOUNT_TMN_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ASSIGN_AGENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ASSIGN_HISTORY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_COMPOUND_AGENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_CUS_ADDRESS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ED_OBENEFIT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ED_POLICY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ED_RIDER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_EMAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ENDORSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ENDORSE_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ENDORSE_ID_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_EXCLUSION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_KWANBUALUNG_FILE_CLOSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_LETTER_AGENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_LETTER_CUSTOMER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_LETTER_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_LETTER_PRINT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_LETTER_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_LFEF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_LFEM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_LFXOCP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_LIFE_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_LIFE_ID_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_LIFE_MRTA_ISSU.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_LIFE_RIDER_PREMIUM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_MEDICAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_MIB_HISTORY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_NAME.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_NAMECODE_ADDRESS_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_NAME_CODE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_NAME_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_OBENEFIT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_OCUST_RDR.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ONCESMART_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ONCESMART_IMG_FILE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ONCESMART_IMG_FILE_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_OPARENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_OPOLICY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_ORA_TRANSACTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_PARENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_PARENT_ED_OCP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_PARENT_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_PARENT_OCCUPATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_PARENT_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_PAR_ED_OCCUPATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_PAYER_ADDRESS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_PAYMENT_ACCOUNT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_PAY_BENEFIT_TYPE_DOCUMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_PAY_BENEFIT_TYPE_DOCUMENT_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_PAY_BENEFIT_TYPE_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_PAY_BENEFIT_TYPE_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_PAY_BENEFIT_TYPE_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POLICY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POLICYHOLDING.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POLICY_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POLICY_PAYER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POLICY_PRESEND.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POLICY_SENDING.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POLPRINTING.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POLPRINTING_EXCEPTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_ADDRESS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_ADVANCE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_ADVANCE_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_ADVANCE_TMN_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_BENEFIT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_EXCLUSION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_EXCLUSION_DETAIL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_EXCLUSION_DETTMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_EXCLUSION_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_NAME.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_ORGANIZATION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_PARENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_PARENT_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_PAYER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POL_PERSONAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_POS_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_REGISTER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_REGISTER_ACCIDENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_REGISTER_EF.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_REGISTER_EM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_REGISTER_HEALTH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_REGISTER_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_REGISTER_PARENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_REGISTER_RDOTH.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_REGISTER_XOCP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_RIDER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_RIDER_ADVANCE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_RIDER_ADVANCE_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_RIDER_ADVANCE_TMN_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_RIDER_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_SERVANT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_SMART_ACCOUNT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_SMART_CAUSE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_SMART_DOCUMENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_SMART_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_SMART_STATUS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_SMART_TMN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_SMART_TMN_REMARK.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_SMART_UPDATE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_STATUS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_WAIVE_PREMIUM.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_WAIVE_PREMIUM_ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_WORKSTATUS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_YELLOW_CARD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.P_YELLOW_CARD_IMPORT_RESULT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.RDPRE_RIDER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.REG_INFO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.REPORT_WAIVE_PREMIUM_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.REPORT_WAIVE_PRM_RIDER_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.RIDER_NODETAIL_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_ACCOUNT_HISTORY_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_APPROVE_DETAIL_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_CANCEL_DETAIL_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_CASE_SELECTOR_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_INFO_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_LETTER_CAUSE_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_LETTER_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_LETTER_LIST_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_OLD_ACCOUNT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_OLD_ACCOUNT_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_OLD_POLICY_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_STATUS_HISTORY_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_SUMMARIZE_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_SUMMARIZE_POLICY_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SMART_UPDATE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.SUMREP_ADVANCE_PREMIUM_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.TEMP_ACCOUNT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.VIEW_KWANBUALUNG_LETTER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.V_SMARTAPP_PRINT_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.WAIVE_PREMIUM_HIST_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.WAIVE_PREMIUM_INFO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.WAIVE_PREMIUM_REPORT_CHECKLIST_COLLECTION.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ZTB_CONSTANT1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ZTB_PLAN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ZTB_PM_POLICY.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ZTB_POLPRINTING_DATA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\NewBisPA.PolicySvcRef.ZTB_PRINTER_Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PolicySvcRef\PolicySvc1.wsdl" />
+    <None Include="Service References\PolicySvcRef\PolicyWcf8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PolicySvcRef\PolicyWcf81.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PolicySvcRef\PolicyWcf82.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PolicySvcRef\PolicyWcf83.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PolicySvcRef\PolicyWcf84.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PolicySvcRef\PolicyWcf85.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PolicySvcRef\PolicyWcf86.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PolicySvcRef\PolicyWcf87.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReceiptSvcRef\NewBisPA.ReceiptSvcRef.MyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ReceiptSvcRef\Service2.wsdl" />
+    <None Include="Service References\ReceiptSvcRef\Service21.wsdl" />
+    <None Include="Service References\ReceiptSvcRef\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReceiptSvcRef\Service31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ReceiptSvcRef\Service32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecuritySvcRef\NewBisPA.SecuritySvcRef.Application.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecuritySvcRef\NewBisPA.SecuritySvcRef.ProcessResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecuritySvcRef\NewBisPA.SecuritySvcRef.Program.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecuritySvcRef\NewBisPA.SecuritySvcRef.ProgramGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecuritySvcRef\SecurityService.wsdl" />
+    <None Include="Service References\SecuritySvcRef\SecurityWcf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecuritySvcRef\SecurityWcf1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecuritySvcRef\SecurityWcf2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecuritySvcRef\SecurityWcf3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecuritySvcRef\SecurityWcf4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\smsSvcRef\NewBisPA.smsSvcRef.Param_SMS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\smsSvcRef\NewBisPA.smsSvcRef.ProcessResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\smsSvcRef\NewBisPA.smsSvcRef.SMS_Send_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\smsSvcRef\SMS_Wsvc1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\address.png" />
+    <Content Include="images\administrative-docs.png" />
+    <Content Include="images\advertising.png" />
+    <Content Include="images\archives.png" />
+    <Content Include="images\attibutes.png" />
+    <Content Include="images\bank.png" />
+    <Content Include="images\basket.png" />
+    <Content Include="images\bestseller.png" />
+    <Content Include="images\billing.png" />
+    <Content Include="images\BLA LOGO Standard.jpg" />
+    <Content Include="images\bookmark.png" />
+    <Content Include="images\brainstorming.png" />
+    <Content Include="images\business-contact.png" />
+    <Content Include="images\busy.png" />
+    <Content Include="images\calendar.png" />
+    <Content Include="images\category.png" />
+    <Content Include="images\check.png" />
+    <Content Include="images\check16.png" />
+    <Content Include="images\collaboration.png" />
+    <Content Include="images\comment.png" />
+    <Content Include="images\communication.png" />
+    <Content Include="images\config.png" />
+    <Content Include="images\consulting.png" />
+    <Content Include="images\contact.png" />
+    <Content Include="images\cost.png" />
+    <Content Include="images\credit-card.png" />
+    <Content Include="images\credit.png" />
+    <Content Include="images\current-work.png" />
+    <Content Include="images\customers.png" />
+    <Content Include="images\cv.png" />
+    <Content Include="images\database.png" />
+    <Content Include="images\date.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\delicious.png" />
+    <Content Include="images\disket.png" />
+    <Content Include="images\document-library.png" />
+    <Content Include="images\donate.png" />
+    <Content Include="images\drawings.png" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\edit_mini.png" />
+    <Content Include="images\email.png" />
+    <Content Include="images\featured.png" />
+    <Content Include="images\feed.png" />
+    <Content Include="images\find.png" />
+    <Content Include="images\finished-work.png" />
+    <Content Include="images\flag.png" />
+    <Content Include="images\folder.png" />
+    <Content Include="images\free-for-job.png" />
+    <Content Include="images\freelance.png" />
+    <Content Include="images\full-time.png" />
+    <Content Include="images\future-projects.png" />
+    <Content Include="images\graphic-design.png" />
+    <Content Include="images\heart.png" />
+    <Content Include="images\hire-me.png" />
+    <Content Include="images\home.png" />
+    <Content Include="images\illustration.png" />
+    <Content Include="images\invoice.png" />
+    <Content Include="images\issue.png" />
+    <Content Include="images\library.png" />
+    <Content Include="images\lightbulb.png" />
+    <Content Include="images\limited-edition.png" />
+    <Content Include="images\link.png" />
+    <Content Include="images\loading-bar.gif" />
+    <Content Include="images\lock.png" />
+    <Content Include="images\login.png" />
+    <Content Include="images\Logo BLA PCL T.jpg" />
+    <Content Include="images\Logo BLA PCL.jpg" />
+    <Content Include="images\Logo BLA PCL_T_EDIT.jpg" />
+    <Content Include="images\Logo BLA UP.jpg" />
+    <Content Include="images\logout.png" />
+    <Content Include="images\milestone.png" />
+    <Content Include="images\Money-icon.png" />
+    <Content Include="images\money.jpg" />
+    <Content Include="images\my-account.png" />
+    <Content Include="images\networking.png" />
+    <Content Include="images\newbla.png" />
+    <Content Include="images\old-versions.png" />
+    <Content Include="images\order-1.png" />
+    <Content Include="images\order.png" />
+    <Content Include="images\payment-card.png" />
+    <Content Include="images\paypal.png" />
+    <Content Include="images\pen.png" />
+    <Content Include="images\pencil.png" />
+    <Content Include="images\phone.png" />
+    <Content Include="images\photography.png" />
+    <Content Include="images\plus.png" />
+    <Content Include="images\premium.png" />
+    <Content Include="images\print.png" />
+    <Content Include="images\process.png" />
+    <Content Include="images\product-1.png" />
+    <Content Include="images\product-design.png" />
+    <Content Include="images\product.png" />
+    <Content Include="images\project.png" />
+    <Content Include="images\publish.png" />
+    <Content Include="images\refresh.png" />
+    <Content Include="images\save.png" />
+    <Content Include="images\search.png" />
+    <Content Include="images\settings.png" />
+    <Content Include="images\shipping.png" />
+    <Content Include="images\showreel.png" />
+    <Content Include="images\sign-in.png" />
+    <Content Include="images\sign-out.png" />
+    <Content Include="images\sign-up.png" />
+    <Content Include="images\sitemap.png" />
+    <Content Include="images\special-offer.png" />
+    <Content Include="images\star.png" />
+    <Content Include="images\statistics.png" />
+    <Content Include="images\suppliers.png" />
+    <Content Include="images\tag.png" />
+    <Content Include="images\ticket.png" />
+    <Content Include="images\twitter.png" />
+    <Content Include="images\unlock.png" />
+    <Content Include="images\upcoming-work.png" />
+    <Content Include="images\user.png" />
+    <Content Include="images\world.png" />
+    <Content Include="images\X24.png" />
+    <Content Include="images\zoom.png" />
+    <Content Include="Resources\loading-bar.gif" />
+    <Content Include="Resources\Logo BLA UP.jpg" />
+    <None Include="Service References\ImproveNewBisSvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ImproveNewBisSvcRef\configuration.svcinfo" />
+    <None Include="Service References\ImproveNewBisSvcRef\configuration91.svcinfo" />
+    <None Include="Service References\ImproveNewBisSvcRef\ImproveNewBisWcf.disco" />
+    <None Include="Service References\NewBISSvcRef\NewBisWcf.disco" />
+    <None Include="Service References\ImageManagementSvcRef\ImagemanagementWcf1.disco" />
+    <None Include="Service References\ImageManagementSvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ImageManagementSvcRef\configuration.svcinfo" />
+    <None Include="Service References\ImageManagementSvcRef\configuration91.svcinfo" />
+    <None Include="Service References\NewBisOnlineWcfRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\NewBisOnlineWcfRef\configuration.svcinfo" />
+    <None Include="Service References\NewBisOnlineWcfRef\configuration91.svcinfo" />
+    <None Include="Service References\NewBisOnlineWcfRef\NewBisWcf.disco" />
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf2.disco" />
+    <None Include="Service References\DeathSvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DeathSvcRef\configuration.svcinfo" />
+    <None Include="Service References\DeathSvcRef\configuration91.svcinfo" />
+    <None Include="Service References\DeathSvcRef\IdCard.disco" />
+    <None Include="Service References\smsSvcRef\SMS_Wsvc1.disco" />
+    <None Include="Service References\smsSvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\smsSvcRef\configuration.svcinfo" />
+    <None Include="Service References\smsSvcRef\configuration91.svcinfo" />
+    <None Include="Service References\ReceiptSvcRef\Service1.disco" />
+    <None Include="Service References\PolicySvcRef\PolicyWcf1.disco" />
+    <None Include="Resources\isync.png" />
+    <None Include="Resources\find.png" />
+    <None Include="Service References\NewBisPASvcRef\NewBisPAWcf.disco" />
+    <None Include="Service References\SecuritySvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SecuritySvcRef\configuration.svcinfo" />
+    <None Include="Service References\SecuritySvcRef\configuration91.svcinfo" />
+    <None Include="Service References\SecuritySvcRef\SecurityWcf.disco" />
+    <None Include="Service References\ReceiptSvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ReceiptSvcRef\configuration.svcinfo" />
+    <None Include="Service References\ReceiptSvcRef\configuration91.svcinfo" />
+    <None Include="Service References\CashierSvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CashierSvcRef\configuration.svcinfo" />
+    <None Include="Service References\CashierSvcRef\configuration91.svcinfo" />
+    <None Include="Service References\CashierSvcRef\CashierWcf.disco" />
+    <None Include="Service References\AccountSvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AccountSvcRef\configuration.svcinfo" />
+    <None Include="Service References\AccountSvcRef\configuration91.svcinfo" />
+    <None Include="Service References\AccountSvcRef\AccountWcf.disco" />
+    <None Include="Service References\BankruptSvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\BankruptSvcRef\configuration.svcinfo" />
+    <None Include="Service References\BankruptSvcRef\configuration91.svcinfo" />
+    <None Include="Service References\BankruptSvcRef\BankruptServiceReference.disco" />
+    <None Include="Service References\LetterSvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\LetterSvcRef\configuration.svcinfo" />
+    <None Include="Service References\LetterSvcRef\configuration91.svcinfo" />
+    <None Include="Service References\LetterSvcRef\LetterServiceWcf.disco" />
+    <None Include="Service References\PolicySvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PolicySvcRef\configuration.svcinfo" />
+    <None Include="Service References\PolicySvcRef\configuration91.svcinfo" />
+    <None Include="Service References\CenterSvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CenterSvcRef\configuration.svcinfo" />
+    <None Include="Service References\CenterSvcRef\configuration91.svcinfo" />
+    <None Include="Service References\CenterSvcRef\CenterWcf.disco" />
+    <None Include="Service References\IsisAppTransportService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\IsisAppTransportService\configuration.svcinfo" />
+    <None Include="Service References\IsisAppTransportService\configuration91.svcinfo" />
+    <None Include="Service References\IsisAppTransportService\ISISAppTransportServiceReference.disco" />
+    <None Include="Service References\NewBisPASvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\NewBisPASvcRef\configuration.svcinfo" />
+    <None Include="Service References\NewBisPASvcRef\configuration91.svcinfo" />
+    <None Include="Service References\NewBISSvcRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\NewBISSvcRef\configuration.svcinfo" />
+    <None Include="Service References\NewBISSvcRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ITUtility\ITUtility.csproj">
+      <Project>{BF82737B-D88A-4E1E-9C2B-0DCEA7EC374F}</Project>
+      <Name>ITUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AccountSvcRef\" />
+    <WCFMetadataStorage Include="Service References\BankruptSvcRef\" />
+    <WCFMetadataStorage Include="Service References\CashierSvcRef\" />
+    <WCFMetadataStorage Include="Service References\CenterSvcRef\" />
+    <WCFMetadataStorage Include="Service References\DeathSvcRef\" />
+    <WCFMetadataStorage Include="Service References\ImageManagementSvcRef\" />
+    <WCFMetadataStorage Include="Service References\ImproveNewBisSvcRef\" />
+    <WCFMetadataStorage Include="Service References\IsisAppTransportService\" />
+    <WCFMetadataStorage Include="Service References\LetterSvcRef\" />
+    <WCFMetadataStorage Include="Service References\NewBisOnlineWcfRef\" />
+    <WCFMetadataStorage Include="Service References\NewBisPASvcRef\" />
+    <WCFMetadataStorage Include="Service References\NewBISSvcRef\" />
+    <WCFMetadataStorage Include="Service References\PolicySvcRef\" />
+    <WCFMetadataStorage Include="Service References\ReceiptSvcRef\" />
+    <WCFMetadataStorage Include="Service References\SecuritySvcRef\" />
+    <WCFMetadataStorage Include="Service References\smsSvcRef\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="ITUtility">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ITUtility.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="NewBisPA.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Newtonsoft.Json">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="nl\PdfiumViewer.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="Oracle.DataAccess">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="PdfiumViewer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Library\SystemConst\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

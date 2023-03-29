@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="urn:ReceiptWcfSvc" elementFormDefault="qualified" targetNamespace="urn:ReceiptWcfSvc" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="MyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MyResponse" nillable="true" type="tns:MyResponse" />
+</xs:schema>

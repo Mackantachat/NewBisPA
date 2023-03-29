@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5023d58e-31a7-4a34-afd0-0b5a03311dc5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranetuat.bla.co.th:88/LetterServiceWcfSvc/LetterServiceWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LetterServiceWcf6.xsd" MetadataType="Schema" ID="0c31ac36-85cc-4da4-9635-62834a85c8e0" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd4" />
+    <MetadataFile FileName="LetterServiceWcf61.xsd" MetadataType="Schema" ID="002f732f-fb1a-4f6a-858d-786bf00f393a" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd5" />
+    <MetadataFile FileName="LetterService1.wsdl" MetadataType="Wsdl" ID="117edabc-a8b0-41f9-a956-5392cae3d539" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/LetterServiceWcfSvc/LetterServiceWcf.svc?wsdl" />
+    <MetadataFile FileName="LetterServiceWcf1.disco" MetadataType="Disco" ID="b206a251-f77e-4ca0-8f17-dc34ac790dab" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/LetterServiceWcfSvc/LetterServiceWcf.svc?disco" />
+    <MetadataFile FileName="LetterServiceWcf62.xsd" MetadataType="Schema" ID="b62f8d13-af55-47e6-bf46-b12376ce6297" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="LetterServiceWcf63.xsd" MetadataType="Schema" ID="948362ec-7794-4ca4-b30e-f70be3f757ca" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="LetterServiceWcf64.xsd" MetadataType="Schema" ID="52bdcc7e-d8d1-4b95-9411-982384e7b481" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="LetterServiceWcf65.xsd" MetadataType="Schema" ID="93f72e92-eed6-4f99-9eec-700c477e8e12" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

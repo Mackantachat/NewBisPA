@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LetterService" />
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/LetterServiceWcfSvc/LetterServiceWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+  <xs:element name="GetFileControl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="applicationId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="office" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orgId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TrandateFrom" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Trandateto" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileControlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LetterService" minOccurs="0" name="GetFileControlResult" nillable="true" type="q1:ArrayOfLS_FILE_CONTROL_LOG" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="processResult" nillable="true" type="q2:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAppDeatails">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAppDeatailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectAppDeatailsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="controlId" type="xs:long" />
+        <xs:element minOccurs="0" name="downLoadBy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LetterService" minOccurs="0" name="DownloadFileResult" nillable="true" type="q3:DocumentFile" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pr" nillable="true" type="q4:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="controlId" type="xs:long" />
+        <xs:element minOccurs="0" name="deleteBy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="DeleteFileResult" nillable="true" type="q5:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/LetterService" minOccurs="0" name="fileControl" nillable="true" type="q6:LS_FILE_CONTROL" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/LetterService" minOccurs="0" name="file" nillable="true" type="q7:DocumentFile" />
+        <xs:element minOccurs="0" name="mailFlg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="UploadFileResult" nillable="true" type="q8:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddSetting">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAddSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/LetterService" minOccurs="0" name="GetAddSettingResult" nillable="true" type="q9:ArrayOfLS_SETTING" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="pr" nillable="true" type="q10:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/LetterService" minOccurs="0" name="mail" nillable="true" type="q11:Mail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SendMailResult" nillable="true" type="q12:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MESSAGE" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/LetterService" minOccurs="0" name="recipients" nillable="true" type="q13:ArrayOfRecipient" />
+        <xs:element minOccurs="0" name="ZTB_SMS_TYPE_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="ZTB_ORG_ID" type="xs:int" />
+        <xs:element minOccurs="0" name="OFFICE" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SEND_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SEND_DT" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="passKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SendSMSResult" nillable="true" type="q14:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/LetterService" minOccurs="0" name="SMS" nillable="true" type="q15:ArrayOfSMS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSMS_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="SendSMS_V2Result" nillable="true" type="q16:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadFile_fornewbis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/LetterService" minOccurs="0" name="fileControl" nillable="true" type="q17:LS_FILE_CONTROL" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/LetterService" minOccurs="0" name="file" nillable="true" type="q18:DocumentFile" />
+        <xs:element minOccurs="0" name="mailFlg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadFile_fornewbisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ITUtility" minOccurs="0" name="UploadFile_fornewbisResult" nillable="true" type="q19:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://DMSServices.Model/2010/DMSExternalCallServices" elementFormDefault="qualified" targetNamespace="http://DMSServices.Model/2010/DMSExternalCallServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ws.bla.co.th/DmsServices/DmsWcfExtServiceReference.svc?xsd=xsd2" namespace="http://DMSServices.Model/2010/DMSServices" />
+  <xs:element name="AddNewExtContentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BatchNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="CategoryID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://DMSServices.Model/2010/DMSServices" minOccurs="0" name="Content" nillable="true" type="q1:Content" />
+        <xs:element minOccurs="0" name="DocNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="SecureID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TotalPages" type="xs:int" />
+        <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewExtContentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocumentID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SeqNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextExtBatchNumberRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SecureID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextExtBatchNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BatchNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

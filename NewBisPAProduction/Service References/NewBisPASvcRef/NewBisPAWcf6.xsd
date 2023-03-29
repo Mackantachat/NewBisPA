@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NewBISService.CustomContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NewBISService.CustomContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/NewBISService" />
+  <xs:import schemaLocation="http://ws3-pro.bla.co.th:88/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" />
+  <xs:complexType name="ApplicationFraudInfo">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NewBISService" minOccurs="0" name="DeathFraud" nillable="true" type="q1:U_APPLICATION_FRAUD" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NewBISService" minOccurs="0" name="FraudModel" nillable="true" type="q2:U_APPLICATION_FRAUD_MODEL" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/NewBISService" minOccurs="0" name="RiderFraud" nillable="true" type="q3:U_APPLICATION_FRAUD" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplicationFraudInfo" nillable="true" type="tns:ApplicationFraudInfo" />
+  <xs:complexType name="ArrayOfBundlePolicyForReRunItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BundlePolicyForReRunItem" nillable="true" type="tns:BundlePolicyForReRunItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBundlePolicyForReRunItem" nillable="true" type="tns:ArrayOfBundlePolicyForReRunItem" />
+  <xs:complexType name="BundlePolicyForReRunItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APP_REMARK_FLG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="APP_REMARK_STATUS_FLG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AppId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="AppIdOwner" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="AppNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AssDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BirthDay" nillable="true" type="xs:dateTime" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" minOccurs="0" name="BundleSMS" nillable="true" type="q4:ZTB_BUNDLE_SMS" />
+      <xs:element minOccurs="0" name="CampaignName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EPOLICY_FLG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EPOLICY_IMAGE_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="EPOLICY_STATUS_FLG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EPOLICY_URL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISuDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdCardNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobilePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="PlBlock" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlCode2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlanName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Policy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyHolding" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SEND_EPOLICY_FLG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SMS_FLG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SMS_STATUS_FLG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZBC_ID" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BundlePolicyForReRunItem" nillable="true" type="tns:BundlePolicyForReRunItem" />
+</xs:schema>

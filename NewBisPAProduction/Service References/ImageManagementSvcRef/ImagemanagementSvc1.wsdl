@@ -1,0 +1,1350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ImagemanagementSvc" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IImagemanagementSvc_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+      <xsd:import schemaLocation="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ImageManagement.DataContract" />
+      <xsd:import schemaLocation="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IImagemanagementSvc_CHECK_IMAGE_ID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CHECK_IMAGE_ID" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_CHECK_IMAGE_ID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CHECK_IMAGE_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_RESERVE_IMAGE_ID_InputMessage">
+    <wsdl:part name="parameters" element="tns:RESERVE_IMAGE_ID" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_RESERVE_IMAGE_ID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RESERVE_IMAGE_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_SERVER_TYPE_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_SERVER_TYPE" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_SERVER_TYPE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_SERVER_TYPEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IMAGE_INFO_BY_POLICY_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IMAGE_INFO_BY_POLICY" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IMAGE_INFO_BY_POLICY_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IMAGE_INFO_BY_POLICYResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IMAGE_INFO_BY_TAG_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IMAGE_INFO_BY_TAG" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IMAGE_INFO_BY_TAG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IMAGE_INFO_BY_TAGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_TAG_DETAIL_WITH_APP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_TAG_DETAIL_WITH_APP" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_TAG_DETAIL_WITH_APP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_TAG_DETAIL_WITH_APPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_TAG_DATA_BY_IMAGE_ID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_TAG_DATA_BY_IMAGE_ID" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_TAG_DATA_BY_IMAGE_ID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_TAG_DATA_BY_IMAGE_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_TAG_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_TAG" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_TAG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_TAGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_LIST_BY_POLICY_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_LIST_BY_POLICY" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_LIST_BY_POLICY_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_LIST_BY_POLICYResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_APP_ID_BY_APP_NO_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_APP_ID_BY_APP_NO" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_APP_ID_BY_APP_NO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_APP_ID_BY_APP_NOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_TMN_IMAGE_InputMessage">
+    <wsdl:part name="parameters" element="tns:TMN_IMAGE" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_TMN_IMAGE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TMN_IMAGEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_EDIT_IMAGE_BY_POLICY_InputMessage">
+    <wsdl:part name="parameters" element="tns:EDIT_IMAGE_BY_POLICY" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_EDIT_IMAGE_BY_POLICY_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EDIT_IMAGE_BY_POLICYResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_EDIT_IMAGE_BY_TAG_InputMessage">
+    <wsdl:part name="parameters" element="tns:EDIT_IMAGE_BY_TAG" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_EDIT_IMAGE_BY_TAG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EDIT_IMAGE_BY_TAGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPLOAD_FILE_BY_POLICY_InputMessage">
+    <wsdl:part name="parameters" element="tns:UPLOAD_FILE_BY_POLICY" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPLOAD_FILE_BY_POLICY_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UPLOAD_FILE_BY_POLICYResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPLOAD_FILE_BY_TAG_InputMessage">
+    <wsdl:part name="parameters" element="tns:UPLOAD_FILE_BY_TAG" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPLOAD_FILE_BY_TAG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UPLOAD_FILE_BY_TAGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_FILE_BY_POLICY_InputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_FILE_BY_POLICY" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_FILE_BY_POLICY_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_FILE_BY_POLICYResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_FILE_BY_TAG_InputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_FILE_BY_TAG" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_FILE_BY_TAG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_FILE_BY_TAGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_FILE_BY_IMAGE_ID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_FILE_BY_IMAGE_ID" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_FILE_BY_IMAGE_ID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_FILE_BY_IMAGE_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_BY_IMAGE_ID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_BY_IMAGE_ID" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_BY_IMAGE_ID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_BY_IMAGE_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_BY_IMAGE_ID_CODE_InputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_BY_IMAGE_ID_CODE" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_BY_IMAGE_ID_CODE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_BY_IMAGE_ID_CODEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_BY_PATH_InputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_BY_PATH" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_BY_PATH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_BY_PATHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPLOAD_FILE_BY_TAG_RETURN_PATH_InputMessage">
+    <wsdl:part name="parameters" element="tns:UPLOAD_FILE_BY_TAG_RETURN_PATH" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPLOAD_FILE_BY_TAG_RETURN_PATH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UPLOAD_FILE_BY_TAG_RETURN_PATHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_ADD_IMAGE_INFO_BY_POLICY_InputMessage">
+    <wsdl:part name="parameters" element="tns:ADD_IMAGE_INFO_BY_POLICY" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_ADD_IMAGE_INFO_BY_POLICY_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ADD_IMAGE_INFO_BY_POLICYResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPLOAD_NEW_IMAGE_FILE_InputMessage">
+    <wsdl:part name="parameters" element="tns:UPLOAD_NEW_IMAGE_FILE" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPLOAD_NEW_IMAGE_FILE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UPLOAD_NEW_IMAGE_FILEResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendFileTransferMessageByPolicy">
+    <wsdl:part name="parameters" element="tns:SendFileTransferMessageByPolicy" />
+  </wsdl:message>
+  <wsdl:message name="SendFileTransferMessageByPolicy_Headers">
+    <wsdl:part name="FileInfo" element="tns:FileInfo" />
+    <wsdl:part name="PolicyDataInfo" element="tns:PolicyDataInfo" />
+  </wsdl:message>
+  <wsdl:message name="SendFileTransferResultMessage">
+    <wsdl:part name="parameters" element="tns:SendFileTransferResultMessage" />
+  </wsdl:message>
+  <wsdl:message name="SendFileTransferResultMessage_Headers">
+    <wsdl:part name="ProcessResult" element="tns:ProcessResult" />
+  </wsdl:message>
+  <wsdl:message name="SendFileTransferMessageByTag">
+    <wsdl:part name="parameters" element="tns:SendFileTransferMessageByTag" />
+  </wsdl:message>
+  <wsdl:message name="SendFileTransferMessageByTag_Headers">
+    <wsdl:part name="FileInfo" element="tns:FileInfo" />
+    <wsdl:part name="TagDataInfo" element="tns:TagDataInfo" />
+  </wsdl:message>
+  <wsdl:message name="SendNewFileTransferMessage">
+    <wsdl:part name="parameters" element="tns:SendNewFileTransferMessage" />
+  </wsdl:message>
+  <wsdl:message name="SendNewFileTransferMessage_Headers">
+    <wsdl:part name="DataInfo" element="tns:DataInfo" />
+    <wsdl:part name="FileInfo" element="tns:FileInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetFileTransferMessage">
+    <wsdl:part name="parameters" element="tns:GetFileTransferMessage" />
+  </wsdl:message>
+  <wsdl:message name="GetFileTransferMessage_Headers">
+    <wsdl:part name="Info" element="tns:Info" />
+  </wsdl:message>
+  <wsdl:message name="GetFileTransferResultMessage">
+    <wsdl:part name="parameters" element="tns:GetFileTransferResultMessage" />
+  </wsdl:message>
+  <wsdl:message name="GetFileTransferResultMessage_Headers">
+    <wsdl:part name="FileInfo" element="tns:FileInfo" />
+    <wsdl:part name="ProcessResult" element="tns:ProcessResult" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_ppSvc_current_InputMessage">
+    <wsdl:part name="parameters" element="tns:ppSvc_current" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_ppSvc_current_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ppSvc_currentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_ppSvc_Name_InputMessage">
+    <wsdl:part name="parameters" element="tns:ppSvc_Name" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_ppSvc_Name_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ppSvc_NameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_ppSvc_InputMessage">
+    <wsdl:part name="parameters" element="tns:ppSvc" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_ppSvc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ppSvcResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_ppSvc_CopyALL_InputMessage">
+    <wsdl:part name="parameters" element="tns:ppSvc_CopyALL" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_ppSvc_CopyALL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ppSvc_CopyALLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_DATA_U_NEWBISSCAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_DATA_U_NEWBISSCAN" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_DATA_U_NEWBISSCAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_DATA_U_NEWBISSCANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_DT_SCAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_DT_SCAN" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_DT_SCAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_DT_SCANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_REG_SEARCH_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_REG_SEARCH" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_REG_SEARCH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_REG_SEARCHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPDATE_FLAG_EDM_InputMessage">
+    <wsdl:part name="parameters" element="tns:UPDATE_FLAG_EDM" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPDATE_FLAG_EDM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UPDATE_FLAG_EDMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GetDetailForPic_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailForPic" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GetDetailForPic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailForPicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_U_NEWBIS_SCAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:U_NEWBIS_SCAN" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_U_NEWBIS_SCAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:U_NEWBIS_SCANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_U_APPROVED_InputMessage">
+    <wsdl:part name="parameters" element="tns:U_APPROVED" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_U_APPROVED_OutputMessage">
+    <wsdl:part name="parameters" element="tns:U_APPROVEDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_U_DMS_CHANGE_InputMessage">
+    <wsdl:part name="parameters" element="tns:U_DMS_CHANGE" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_U_DMS_CHANGE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:U_DMS_CHANGEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_update_scan_InputMessage">
+    <wsdl:part name="parameters" element="tns:update_scan" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_update_scan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:update_scanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_update_scan_edit_InputMessage">
+    <wsdl:part name="parameters" element="tns:update_scan_edit" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_update_scan_edit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:update_scan_editResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_update_scan_lot_InputMessage">
+    <wsdl:part name="parameters" element="tns:update_scan_lot" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_update_scan_lot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:update_scan_lotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_CHECK_FILE_BY_TAG_InputMessage">
+    <wsdl:part name="parameters" element="tns:CHECK_FILE_BY_TAG" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_CHECK_FILE_BY_TAG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CHECK_FILE_BY_TAGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_USER_MODEL_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_USER_MODEL" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_USER_MODEL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_USER_MODELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_POLCY_BY_POLICY_ID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_POLCY_BY_POLICY_ID" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_POLCY_BY_POLICY_ID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_POLCY_BY_POLICY_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPLOAD_FILE_BY_TAG__NEWBIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:UPLOAD_FILE_BY_TAG__NEWBIS" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPLOAD_FILE_BY_TAG__NEWBIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UPLOAD_FILE_BY_TAG__NEWBISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_TAG_DETAIL_WITH_APP_NEWBIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_TAG_DETAIL_WITH_APP_NEWBIS" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_TAG_DETAIL_WITH_APP_NEWBIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_TAG_DETAIL_WITH_APP_NEWBISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_TAG_DETAIL_WITH_APP_NEWBIS1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_TAG_DETAIL_WITH_APP_NEWBIS1" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_TAG_DETAIL_WITH_APP_NEWBIS1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_TAG_DETAIL_WITH_APP_NEWBIS1Response" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_AUTB_APP_CHANNEL_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_AUTB_APP_CHANNEL" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_AUTB_APP_CHANNEL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_AUTB_APP_CHANNELResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IS_BBL_REF_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IS_BBL_REF" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IS_BBL_REF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IS_BBL_REFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_CHECK_U_APPROVED_InputMessage">
+    <wsdl:part name="parameters" element="tns:CHECK_U_APPROVED" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_CHECK_U_APPROVED_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CHECK_U_APPROVEDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_CHECK_MEMO_InputMessage">
+    <wsdl:part name="parameters" element="tns:CHECK_MEMO" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_CHECK_MEMO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CHECK_MEMOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IMAGE_DETAIL_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IMAGE_DETAIL" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IMAGE_DETAIL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IMAGE_DETAILResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IMAGE_WITH_APP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IMAGE_WITH_APP" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IMAGE_WITH_APP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IMAGE_WITH_APPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_DATA_BY_TAG_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_DATA_BY_TAG" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_DATA_BY_TAG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_DATA_BY_TAGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IS_SORT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IS_SORT" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IS_SORT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IS_SORTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IMAGEID_TO_EDM_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IMAGEID_TO_EDM" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_IMAGEID_TO_EDM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_IMAGEID_TO_EDMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPDATE_IMAGEID_TO_EDM_InputMessage">
+    <wsdl:part name="parameters" element="tns:UPDATE_IMAGEID_TO_EDM" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPDATE_IMAGEID_TO_EDM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UPDATE_IMAGEID_TO_EDMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPDATE_U_APP_ISIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:UPDATE_U_APP_ISIS" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_UPDATE_U_APP_ISIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UPDATE_U_APP_ISISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_INSERT_IMAGE_TO_SORT_APP_InputMessage">
+    <wsdl:part name="parameters" element="tns:INSERT_IMAGE_TO_SORT_APP" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_INSERT_IMAGE_TO_SORT_APP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:INSERT_IMAGE_TO_SORT_APPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_CTREF_GET_IMAGE_ID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CTREF_GET_IMAGE_ID" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_CTREF_GET_IMAGE_ID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CTREF_GET_IMAGE_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_CTREF_SET_IMAGE_ID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CTREF_SET_IMAGE_ID" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_CTREF_SET_IMAGE_ID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CTREF_SET_IMAGE_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_CTREF_EDIT_IMAGE_ID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CTREF_EDIT_IMAGE_ID" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_CTREF_EDIT_IMAGE_ID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CTREF_EDIT_IMAGE_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_FILE_BY_POLICY_JOBCODE_InputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_FILE_BY_POLICY_JOBCODE" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_DOWNLOAD_FILE_BY_POLICY_JOBCODE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DOWNLOAD_FILE_BY_POLICY_JOBCODEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_LBDU_IMAGE_ID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_LBDU_IMAGE_ID" />
+  </wsdl:message>
+  <wsdl:message name="IImagemanagementSvc_GET_LBDU_IMAGE_ID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_LBDU_IMAGE_IDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IImagemanagementSvc">
+    <wsdl:operation name="CHECK_IMAGE_ID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/CHECK_IMAGE_ID" message="tns:IImagemanagementSvc_CHECK_IMAGE_ID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/CHECK_IMAGE_IDResponse" message="tns:IImagemanagementSvc_CHECK_IMAGE_ID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RESERVE_IMAGE_ID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/RESERVE_IMAGE_ID" message="tns:IImagemanagementSvc_RESERVE_IMAGE_ID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/RESERVE_IMAGE_IDResponse" message="tns:IImagemanagementSvc_RESERVE_IMAGE_ID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_SERVER_TYPE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_SERVER_TYPE" message="tns:IImagemanagementSvc_GET_SERVER_TYPE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_SERVER_TYPEResponse" message="tns:IImagemanagementSvc_GET_SERVER_TYPE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_IMAGE_INFO_BY_POLICY">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IMAGE_INFO_BY_POLICY" message="tns:IImagemanagementSvc_GET_IMAGE_INFO_BY_POLICY_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IMAGE_INFO_BY_POLICYResponse" message="tns:IImagemanagementSvc_GET_IMAGE_INFO_BY_POLICY_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_IMAGE_INFO_BY_TAG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IMAGE_INFO_BY_TAG" message="tns:IImagemanagementSvc_GET_IMAGE_INFO_BY_TAG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IMAGE_INFO_BY_TAGResponse" message="tns:IImagemanagementSvc_GET_IMAGE_INFO_BY_TAG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_TAG_DETAIL_WITH_APP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_TAG_DETAIL_WITH_APP" message="tns:IImagemanagementSvc_GET_TAG_DETAIL_WITH_APP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_TAG_DETAIL_WITH_APPResponse" message="tns:IImagemanagementSvc_GET_TAG_DETAIL_WITH_APP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_TAG_DATA_BY_IMAGE_ID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_TAG_DATA_BY_IMAGE_ID" message="tns:IImagemanagementSvc_GET_TAG_DATA_BY_IMAGE_ID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_TAG_DATA_BY_IMAGE_IDResponse" message="tns:IImagemanagementSvc_GET_TAG_DATA_BY_IMAGE_ID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_TAG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_TAG" message="tns:IImagemanagementSvc_GET_TAG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_TAGResponse" message="tns:IImagemanagementSvc_GET_TAG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_LIST_BY_POLICY">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_LIST_BY_POLICY" message="tns:IImagemanagementSvc_GET_LIST_BY_POLICY_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_LIST_BY_POLICYResponse" message="tns:IImagemanagementSvc_GET_LIST_BY_POLICY_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_APP_ID_BY_APP_NO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_APP_ID_BY_APP_NO" message="tns:IImagemanagementSvc_GET_APP_ID_BY_APP_NO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_APP_ID_BY_APP_NOResponse" message="tns:IImagemanagementSvc_GET_APP_ID_BY_APP_NO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TMN_IMAGE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/TMN_IMAGE" message="tns:IImagemanagementSvc_TMN_IMAGE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/TMN_IMAGEResponse" message="tns:IImagemanagementSvc_TMN_IMAGE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EDIT_IMAGE_BY_POLICY">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/EDIT_IMAGE_BY_POLICY" message="tns:IImagemanagementSvc_EDIT_IMAGE_BY_POLICY_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/EDIT_IMAGE_BY_POLICYResponse" message="tns:IImagemanagementSvc_EDIT_IMAGE_BY_POLICY_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EDIT_IMAGE_BY_TAG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/EDIT_IMAGE_BY_TAG" message="tns:IImagemanagementSvc_EDIT_IMAGE_BY_TAG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/EDIT_IMAGE_BY_TAGResponse" message="tns:IImagemanagementSvc_EDIT_IMAGE_BY_TAG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UPLOAD_FILE_BY_POLICY">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPLOAD_FILE_BY_POLICY" message="tns:IImagemanagementSvc_UPLOAD_FILE_BY_POLICY_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPLOAD_FILE_BY_POLICYResponse" message="tns:IImagemanagementSvc_UPLOAD_FILE_BY_POLICY_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UPLOAD_FILE_BY_TAG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPLOAD_FILE_BY_TAG" message="tns:IImagemanagementSvc_UPLOAD_FILE_BY_TAG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPLOAD_FILE_BY_TAGResponse" message="tns:IImagemanagementSvc_UPLOAD_FILE_BY_TAG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_FILE_BY_POLICY">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_FILE_BY_POLICY" message="tns:IImagemanagementSvc_DOWNLOAD_FILE_BY_POLICY_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_FILE_BY_POLICYResponse" message="tns:IImagemanagementSvc_DOWNLOAD_FILE_BY_POLICY_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_FILE_BY_TAG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_FILE_BY_TAG" message="tns:IImagemanagementSvc_DOWNLOAD_FILE_BY_TAG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_FILE_BY_TAGResponse" message="tns:IImagemanagementSvc_DOWNLOAD_FILE_BY_TAG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_FILE_BY_IMAGE_ID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_FILE_BY_IMAGE_ID" message="tns:IImagemanagementSvc_DOWNLOAD_FILE_BY_IMAGE_ID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_FILE_BY_IMAGE_IDResponse" message="tns:IImagemanagementSvc_DOWNLOAD_FILE_BY_IMAGE_ID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_BY_IMAGE_ID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_BY_IMAGE_ID" message="tns:IImagemanagementSvc_DOWNLOAD_BY_IMAGE_ID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_BY_IMAGE_IDResponse" message="tns:IImagemanagementSvc_DOWNLOAD_BY_IMAGE_ID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_BY_IMAGE_ID_CODE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_BY_IMAGE_ID_CODE" message="tns:IImagemanagementSvc_DOWNLOAD_BY_IMAGE_ID_CODE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_BY_IMAGE_ID_CODEResponse" message="tns:IImagemanagementSvc_DOWNLOAD_BY_IMAGE_ID_CODE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_BY_PATH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_BY_PATH" message="tns:IImagemanagementSvc_DOWNLOAD_BY_PATH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_BY_PATHResponse" message="tns:IImagemanagementSvc_DOWNLOAD_BY_PATH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UPLOAD_FILE_BY_TAG_RETURN_PATH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPLOAD_FILE_BY_TAG_RETURN_PATH" message="tns:IImagemanagementSvc_UPLOAD_FILE_BY_TAG_RETURN_PATH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPLOAD_FILE_BY_TAG_RETURN_PATHResponse" message="tns:IImagemanagementSvc_UPLOAD_FILE_BY_TAG_RETURN_PATH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ADD_IMAGE_INFO_BY_POLICY">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/ADD_IMAGE_INFO_BY_POLICY" message="tns:IImagemanagementSvc_ADD_IMAGE_INFO_BY_POLICY_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/ADD_IMAGE_INFO_BY_POLICYResponse" message="tns:IImagemanagementSvc_ADD_IMAGE_INFO_BY_POLICY_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UPLOAD_NEW_IMAGE_FILE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPLOAD_NEW_IMAGE_FILE" message="tns:IImagemanagementSvc_UPLOAD_NEW_IMAGE_FILE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPLOAD_NEW_IMAGE_FILEResponse" message="tns:IImagemanagementSvc_UPLOAD_NEW_IMAGE_FILE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SEND_FILE_BY_POLICY">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/SEND_FILE_BY_POLICY" name="SendFileTransferMessageByPolicy" message="tns:SendFileTransferMessageByPolicy" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/SEND_FILE_BY_POLICYResponse" name="SendFileTransferResultMessage" message="tns:SendFileTransferResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SEND_FILE_BY_TAG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/SEND_FILE_BY_TAG" name="SendFileTransferMessageByTag" message="tns:SendFileTransferMessageByTag" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/SEND_FILE_BY_TAGResponse" name="SendFileTransferResultMessage" message="tns:SendFileTransferResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SEND_NEW_IMAGE_FILE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/SEND_NEW_IMAGE_FILE" name="SendNewFileTransferMessage" message="tns:SendNewFileTransferMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/SEND_NEW_IMAGE_FILEResponse" name="SendFileTransferResultMessage" message="tns:SendFileTransferResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_FILE_BY_POLICY">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_FILE_BY_POLICY" name="GetFileTransferMessage" message="tns:GetFileTransferMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_FILE_BY_POLICYResponse" name="GetFileTransferResultMessage" message="tns:GetFileTransferResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_FILE_BY_TAG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_FILE_BY_TAG" name="GetFileTransferMessage" message="tns:GetFileTransferMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_FILE_BY_TAGResponse" name="GetFileTransferResultMessage" message="tns:GetFileTransferResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_FILE_BY_IMAGE_ID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_FILE_BY_IMAGE_ID" name="GetFileTransferMessage" message="tns:GetFileTransferMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_FILE_BY_IMAGE_IDResponse" name="GetFileTransferResultMessage" message="tns:GetFileTransferResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ppSvc_current">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/ppSvc_current" message="tns:IImagemanagementSvc_ppSvc_current_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/ppSvc_currentResponse" message="tns:IImagemanagementSvc_ppSvc_current_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ppSvc_Name">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/ppSvc_Name" message="tns:IImagemanagementSvc_ppSvc_Name_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/ppSvc_NameResponse" message="tns:IImagemanagementSvc_ppSvc_Name_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ppSvc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/ppSvc" message="tns:IImagemanagementSvc_ppSvc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/ppSvcResponse" message="tns:IImagemanagementSvc_ppSvc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ppSvc_CopyALL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/ppSvc_CopyALL" message="tns:IImagemanagementSvc_ppSvc_CopyALL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/ppSvc_CopyALLResponse" message="tns:IImagemanagementSvc_ppSvc_CopyALL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_DATA_U_NEWBISSCAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_DATA_U_NEWBISSCAN" message="tns:IImagemanagementSvc_GET_DATA_U_NEWBISSCAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_DATA_U_NEWBISSCANResponse" message="tns:IImagemanagementSvc_GET_DATA_U_NEWBISSCAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_DT_SCAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_DT_SCAN" message="tns:IImagemanagementSvc_GET_DT_SCAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_DT_SCANResponse" message="tns:IImagemanagementSvc_GET_DT_SCAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_REG_SEARCH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_REG_SEARCH" message="tns:IImagemanagementSvc_GET_REG_SEARCH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_REG_SEARCHResponse" message="tns:IImagemanagementSvc_GET_REG_SEARCH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_FLAG_EDM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPDATE_FLAG_EDM" message="tns:IImagemanagementSvc_UPDATE_FLAG_EDM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPDATE_FLAG_EDMResponse" message="tns:IImagemanagementSvc_UPDATE_FLAG_EDM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailForPic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GetDetailForPic" message="tns:IImagemanagementSvc_GetDetailForPic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GetDetailForPicResponse" message="tns:IImagemanagementSvc_GetDetailForPic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="U_NEWBIS_SCAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/U_NEWBIS_SCAN" message="tns:IImagemanagementSvc_U_NEWBIS_SCAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/U_NEWBIS_SCANResponse" message="tns:IImagemanagementSvc_U_NEWBIS_SCAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="U_APPROVED">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/U_APPROVED" message="tns:IImagemanagementSvc_U_APPROVED_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/U_APPROVEDResponse" message="tns:IImagemanagementSvc_U_APPROVED_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="U_DMS_CHANGE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/U_DMS_CHANGE" message="tns:IImagemanagementSvc_U_DMS_CHANGE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/U_DMS_CHANGEResponse" message="tns:IImagemanagementSvc_U_DMS_CHANGE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="update_scan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/update_scan" message="tns:IImagemanagementSvc_update_scan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/update_scanResponse" message="tns:IImagemanagementSvc_update_scan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="update_scan_edit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/update_scan_edit" message="tns:IImagemanagementSvc_update_scan_edit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/update_scan_editResponse" message="tns:IImagemanagementSvc_update_scan_edit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="update_scan_lot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/update_scan_lot" message="tns:IImagemanagementSvc_update_scan_lot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/update_scan_lotResponse" message="tns:IImagemanagementSvc_update_scan_lot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CHECK_FILE_BY_TAG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/CHECK_FILE_BY_TAG" message="tns:IImagemanagementSvc_CHECK_FILE_BY_TAG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/CHECK_FILE_BY_TAGResponse" message="tns:IImagemanagementSvc_CHECK_FILE_BY_TAG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_USER_MODEL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_USER_MODEL" message="tns:IImagemanagementSvc_GET_USER_MODEL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_USER_MODELResponse" message="tns:IImagemanagementSvc_GET_USER_MODEL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_POLCY_BY_POLICY_ID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_POLCY_BY_POLICY_ID" message="tns:IImagemanagementSvc_GET_POLCY_BY_POLICY_ID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_POLCY_BY_POLICY_IDResponse" message="tns:IImagemanagementSvc_GET_POLCY_BY_POLICY_ID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UPLOAD_FILE_BY_TAG__NEWBIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPLOAD_FILE_BY_TAG__NEWBIS" message="tns:IImagemanagementSvc_UPLOAD_FILE_BY_TAG__NEWBIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPLOAD_FILE_BY_TAG__NEWBISResponse" message="tns:IImagemanagementSvc_UPLOAD_FILE_BY_TAG__NEWBIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_TAG_DETAIL_WITH_APP_NEWBIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_TAG_DETAIL_WITH_APP_NEWBIS" message="tns:IImagemanagementSvc_GET_TAG_DETAIL_WITH_APP_NEWBIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_TAG_DETAIL_WITH_APP_NEWBISResponse" message="tns:IImagemanagementSvc_GET_TAG_DETAIL_WITH_APP_NEWBIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_TAG_DETAIL_WITH_APP_NEWBIS1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_TAG_DETAIL_WITH_APP_NEWBIS1" message="tns:IImagemanagementSvc_GET_TAG_DETAIL_WITH_APP_NEWBIS1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_TAG_DETAIL_WITH_APP_NEWBIS1Response" message="tns:IImagemanagementSvc_GET_TAG_DETAIL_WITH_APP_NEWBIS1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_AUTB_APP_CHANNEL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_AUTB_APP_CHANNEL" message="tns:IImagemanagementSvc_GET_AUTB_APP_CHANNEL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_AUTB_APP_CHANNELResponse" message="tns:IImagemanagementSvc_GET_AUTB_APP_CHANNEL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_IS_BBL_REF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IS_BBL_REF" message="tns:IImagemanagementSvc_GET_IS_BBL_REF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IS_BBL_REFResponse" message="tns:IImagemanagementSvc_GET_IS_BBL_REF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CHECK_U_APPROVED">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/CHECK_U_APPROVED" message="tns:IImagemanagementSvc_CHECK_U_APPROVED_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/CHECK_U_APPROVEDResponse" message="tns:IImagemanagementSvc_CHECK_U_APPROVED_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CHECK_MEMO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/CHECK_MEMO" message="tns:IImagemanagementSvc_CHECK_MEMO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/CHECK_MEMOResponse" message="tns:IImagemanagementSvc_CHECK_MEMO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_IMAGE_DETAIL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IMAGE_DETAIL" message="tns:IImagemanagementSvc_GET_IMAGE_DETAIL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IMAGE_DETAILResponse" message="tns:IImagemanagementSvc_GET_IMAGE_DETAIL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_IMAGE_WITH_APP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IMAGE_WITH_APP" message="tns:IImagemanagementSvc_GET_IMAGE_WITH_APP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IMAGE_WITH_APPResponse" message="tns:IImagemanagementSvc_GET_IMAGE_WITH_APP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_DATA_BY_TAG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_DATA_BY_TAG" message="tns:IImagemanagementSvc_GET_DATA_BY_TAG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_DATA_BY_TAGResponse" message="tns:IImagemanagementSvc_GET_DATA_BY_TAG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_IS_SORT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IS_SORT" message="tns:IImagemanagementSvc_GET_IS_SORT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IS_SORTResponse" message="tns:IImagemanagementSvc_GET_IS_SORT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_IMAGEID_TO_EDM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IMAGEID_TO_EDM" message="tns:IImagemanagementSvc_GET_IMAGEID_TO_EDM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_IMAGEID_TO_EDMResponse" message="tns:IImagemanagementSvc_GET_IMAGEID_TO_EDM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_IMAGEID_TO_EDM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPDATE_IMAGEID_TO_EDM" message="tns:IImagemanagementSvc_UPDATE_IMAGEID_TO_EDM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPDATE_IMAGEID_TO_EDMResponse" message="tns:IImagemanagementSvc_UPDATE_IMAGEID_TO_EDM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_U_APP_ISIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPDATE_U_APP_ISIS" message="tns:IImagemanagementSvc_UPDATE_U_APP_ISIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/UPDATE_U_APP_ISISResponse" message="tns:IImagemanagementSvc_UPDATE_U_APP_ISIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="INSERT_IMAGE_TO_SORT_APP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/INSERT_IMAGE_TO_SORT_APP" message="tns:IImagemanagementSvc_INSERT_IMAGE_TO_SORT_APP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/INSERT_IMAGE_TO_SORT_APPResponse" message="tns:IImagemanagementSvc_INSERT_IMAGE_TO_SORT_APP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CTREF_GET_IMAGE_ID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/CTREF_GET_IMAGE_ID" message="tns:IImagemanagementSvc_CTREF_GET_IMAGE_ID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/CTREF_GET_IMAGE_IDResponse" message="tns:IImagemanagementSvc_CTREF_GET_IMAGE_ID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CTREF_SET_IMAGE_ID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/CTREF_SET_IMAGE_ID" message="tns:IImagemanagementSvc_CTREF_SET_IMAGE_ID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/CTREF_SET_IMAGE_IDResponse" message="tns:IImagemanagementSvc_CTREF_SET_IMAGE_ID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CTREF_EDIT_IMAGE_ID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/CTREF_EDIT_IMAGE_ID" message="tns:IImagemanagementSvc_CTREF_EDIT_IMAGE_ID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/CTREF_EDIT_IMAGE_IDResponse" message="tns:IImagemanagementSvc_CTREF_EDIT_IMAGE_ID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_FILE_BY_POLICY_JOBCODE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_FILE_BY_POLICY_JOBCODE" message="tns:IImagemanagementSvc_DOWNLOAD_FILE_BY_POLICY_JOBCODE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_FILE_BY_POLICY_JOBCODEResponse" message="tns:IImagemanagementSvc_DOWNLOAD_FILE_BY_POLICY_JOBCODE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_LBDU_IMAGE_ID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_LBDU_IMAGE_ID" message="tns:IImagemanagementSvc_GET_LBDU_IMAGE_ID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImagemanagementSvc/GET_LBDU_IMAGE_IDResponse" message="tns:IImagemanagementSvc_GET_LBDU_IMAGE_ID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IImagemanagementSvc" type="tns:IImagemanagementSvc">
+    <wsp:PolicyReference URI="#WSHttpBinding_IImagemanagementSvc_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CHECK_IMAGE_ID">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/CHECK_IMAGE_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RESERVE_IMAGE_ID">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/RESERVE_IMAGE_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_SERVER_TYPE">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_SERVER_TYPE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_IMAGE_INFO_BY_POLICY">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_IMAGE_INFO_BY_POLICY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_IMAGE_INFO_BY_TAG">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_IMAGE_INFO_BY_TAG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_TAG_DETAIL_WITH_APP">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_TAG_DETAIL_WITH_APP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_TAG_DATA_BY_IMAGE_ID">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_TAG_DATA_BY_IMAGE_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_TAG">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_TAG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_LIST_BY_POLICY">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_LIST_BY_POLICY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_APP_ID_BY_APP_NO">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_APP_ID_BY_APP_NO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TMN_IMAGE">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/TMN_IMAGE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EDIT_IMAGE_BY_POLICY">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/EDIT_IMAGE_BY_POLICY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EDIT_IMAGE_BY_TAG">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/EDIT_IMAGE_BY_TAG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPLOAD_FILE_BY_POLICY">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/UPLOAD_FILE_BY_POLICY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPLOAD_FILE_BY_TAG">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/UPLOAD_FILE_BY_TAG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_FILE_BY_POLICY">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_FILE_BY_POLICY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_FILE_BY_TAG">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_FILE_BY_TAG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_FILE_BY_IMAGE_ID">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_FILE_BY_IMAGE_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_BY_IMAGE_ID">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_BY_IMAGE_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_BY_IMAGE_ID_CODE">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_BY_IMAGE_ID_CODE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_BY_PATH">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_BY_PATH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPLOAD_FILE_BY_TAG_RETURN_PATH">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/UPLOAD_FILE_BY_TAG_RETURN_PATH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ADD_IMAGE_INFO_BY_POLICY">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/ADD_IMAGE_INFO_BY_POLICY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPLOAD_NEW_IMAGE_FILE">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/UPLOAD_NEW_IMAGE_FILE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SEND_FILE_BY_POLICY">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/SEND_FILE_BY_POLICY" style="document" />
+      <wsdl:input name="SendFileTransferMessageByPolicy">
+        <soap12:header message="tns:SendFileTransferMessageByPolicy_Headers" part="FileInfo" use="literal" />
+        <soap12:header message="tns:SendFileTransferMessageByPolicy_Headers" part="PolicyDataInfo" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SendFileTransferResultMessage">
+        <soap12:header message="tns:SendFileTransferResultMessage_Headers" part="ProcessResult" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SEND_FILE_BY_TAG">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/SEND_FILE_BY_TAG" style="document" />
+      <wsdl:input name="SendFileTransferMessageByTag">
+        <soap12:header message="tns:SendFileTransferMessageByTag_Headers" part="FileInfo" use="literal" />
+        <soap12:header message="tns:SendFileTransferMessageByTag_Headers" part="TagDataInfo" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SendFileTransferResultMessage">
+        <soap12:header message="tns:SendFileTransferResultMessage_Headers" part="ProcessResult" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SEND_NEW_IMAGE_FILE">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/SEND_NEW_IMAGE_FILE" style="document" />
+      <wsdl:input name="SendNewFileTransferMessage">
+        <soap12:header message="tns:SendNewFileTransferMessage_Headers" part="DataInfo" use="literal" />
+        <soap12:header message="tns:SendNewFileTransferMessage_Headers" part="FileInfo" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SendFileTransferResultMessage">
+        <soap12:header message="tns:SendFileTransferResultMessage_Headers" part="ProcessResult" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_FILE_BY_POLICY">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_FILE_BY_POLICY" style="document" />
+      <wsdl:input name="GetFileTransferMessage">
+        <soap12:header message="tns:GetFileTransferMessage_Headers" part="Info" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetFileTransferResultMessage">
+        <soap12:header message="tns:GetFileTransferResultMessage_Headers" part="FileInfo" use="literal" />
+        <soap12:header message="tns:GetFileTransferResultMessage_Headers" part="ProcessResult" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_FILE_BY_TAG">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_FILE_BY_TAG" style="document" />
+      <wsdl:input name="GetFileTransferMessage">
+        <soap12:header message="tns:GetFileTransferMessage_Headers" part="Info" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetFileTransferResultMessage">
+        <soap12:header message="tns:GetFileTransferResultMessage_Headers" part="FileInfo" use="literal" />
+        <soap12:header message="tns:GetFileTransferResultMessage_Headers" part="ProcessResult" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_FILE_BY_IMAGE_ID">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_FILE_BY_IMAGE_ID" style="document" />
+      <wsdl:input name="GetFileTransferMessage">
+        <soap12:header message="tns:GetFileTransferMessage_Headers" part="Info" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetFileTransferResultMessage">
+        <soap12:header message="tns:GetFileTransferResultMessage_Headers" part="FileInfo" use="literal" />
+        <soap12:header message="tns:GetFileTransferResultMessage_Headers" part="ProcessResult" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ppSvc_current">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/ppSvc_current" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ppSvc_Name">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/ppSvc_Name" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ppSvc">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/ppSvc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ppSvc_CopyALL">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/ppSvc_CopyALL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_DATA_U_NEWBISSCAN">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_DATA_U_NEWBISSCAN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_DT_SCAN">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_DT_SCAN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_REG_SEARCH">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_REG_SEARCH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_FLAG_EDM">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/UPDATE_FLAG_EDM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailForPic">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GetDetailForPic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="U_NEWBIS_SCAN">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/U_NEWBIS_SCAN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="U_APPROVED">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/U_APPROVED" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="U_DMS_CHANGE">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/U_DMS_CHANGE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_scan">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/update_scan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_scan_edit">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/update_scan_edit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="update_scan_lot">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/update_scan_lot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CHECK_FILE_BY_TAG">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/CHECK_FILE_BY_TAG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_USER_MODEL">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_USER_MODEL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_POLCY_BY_POLICY_ID">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_POLCY_BY_POLICY_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPLOAD_FILE_BY_TAG__NEWBIS">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/UPLOAD_FILE_BY_TAG__NEWBIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_TAG_DETAIL_WITH_APP_NEWBIS">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_TAG_DETAIL_WITH_APP_NEWBIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_TAG_DETAIL_WITH_APP_NEWBIS1">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_TAG_DETAIL_WITH_APP_NEWBIS1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_AUTB_APP_CHANNEL">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_AUTB_APP_CHANNEL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_IS_BBL_REF">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_IS_BBL_REF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CHECK_U_APPROVED">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/CHECK_U_APPROVED" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CHECK_MEMO">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/CHECK_MEMO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_IMAGE_DETAIL">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_IMAGE_DETAIL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_IMAGE_WITH_APP">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_IMAGE_WITH_APP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_DATA_BY_TAG">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_DATA_BY_TAG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_IS_SORT">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_IS_SORT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_IMAGEID_TO_EDM">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_IMAGEID_TO_EDM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_IMAGEID_TO_EDM">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/UPDATE_IMAGEID_TO_EDM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_U_APP_ISIS">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/UPDATE_U_APP_ISIS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="INSERT_IMAGE_TO_SORT_APP">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/INSERT_IMAGE_TO_SORT_APP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CTREF_GET_IMAGE_ID">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/CTREF_GET_IMAGE_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CTREF_SET_IMAGE_ID">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/CTREF_SET_IMAGE_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CTREF_EDIT_IMAGE_ID">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/CTREF_EDIT_IMAGE_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DOWNLOAD_FILE_BY_POLICY_JOBCODE">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/DOWNLOAD_FILE_BY_POLICY_JOBCODE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_LBDU_IMAGE_ID">
+      <soap12:operation soapAction="http://tempuri.org/IImagemanagementSvc/GET_LBDU_IMAGE_ID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ImagemanagementSvc">
+    <wsdl:port name="WSHttpBinding_IImagemanagementSvc" binding="tns:WSHttpBinding_IImagemanagementSvc">
+      <soap12:address location="http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://ws7.bla.co.th:88/ImageManagementNewWcfSvc/ImagemanagementWcf.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

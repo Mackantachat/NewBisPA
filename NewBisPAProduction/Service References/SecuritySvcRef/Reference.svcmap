@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9295d91f-b703-42b1-b473-3ef93f517713" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws2.bla.co.th/SecurityWcfSvc/SecurityWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SecurityWcf.xsd" MetadataType="Schema" ID="7503be0d-252d-4dc1-8c76-a67c251712d3" SourceId="1" SourceUrl="http://ws2.bla.co.th/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd4" />
+    <MetadataFile FileName="SecurityWcf1.xsd" MetadataType="Schema" ID="8d2d9a2e-36df-4f40-9a65-e8c94e13155b" SourceId="1" SourceUrl="http://ws2.bla.co.th/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="SecurityWcf2.xsd" MetadataType="Schema" ID="cf699507-fac7-4d44-bdaf-28de30ebdc6e" SourceId="1" SourceUrl="http://ws2.bla.co.th/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="SecurityService.wsdl" MetadataType="Wsdl" ID="c3c24deb-bb4b-44d0-ae22-dc431886e7fe" SourceId="1" SourceUrl="http://ws2.bla.co.th/SecurityWcfSvc/SecurityWcf.svc?wsdl" />
+    <MetadataFile FileName="SecurityWcf3.xsd" MetadataType="Schema" ID="9febc2aa-12ff-417c-99d4-5b307b8c5a9b" SourceId="1" SourceUrl="http://ws2.bla.co.th/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="SecurityWcf.disco" MetadataType="Disco" ID="a8f5dbfd-824b-438e-980a-f4ab73fe5ebe" SourceId="1" SourceUrl="http://ws2.bla.co.th/SecurityWcfSvc/SecurityWcf.svc?disco" />
+    <MetadataFile FileName="SecurityWcf4.xsd" MetadataType="Schema" ID="729d1a19-b318-4f62-8340-9de54f7cdbc6" SourceId="1" SourceUrl="http://ws2.bla.co.th/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

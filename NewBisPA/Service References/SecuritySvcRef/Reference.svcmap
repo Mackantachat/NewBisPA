@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f849a503-aedb-488d-95b1-1b196ac1169f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SecurityWcf.xsd" MetadataType="Schema" ID="ee2ebb57-35a7-48c8-a091-8dfad41d2af7" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="SecurityWcf1.xsd" MetadataType="Schema" ID="26cbf2f2-b52b-4f51-ba09-943fb795952b" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd5" />
+    <MetadataFile FileName="SecurityService.wsdl" MetadataType="Wsdl" ID="6f54df08-c2eb-484a-a05d-935cf9eb2138" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?wsdl" />
+    <MetadataFile FileName="SecurityWcf2.xsd" MetadataType="Schema" ID="7cd59759-1561-48db-915c-854f880df0dd" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="SecurityWcf3.xsd" MetadataType="Schema" ID="fe9c769a-fb3b-4ec0-ab9a-a48b0572ea84" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd4" />
+    <MetadataFile FileName="SecurityWcf4.xsd" MetadataType="Schema" ID="b5bf1e19-a912-4764-9375-4a2e1db9970b" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="SecurityWcf.disco" MetadataType="Disco" ID="20a90894-2fa6-4b98-8bc7-b89e27d8fbeb" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?disco" />
+    <MetadataFile FileName="SecurityWcf5.xsd" MetadataType="Schema" ID="e1ebf1a5-e226-4f14-8371-6f1020db3d0e" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

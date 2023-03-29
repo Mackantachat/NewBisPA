@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.ParamContact" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NewbisOnline.DataContact.ParamContact" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="PLGroupInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PlBlock" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlCode2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PLGroupInfo" nillable="true" type="tns:PLGroupInfo" />
+  <xs:complexType name="AgentRelatedApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompoundAgent" nillable="true" type="tns:AgentRelatedDescription" />
+      <xs:element minOccurs="0" name="LicenseAgent" nillable="true" type="tns:AgentRelatedDescription" />
+      <xs:element minOccurs="0" name="SaleAgent" nillable="true" type="tns:AgentRelatedDescription" />
+      <xs:element minOccurs="0" name="SaleAgentUpline" nillable="true" type="tns:AgentRelatedDescription" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgentRelatedApplication" nillable="true" type="tns:AgentRelatedApplication" />
+  <xs:complexType name="AgentRelatedDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgentStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Licensevalidate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgentRelatedDescription" nillable="true" type="tns:AgentRelatedDescription" />
+  <xs:complexType name="SETRIDER">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BIRTH_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CARD_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CLASS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CTM_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDCARD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISU_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MUST_HAVE_FLAG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OCP_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_BLOCK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_CODE2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PRM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PR_BIRTH_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PR_CLASS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR_SEX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="P_MODE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="QUOTATION_FLG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUMM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SURNAME" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SETRIDER" nillable="true" type="tns:SETRIDER" />
+  <xs:complexType name="CustomerInfoParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BirthDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CardNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PreName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerInfoParam" nillable="true" type="tns:CustomerInfoParam" />
+  <xs:complexType name="PolicyInfoOfCustomerParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BirthDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CardNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PolicyInfoOfCustomerParam" nillable="true" type="tns:PolicyInfoOfCustomerParam" />
+  <xs:complexType name="ReturnPremiumParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountPayInfoOptional" nillable="true" type="tns:AccountPayInfoParam" />
+      <xs:element minOccurs="0" name="AppNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AssuredZipCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BenefitBankName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChannelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerInfo" nillable="true" type="tns:CustomerInfoParam" />
+      <xs:element minOccurs="0" name="PolicyHolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Premium" type="xs:long" />
+      <xs:element minOccurs="0" name="ReturnPremium" type="xs:long" />
+      <xs:element minOccurs="0" name="SaleAgentCodeOfBank" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReturnPremiumParam" nillable="true" type="tns:ReturnPremiumParam" />
+  <xs:complexType name="AccountPayInfoParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccountNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BankCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccountPayInfoParam" nillable="true" type="tns:AccountPayInfoParam" />
+  <xs:complexType name="UnderwriteFlagParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Age" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="AgentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChannelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentClean" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HaveMIB" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HaveMedical" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Height" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IdCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OldPOlicyHolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OldPolicy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_BLOCK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_CODE2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuestionClean" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RELBNFClean" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SUMM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SuspenseClean" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Weight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="XOCP_GRP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XOCP_TYPE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UnderwriteFlagParam" nillable="true" type="tns:UnderwriteFlagParam" />
+</xs:schema>

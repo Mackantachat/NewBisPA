@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PolicyService.DataContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PolicyService.DataContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfAUTB_MEDICAL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AUTB_MEDICAL" nillable="true" type="tns:AUTB_MEDICAL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAUTB_MEDICAL" nillable="true" type="tns:ArrayOfAUTB_MEDICAL" />
+  <xs:complexType name="AUTB_MEDICAL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DETAIL_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="DISABLED" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="EFF_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MED_ABBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MED_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MED_DETAIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MED_EXPENSE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="OMED_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SHOW_SEQ" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TMN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TMN_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPD_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPD_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPL_MED_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VALUE_FLG" nillable="true" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AUTB_MEDICAL" nillable="true" type="tns:AUTB_MEDICAL" />
+  <xs:complexType name="P_RIDER_Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="P_RIDER" nillable="true" type="tns:P_RIDER" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="P_RIDER_Collection" nillable="true" type="tns:P_RIDER_Collection" />
+  <xs:complexType name="P_RIDER">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADMIN_FEE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ADMIN_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="APL_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="APP_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COR" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="COR_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DEPOSIT_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EM_COR" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="EM_PERCENT" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ENDS_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ENDS_TRN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FIRST_ISU_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FREE_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="FSYSTEM_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ISU_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LASTPAY_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LOAN_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MAT_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MAT_TERM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NAMECODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NXTDUE_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OCUST_RDR_Collection" nillable="true" type="tns:P_OCUST_RDR_Collection" />
+      <xs:element minOccurs="0" name="PAY_TERM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PL_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_CODE2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PRM_ALLOCATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PRM_CHG" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PRM_CHG_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PRM_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RDSTATUS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RDSTATUS_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RDSTATUS_TRN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RD_LT" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RD_YR" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="REMAIN_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RIDER_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="RIDER_SEQ" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RIDER_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RNWL_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SEQ" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SUMM" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TMN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPD_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPD_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="URIDER_ID" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="WAIVE_PRM_FLG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XTR_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="XTR_LASTPAY_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="XTR_PAY_TERM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="XTR_PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="XTR_RATE" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ZTB_PLAN_OBJ" nillable="true" type="tns:ZTB_PLAN" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="P_RIDER" nillable="true" type="tns:P_RIDER" />
+  <xs:complexType name="P_OCUST_RDR_Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="P_OCUST_RDR" nillable="true" type="tns:P_OCUST_RDR" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="P_OCUST_RDR_Collection" nillable="true" type="tns:P_OCUST_RDR_Collection" />
+  <xs:complexType name="P_OCUST_RDR">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ASS_TERM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BIRTH_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FSYSTEM_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IDCARD_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISU_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LASTPAY_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MAT_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAMECODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OCP_CLASS" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="OCP_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PASSPORT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PAY_TERM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PL_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_CODE2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PRENAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEQ" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SEX" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="ST_AGE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SUMM" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SURNAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPD_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPD_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XTR_LASTPAY_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="XTR_PREMIUM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="XTR_RATE" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="P_OCUST_RDR" nillable="true" type="tns:P_OCUST_RDR" />
+  <xs:complexType name="ZTB_PLAN">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADJUST_PREM" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="AGE_MAX" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AGE_MIN" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="APL_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ASS_DET" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ASS_UPTOAGE_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="ASS_YR" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BBL_PL_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BLA_TITLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONTRACT_FAMILY" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="CV_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="CV_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DEVIDEND_BNF" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="DISCOUNT" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="DSC_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="EFF_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EFF_REF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EM_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="ETITLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ETITLE_ABBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ET_MATURE" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="ET_SURPLUS" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="EXTRA_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="FIRST_CV_YEAR" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FREE_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="FSYSTEM_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LOAN_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MANUAL_TERM" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="MAT_BNS_GUARANTEE" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="MAT_BONUS_DET" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MAT_BONUS_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="MAT_BONUS_PC" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MAT_DET" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MAT_PAYMENT_DET" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MAT_PRM_PC" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MAT_SUM_PC" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MAT_UPTOAGE_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="MAT_YR" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MAX_LOAN" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="OPL_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OPL_CODE2" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="PAY_DET" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PAY_UPTOAGE_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="PAY_YR" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PENSION" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="PK_PL_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PK_PL_CODE2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_BLOCK" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="PL_CODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_CODE2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PL_TYPE" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="PRM_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PRM_TMO_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PR_AGE_MAX" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PR_AGE_MIN" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PR_ASS_UPTOAGE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PR_PAY_UPTOAGE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PU_BNF" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="PU_SURPLUS" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="QX_ET_PC" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="QX_PC" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="QX_PU_PC" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RATE_FLG" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="RD_CALCULATE_SEQ" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="REMARK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RIDER_SEQ" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RNWL_INST" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SINGLE_MODE" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="SPECIAL_BONUS" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="SUM_DET" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SUM_MAX" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SUM_MIN" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="TITLE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TITLE_ABBR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TMN_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TMN_REF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TMO_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPD_DT" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPD_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WORK_SITE" nillable="true" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZTB_PLAN" nillable="true" type="tns:ZTB_PLAN" />
+  <xs:complexType name="P_RIDER_Display">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:P_RIDER">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="APPNO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="D_DSC_RATE" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="D_PLAN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="D_RATE" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="EXTRA_FLG" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MANUAL_TERM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PL_TYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UPTOAGE_FLG" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="XTR_PERMUE" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="P_RIDER_Display" nillable="true" type="tns:P_RIDER_Display" />
+</xs:schema>

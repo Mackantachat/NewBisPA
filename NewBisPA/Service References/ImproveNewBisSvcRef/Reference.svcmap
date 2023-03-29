@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6dcca880-b316-4151-9cdb-4f6ccaaf34bc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ImproveNewBisWcf.xsd" MetadataType="Schema" ID="ee9be5cc-1541-4828-81ad-514472b2b44f" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="ImproveNewBisWcf1.xsd" MetadataType="Schema" ID="c94ca00a-252f-4813-a1af-eab766ffa929" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd8" />
+    <MetadataFile FileName="ImproveNewBisWcf2.xsd" MetadataType="Schema" ID="11caf32c-055b-40ce-b195-7413ee7c1200" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd9" />
+    <MetadataFile FileName="ImproveNewBisWcf3.xsd" MetadataType="Schema" ID="3bbf860d-36bd-42eb-808f-e8ca8fef8ba0" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd6" />
+    <MetadataFile FileName="ImproveNewBisWcf4.xsd" MetadataType="Schema" ID="abf602b3-7eeb-480b-ab7d-58c401fd8b86" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd7" />
+    <MetadataFile FileName="ImproveNewBisWcf5.xsd" MetadataType="Schema" ID="bec60379-7115-4b9b-8865-2756a0462d0e" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd4" />
+    <MetadataFile FileName="ImproveNewBisSvc.wsdl" MetadataType="Wsdl" ID="0eccc043-f083-4c97-ab90-8745c658d53b" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?wsdl" />
+    <MetadataFile FileName="ImproveNewBisWcf6.xsd" MetadataType="Schema" ID="4829fe81-ca24-4718-8292-11d63a3d4e2e" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="ImproveNewBisWcf7.xsd" MetadataType="Schema" ID="c2465bac-d81c-46ea-8f56-625243011740" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="ImproveNewBisWcf8.xsd" MetadataType="Schema" ID="fe87a3a5-e410-4333-b27e-f94fa83afbff" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="ImproveNewBisWcf.disco" MetadataType="Disco" ID="a55fb6f2-2afc-47e3-9048-b9b5b174b937" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?disco" />
+    <MetadataFile FileName="ImproveNewBisWcf9.xsd" MetadataType="Schema" ID="07f789da-4b45-43a9-885c-86afc315d954" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

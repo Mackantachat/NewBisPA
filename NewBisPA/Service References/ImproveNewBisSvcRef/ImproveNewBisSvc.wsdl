@@ -1,0 +1,2383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ImproveNewBisSvc" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ITUtility" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/PolicyService.DataContract" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/NewBISService.DataContract.StructureModel" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/NewBISService.CustomContract" />
+      <xsd:import schemaLocation="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/NewBISService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IImproveNewBisSvc_GetAgentBehaviourLoss_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentBehaviourLoss" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAgentBehaviourLoss_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentBehaviourLossResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckIsAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIsAccount" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckIsAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIsAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckIsParrentAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIsParrentAccount" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckIsParrentAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIsParrentAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_sendMiniByLot_InputMessage">
+    <wsdl:part name="parameters" element="tns:sendMiniByLot" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_sendMiniByLot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sendMiniByLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_TerminateSuspenseConnect_InputMessage">
+    <wsdl:part name="parameters" element="tns:TerminateSuspenseConnect" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_TerminateSuspenseConnect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TerminateSuspenseConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetChannelTypeByBlock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChannelTypeByBlock" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetChannelTypeByBlock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChannelTypeByBlockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetMKTName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMKTName" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetMKTName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMKTNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_InsertOldStructurePolicy_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOldStructurePolicy" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_InsertOldStructurePolicy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOldStructurePolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_StampSendOldStruct_InputMessage">
+    <wsdl:part name="parameters" element="tns:StampSendOldStruct" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_StampSendOldStruct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StampSendOldStructResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetImageMigration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageMigration" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetImageMigration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageMigrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UpdateUImageMigration_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUImageMigration" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UpdateUImageMigration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUImageMigrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UpdatePayerPageAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePayerPageAmount" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UpdatePayerPageAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePayerPageAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckHealthFirstIsu_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckHealthFirstIsu" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckHealthFirstIsu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckHealthFirstIsuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_MoveSuspense_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveSuspense" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_MoveSuspense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoveSuspenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetUNewbisScanForAccept_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUNewbisScanForAccept" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetUNewbisScanForAccept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUNewbisScanForAcceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddU_APP_ISIS_DOCUMENT_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddU_APP_ISIS_DOCUMENT" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddU_APP_ISIS_DOCUMENT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddU_APP_ISIS_DOCUMENTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetUNewbisScanInfoForAcceptFix_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUNewbisScanInfoForAcceptFix" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetUNewbisScanInfoForAcceptFix_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUNewbisScanInfoForAcceptFixResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetCsSuupenseAllByAppNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCsSuupenseAllByAppNo" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetCsSuupenseAllByAppNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCsSuupenseAllByAppNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetCalPremiumByAppNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCalPremiumByAppNo" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetCalPremiumByAppNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCalPremiumByAppNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetSuspenseNbrFmt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuspenseNbrFmt" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetSuspenseNbrFmt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuspenseNbrFmtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetFSDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFSDetail" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetFSDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFSDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetCTPAIDForBillPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCTPAIDForBillPayment" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetCTPAIDForBillPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCTPAIDForBillPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_suspenseMigration_InputMessage">
+    <wsdl:part name="parameters" element="tns:suspenseMigration" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_suspenseMigration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:suspenseMigrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetInstall_Policy_detail_New_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstall_Policy_detail_New" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetInstall_Policy_detail_New_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstall_Policy_detail_NewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetRejectApp_Detail_New_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRejectApp_Detail_New" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetRejectApp_Detail_New_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRejectApp_Detail_NewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAppInProcess_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppInProcess" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAppInProcess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppInProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetUapplicationLock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUapplicationLock" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetUapplicationLock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUapplicationLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetLastU_APPLICATION_LOCK_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastU_APPLICATION_LOCK" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetLastU_APPLICATION_LOCK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastU_APPLICATION_LOCKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_EditLock_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditLock" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_EditLock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_RemoveLock_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveLock" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_RemoveLock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAppInProcessByUappID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppInProcessByUappID" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAppInProcessByUappID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppInProcessByUappIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddRenewalApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRenewalApplication" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddRenewalApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRenewalApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckVIPbyNamecode_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckVIPbyNamecode" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckVIPbyNamecode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckVIPbyNamecodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetVIPDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVIPDocument" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetVIPDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVIPDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetEkyc_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEkyc" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetEkyc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEkycResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetUnameCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnameCode" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetUnameCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnameCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckAppNoValid_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAppNoValid" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckAppNoValid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAppNoValidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetTempPaymentAbsolute_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTempPaymentAbsolute" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetTempPaymentAbsolute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTempPaymentAbsoluteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddApproveFlag_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddApproveFlag" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddApproveFlag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddApproveFlagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_DelNewCS_ORD_BILL_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelNewCS_ORD_BILL" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_DelNewCS_ORD_BILL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelNewCS_ORD_BILLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckAgentBlackList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAgentBlackList" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckAgentBlackList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckAgentBlackListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getAgentWarning_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAgentWarning" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getAgentWarning_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAgentWarningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_checkAppnameId_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkAppnameId" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_checkAppnameId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkAppnameIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getPayerAppPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPayerAppPage" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getPayerAppPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPayerAppPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getGMNotInAppOldStruct_InputMessage">
+    <wsdl:part name="parameters" element="tns:getGMNotInAppOldStruct" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getGMNotInAppOldStruct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getGMNotInAppOldStructResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_checkParPayYearly_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkParPayYearly" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_checkParPayYearly_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkParPayYearlyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetEKYCDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEKYCDate" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetEKYCDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEKYCDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_checkTrainingAMLO_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkTrainingAMLO" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_checkTrainingAMLO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkTrainingAMLOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetForSendOldStructure_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetForSendOldStructure" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetForSendOldStructure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetForSendOldStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getMarketingTypeAllPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMarketingTypeAllPlan" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getMarketingTypeAllPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMarketingTypeAllPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getMarketingTypeByAppNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMarketingTypeByAppNo" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getMarketingTypeByAppNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMarketingTypeByAppNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetSpecialMEMO_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialMEMO" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetSpecialMEMO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialMEMOResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetPensionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPensionData" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetPensionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPensionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_EditP_POLPRINTING_EXCEPTION_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditP_POLPRINTING_EXCEPTION" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_EditP_POLPRINTING_EXCEPTION_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditP_POLPRINTING_EXCEPTIONResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckNdid_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckNdid" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckNdid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckNdidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataU_AUTO_INFORCE_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataU_AUTO_INFORCE" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataU_AUTO_INFORCE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataU_AUTO_INFORCEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UpdateAbsoluteProcessStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAbsoluteProcessStatus" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UpdateAbsoluteProcessStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAbsoluteProcessStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UPDATE_U_NEWBIS_SCAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:UPDATE_U_NEWBIS_SCAN" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UPDATE_U_NEWBIS_SCAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UPDATE_U_NEWBIS_SCANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_updateInforceComplete_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateInforceComplete" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_updateInforceComplete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateInforceCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_clearAutoInforceRemain_InputMessage">
+    <wsdl:part name="parameters" element="tns:clearAutoInforceRemain" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_clearAutoInforceRemain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clearAutoInforceRemainResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_RemoveP_POLPRINTING_EXCEPTION_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveP_POLPRINTING_EXCEPTION" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_RemoveP_POLPRINTING_EXCEPTION_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveP_POLPRINTING_EXCEPTIONResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataP_POLPRINTING_EXCEPTION_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataP_POLPRINTING_EXCEPTION" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataP_POLPRINTING_EXCEPTION_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataP_POLPRINTING_EXCEPTIONResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckPolicy_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPolicy" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckPolicy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_PUPD_SRM_InputMessage">
+    <wsdl:part name="parameters" element="tns:PUPD_SRM" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_PUPD_SRM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PUPD_SRMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddP_ORA_TRANSACTION_RECEIPT_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddP_ORA_TRANSACTION_RECEIPT" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddP_ORA_TRANSACTION_RECEIPT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddP_ORA_TRANSACTION_RECEIPTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddPayMentAccountNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPayMentAccountNew" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddPayMentAccountNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPayMentAccountNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UpdateNewBisDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNewBisDate" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UpdateNewBisDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNewBisDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetOtherAppCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherAppCampaign" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetOtherAppCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherAppCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetPOraInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPOraInformation" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetPOraInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPOraInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddP_SUSPENSE_CONNECT_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddP_SUSPENSE_CONNECT" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddP_SUSPENSE_CONNECT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddP_SUSPENSE_CONNECTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetCS_TEMP_PAYMENT_ABSOLUTE_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCS_TEMP_PAYMENT_ABSOLUTE" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetCS_TEMP_PAYMENT_ABSOLUTE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCS_TEMP_PAYMENT_ABSOLUTEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_registerHappyLifeClub_InputMessage">
+    <wsdl:part name="parameters" element="tns:registerHappyLifeClub" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_registerHappyLifeClub_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registerHappyLifeClubResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_isHappyLifeMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:isHappyLifeMember" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_isHappyLifeMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isHappyLifeMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataP_NAME_HAPPY_LIFE_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataP_NAME_HAPPY_LIFE" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataP_NAME_HAPPY_LIFE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataP_NAME_HAPPY_LIFEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDiscountNotUsedCreditCardForReturn_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiscountNotUsedCreditCardForReturn" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDiscountNotUsedCreditCardForReturn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiscountNotUsedCreditCardForReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetMedicalByPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicalByPlan" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetMedicalByPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicalByPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_INS_OVER_NEW_InputMessage">
+    <wsdl:part name="parameters" element="tns:INS_OVER_NEW" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_INS_OVER_NEW_OutputMessage">
+    <wsdl:part name="parameters" element="tns:INS_OVER_NEWResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetBillFromISIS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillFromISIS" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetBillFromISIS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillFromISISResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataForRerunReceipt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataForRerunReceipt" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataForRerunReceipt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataForRerunReceiptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_rerunLetterRunno_InputMessage">
+    <wsdl:part name="parameters" element="tns:rerunLetterRunno" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_rerunLetterRunno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:rerunLetterRunnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UPDATE_U_APP_ISIS_DOCUMENT_InputMessage">
+    <wsdl:part name="parameters" element="tns:UPDATE_U_APP_ISIS_DOCUMENT" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UPDATE_U_APP_ISIS_DOCUMENT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UPDATE_U_APP_ISIS_DOCUMENTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_ADD_NEW_ABS_TRAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:ADD_NEW_ABS_TRAN" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_ADD_NEW_ABS_TRAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ADD_NEW_ABS_TRANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckBillNoV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckBillNoV2" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckBillNoV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckBillNoV2Response" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_checkAgentCanSale_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkAgentCanSale" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_checkAgentCanSale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkAgentCanSaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_fixCsReceiptOption_InputMessage">
+    <wsdl:part name="parameters" element="tns:fixCsReceiptOption" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_fixCsReceiptOption_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fixCsReceiptOptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CalculateNewBisODPremium_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateNewBisODPremium" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CalculateNewBisODPremium_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateNewBisODPremiumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CalPremiumForQuotation_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalPremiumForQuotation" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CalPremiumForQuotation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalPremiumForQuotationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_InsertACDebt_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertACDebt" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_InsertACDebt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertACDebtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_ADD_PD_BILLING_InputMessage">
+    <wsdl:part name="parameters" element="tns:ADD_PD_BILLING" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_ADD_PD_BILLING_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ADD_PD_BILLINGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddHealth1stRenewalApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddHealth1stRenewalApplication" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddHealth1stRenewalApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddHealth1stRenewalApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_collectDataBillingV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:collectDataBillingV2" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_collectDataBillingV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:collectDataBillingV2Response" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_IsRenewalByUappId_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsRenewalByUappId" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_IsRenewalByUappId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsRenewalByUappIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDetailCancelBillV3_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailCancelBillV3" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDetailCancelBillV3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailCancelBillV3Response" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetBillCancelInformationV2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillCancelInformationV2" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetBillCancelInformationV2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillCancelInformationV2Response" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddNewReceipt_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewReceipt" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddNewReceipt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewReceiptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UpdateStampImageLetter_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStampImageLetter" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_UpdateStampImageLetter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStampImageLetterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getCapturePrivilege_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCapturePrivilege" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getCapturePrivilege_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCapturePrivilegeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataU_APPLICATION_SIGN_VOICE_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataU_APPLICATION_SIGN_VOICE" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataU_APPLICATION_SIGN_VOICE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataU_APPLICATION_SIGN_VOICEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_PCL_ALLSUM_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:PCL_ALLSUM_V2" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_PCL_ALLSUM_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PCL_ALLSUM_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_PCL_ALLSUM_GM_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:PCL_ALLSUM_GM_V2" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_PCL_ALLSUM_GM_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PCL_ALLSUM_GM_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_manageAbsoluteTrans_InputMessage">
+    <wsdl:part name="parameters" element="tns:manageAbsoluteTrans" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_manageAbsoluteTrans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:manageAbsoluteTransResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_checkBankCallStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkBankCallStatus" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_checkBankCallStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkBankCallStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getLoanPromotion_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLoanPromotion" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_getLoanPromotion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLoanPromotionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetSendAtBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendAtBranch" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetSendAtBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendAtBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_TranferToAppOFGM_InputMessage">
+    <wsdl:part name="parameters" element="tns:TranferToAppOFGM" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_TranferToAppOFGM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TranferToAppOFGMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_INS_ABSOLUTE_InputMessage">
+    <wsdl:part name="parameters" element="tns:INS_ABSOLUTE" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_INS_ABSOLUTE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:INS_ABSOLUTEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_INS_ABSOLUTE_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:INS_ABSOLUTE_V2" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_INS_ABSOLUTE_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:INS_ABSOLUTE_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetBLA_V_SUSPENSE_Collection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBLA_V_SUSPENSE_Collection" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetBLA_V_SUSPENSE_Collection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBLA_V_SUSPENSE_CollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CANCEL_ABS_InputMessage">
+    <wsdl:part name="parameters" element="tns:CANCEL_ABS" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CANCEL_ABS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CANCEL_ABSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAppUpdateSuspense_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppUpdateSuspense" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAppUpdateSuspense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppUpdateSuspenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataP_SUSPENSE_CONNECT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataP_SUSPENSE_CONNECT" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataP_SUSPENSE_CONNECT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataP_SUSPENSE_CONNECTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetReportPolicyPrinting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportPolicyPrinting" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetReportPolicyPrinting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportPolicyPrintingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAppID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppID" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAppID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckFileProtect_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckFileProtect" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckFileProtect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckFileProtectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_checkMBPhoneDuplicate_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkMBPhoneDuplicate" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_checkMBPhoneDuplicate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkMBPhoneDuplicateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddDataForNewBisSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDataForNewBisSystem" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddDataForNewBisSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDataForNewBisSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetBrokerOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrokerOffice" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetBrokerOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrokerOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddU_NEWBIS_SCAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddU_NEWBIS_SCAN" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_AddU_NEWBIS_SCAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddU_NEWBIS_SCANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAutoUnderwritingResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoUnderwritingResult" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAutoUnderwritingResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoUnderwritingResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAgentBehaviour_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentBehaviour" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAgentBehaviour_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentBehaviourResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAgentBehaviourBad_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentBehaviourBad" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetAgentBehaviourBad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentBehaviourBadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_updateMOBroker_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateMOBroker" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_updateMOBroker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateMOBrokerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckGPFRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckGPFRegister" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_CheckGPFRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckGPFRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataEV_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataEV" />
+  </wsdl:message>
+  <wsdl:message name="IImproveNewBisSvc_GetDataEV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataEVResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IImproveNewBisSvc">
+    <wsdl:operation name="GetAgentBehaviourLoss">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAgentBehaviourLoss" message="tns:IImproveNewBisSvc_GetAgentBehaviourLoss_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAgentBehaviourLossResponse" message="tns:IImproveNewBisSvc_GetAgentBehaviourLoss_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIsAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckIsAccount" message="tns:IImproveNewBisSvc_CheckIsAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckIsAccountResponse" message="tns:IImproveNewBisSvc_CheckIsAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIsParrentAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckIsParrentAccount" message="tns:IImproveNewBisSvc_CheckIsParrentAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckIsParrentAccountResponse" message="tns:IImproveNewBisSvc_CheckIsParrentAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sendMiniByLot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/sendMiniByLot" message="tns:IImproveNewBisSvc_sendMiniByLot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/sendMiniByLotResponse" message="tns:IImproveNewBisSvc_sendMiniByLot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TerminateSuspenseConnect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/TerminateSuspenseConnect" message="tns:IImproveNewBisSvc_TerminateSuspenseConnect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/TerminateSuspenseConnectResponse" message="tns:IImproveNewBisSvc_TerminateSuspenseConnect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelTypeByBlock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetChannelTypeByBlock" message="tns:IImproveNewBisSvc_GetChannelTypeByBlock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetChannelTypeByBlockResponse" message="tns:IImproveNewBisSvc_GetChannelTypeByBlock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMKTName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetMKTName" message="tns:IImproveNewBisSvc_GetMKTName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetMKTNameResponse" message="tns:IImproveNewBisSvc_GetMKTName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOldStructurePolicy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/InsertOldStructurePolicy" message="tns:IImproveNewBisSvc_InsertOldStructurePolicy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/InsertOldStructurePolicyResponse" message="tns:IImproveNewBisSvc_InsertOldStructurePolicy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StampSendOldStruct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/StampSendOldStruct" message="tns:IImproveNewBisSvc_StampSendOldStruct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/StampSendOldStructResponse" message="tns:IImproveNewBisSvc_StampSendOldStruct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageMigration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetImageMigration" message="tns:IImproveNewBisSvc_GetImageMigration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetImageMigrationResponse" message="tns:IImproveNewBisSvc_GetImageMigration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUImageMigration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UpdateUImageMigration" message="tns:IImproveNewBisSvc_UpdateUImageMigration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UpdateUImageMigrationResponse" message="tns:IImproveNewBisSvc_UpdateUImageMigration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePayerPageAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UpdatePayerPageAmount" message="tns:IImproveNewBisSvc_UpdatePayerPageAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UpdatePayerPageAmountResponse" message="tns:IImproveNewBisSvc_UpdatePayerPageAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckHealthFirstIsu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckHealthFirstIsu" message="tns:IImproveNewBisSvc_CheckHealthFirstIsu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckHealthFirstIsuResponse" message="tns:IImproveNewBisSvc_CheckHealthFirstIsu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveSuspense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/MoveSuspense" message="tns:IImproveNewBisSvc_MoveSuspense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/MoveSuspenseResponse" message="tns:IImproveNewBisSvc_MoveSuspense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUNewbisScanForAccept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetUNewbisScanForAccept" message="tns:IImproveNewBisSvc_GetUNewbisScanForAccept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetUNewbisScanForAcceptResponse" message="tns:IImproveNewBisSvc_GetUNewbisScanForAccept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddU_APP_ISIS_DOCUMENT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddU_APP_ISIS_DOCUMENT" message="tns:IImproveNewBisSvc_AddU_APP_ISIS_DOCUMENT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddU_APP_ISIS_DOCUMENTResponse" message="tns:IImproveNewBisSvc_AddU_APP_ISIS_DOCUMENT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUNewbisScanInfoForAcceptFix">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetUNewbisScanInfoForAcceptFix" message="tns:IImproveNewBisSvc_GetUNewbisScanInfoForAcceptFix_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetUNewbisScanInfoForAcceptFixResponse" message="tns:IImproveNewBisSvc_GetUNewbisScanInfoForAcceptFix_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCsSuupenseAllByAppNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetCsSuupenseAllByAppNo" message="tns:IImproveNewBisSvc_GetCsSuupenseAllByAppNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetCsSuupenseAllByAppNoResponse" message="tns:IImproveNewBisSvc_GetCsSuupenseAllByAppNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalPremiumByAppNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetCalPremiumByAppNo" message="tns:IImproveNewBisSvc_GetCalPremiumByAppNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetCalPremiumByAppNoResponse" message="tns:IImproveNewBisSvc_GetCalPremiumByAppNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSuspenseNbrFmt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetSuspenseNbrFmt" message="tns:IImproveNewBisSvc_GetSuspenseNbrFmt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetSuspenseNbrFmtResponse" message="tns:IImproveNewBisSvc_GetSuspenseNbrFmt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFSDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetFSDetail" message="tns:IImproveNewBisSvc_GetFSDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetFSDetailResponse" message="tns:IImproveNewBisSvc_GetFSDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCTPAIDForBillPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetCTPAIDForBillPayment" message="tns:IImproveNewBisSvc_GetCTPAIDForBillPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetCTPAIDForBillPaymentResponse" message="tns:IImproveNewBisSvc_GetCTPAIDForBillPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="suspenseMigration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/suspenseMigration" message="tns:IImproveNewBisSvc_suspenseMigration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/suspenseMigrationResponse" message="tns:IImproveNewBisSvc_suspenseMigration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstall_Policy_detail_New">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetInstall_Policy_detail_New" message="tns:IImproveNewBisSvc_GetInstall_Policy_detail_New_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetInstall_Policy_detail_NewResponse" message="tns:IImproveNewBisSvc_GetInstall_Policy_detail_New_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRejectApp_Detail_New">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetRejectApp_Detail_New" message="tns:IImproveNewBisSvc_GetRejectApp_Detail_New_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetRejectApp_Detail_NewResponse" message="tns:IImproveNewBisSvc_GetRejectApp_Detail_New_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppInProcess">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAppInProcess" message="tns:IImproveNewBisSvc_GetAppInProcess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAppInProcessResponse" message="tns:IImproveNewBisSvc_GetAppInProcess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUapplicationLock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetUapplicationLock" message="tns:IImproveNewBisSvc_GetUapplicationLock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetUapplicationLockResponse" message="tns:IImproveNewBisSvc_GetUapplicationLock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastU_APPLICATION_LOCK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetLastU_APPLICATION_LOCK" message="tns:IImproveNewBisSvc_GetLastU_APPLICATION_LOCK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetLastU_APPLICATION_LOCKResponse" message="tns:IImproveNewBisSvc_GetLastU_APPLICATION_LOCK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditLock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/EditLock" message="tns:IImproveNewBisSvc_EditLock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/EditLockResponse" message="tns:IImproveNewBisSvc_EditLock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/RemoveLock" message="tns:IImproveNewBisSvc_RemoveLock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/RemoveLockResponse" message="tns:IImproveNewBisSvc_RemoveLock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppInProcessByUappID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAppInProcessByUappID" message="tns:IImproveNewBisSvc_GetAppInProcessByUappID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAppInProcessByUappIDResponse" message="tns:IImproveNewBisSvc_GetAppInProcessByUappID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRenewalApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddRenewalApplication" message="tns:IImproveNewBisSvc_AddRenewalApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddRenewalApplicationResponse" message="tns:IImproveNewBisSvc_AddRenewalApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVIPbyNamecode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckVIPbyNamecode" message="tns:IImproveNewBisSvc_CheckVIPbyNamecode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckVIPbyNamecodeResponse" message="tns:IImproveNewBisSvc_CheckVIPbyNamecode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVIPDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetVIPDocument" message="tns:IImproveNewBisSvc_GetVIPDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetVIPDocumentResponse" message="tns:IImproveNewBisSvc_GetVIPDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEkyc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetEkyc" message="tns:IImproveNewBisSvc_GetEkyc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetEkycResponse" message="tns:IImproveNewBisSvc_GetEkyc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnameCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetUnameCode" message="tns:IImproveNewBisSvc_GetUnameCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetUnameCodeResponse" message="tns:IImproveNewBisSvc_GetUnameCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAppNoValid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckAppNoValid" message="tns:IImproveNewBisSvc_CheckAppNoValid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckAppNoValidResponse" message="tns:IImproveNewBisSvc_CheckAppNoValid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTempPaymentAbsolute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetTempPaymentAbsolute" message="tns:IImproveNewBisSvc_GetTempPaymentAbsolute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetTempPaymentAbsoluteResponse" message="tns:IImproveNewBisSvc_GetTempPaymentAbsolute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddApproveFlag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddApproveFlag" message="tns:IImproveNewBisSvc_AddApproveFlag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddApproveFlagResponse" message="tns:IImproveNewBisSvc_AddApproveFlag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelNewCS_ORD_BILL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/DelNewCS_ORD_BILL" message="tns:IImproveNewBisSvc_DelNewCS_ORD_BILL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/DelNewCS_ORD_BILLResponse" message="tns:IImproveNewBisSvc_DelNewCS_ORD_BILL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAgentBlackList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckAgentBlackList" message="tns:IImproveNewBisSvc_CheckAgentBlackList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckAgentBlackListResponse" message="tns:IImproveNewBisSvc_CheckAgentBlackList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAgentWarning">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getAgentWarning" message="tns:IImproveNewBisSvc_getAgentWarning_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getAgentWarningResponse" message="tns:IImproveNewBisSvc_getAgentWarning_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkAppnameId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/checkAppnameId" message="tns:IImproveNewBisSvc_checkAppnameId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/checkAppnameIdResponse" message="tns:IImproveNewBisSvc_checkAppnameId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPayerAppPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getPayerAppPage" message="tns:IImproveNewBisSvc_getPayerAppPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getPayerAppPageResponse" message="tns:IImproveNewBisSvc_getPayerAppPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getGMNotInAppOldStruct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getGMNotInAppOldStruct" message="tns:IImproveNewBisSvc_getGMNotInAppOldStruct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getGMNotInAppOldStructResponse" message="tns:IImproveNewBisSvc_getGMNotInAppOldStruct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkParPayYearly">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/checkParPayYearly" message="tns:IImproveNewBisSvc_checkParPayYearly_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/checkParPayYearlyResponse" message="tns:IImproveNewBisSvc_checkParPayYearly_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEKYCDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetEKYCDate" message="tns:IImproveNewBisSvc_GetEKYCDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetEKYCDateResponse" message="tns:IImproveNewBisSvc_GetEKYCDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkTrainingAMLO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/checkTrainingAMLO" message="tns:IImproveNewBisSvc_checkTrainingAMLO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/checkTrainingAMLOResponse" message="tns:IImproveNewBisSvc_checkTrainingAMLO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForSendOldStructure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetForSendOldStructure" message="tns:IImproveNewBisSvc_GetForSendOldStructure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetForSendOldStructureResponse" message="tns:IImproveNewBisSvc_GetForSendOldStructure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMarketingTypeAllPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getMarketingTypeAllPlan" message="tns:IImproveNewBisSvc_getMarketingTypeAllPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getMarketingTypeAllPlanResponse" message="tns:IImproveNewBisSvc_getMarketingTypeAllPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMarketingTypeByAppNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getMarketingTypeByAppNo" message="tns:IImproveNewBisSvc_getMarketingTypeByAppNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getMarketingTypeByAppNoResponse" message="tns:IImproveNewBisSvc_getMarketingTypeByAppNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialMEMO">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetSpecialMEMO" message="tns:IImproveNewBisSvc_GetSpecialMEMO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetSpecialMEMOResponse" message="tns:IImproveNewBisSvc_GetSpecialMEMO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPensionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetPensionData" message="tns:IImproveNewBisSvc_GetPensionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetPensionDataResponse" message="tns:IImproveNewBisSvc_GetPensionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditP_POLPRINTING_EXCEPTION">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/EditP_POLPRINTING_EXCEPTION" message="tns:IImproveNewBisSvc_EditP_POLPRINTING_EXCEPTION_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/EditP_POLPRINTING_EXCEPTIONResponse" message="tns:IImproveNewBisSvc_EditP_POLPRINTING_EXCEPTION_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckNdid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckNdid" message="tns:IImproveNewBisSvc_CheckNdid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckNdidResponse" message="tns:IImproveNewBisSvc_CheckNdid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataU_AUTO_INFORCE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataU_AUTO_INFORCE" message="tns:IImproveNewBisSvc_GetDataU_AUTO_INFORCE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataU_AUTO_INFORCEResponse" message="tns:IImproveNewBisSvc_GetDataU_AUTO_INFORCE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAbsoluteProcessStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UpdateAbsoluteProcessStatus" message="tns:IImproveNewBisSvc_UpdateAbsoluteProcessStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UpdateAbsoluteProcessStatusResponse" message="tns:IImproveNewBisSvc_UpdateAbsoluteProcessStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_U_NEWBIS_SCAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UPDATE_U_NEWBIS_SCAN" message="tns:IImproveNewBisSvc_UPDATE_U_NEWBIS_SCAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UPDATE_U_NEWBIS_SCANResponse" message="tns:IImproveNewBisSvc_UPDATE_U_NEWBIS_SCAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateInforceComplete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/updateInforceComplete" message="tns:IImproveNewBisSvc_updateInforceComplete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/updateInforceCompleteResponse" message="tns:IImproveNewBisSvc_updateInforceComplete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="clearAutoInforceRemain">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/clearAutoInforceRemain" message="tns:IImproveNewBisSvc_clearAutoInforceRemain_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/clearAutoInforceRemainResponse" message="tns:IImproveNewBisSvc_clearAutoInforceRemain_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveP_POLPRINTING_EXCEPTION">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/RemoveP_POLPRINTING_EXCEPTION" message="tns:IImproveNewBisSvc_RemoveP_POLPRINTING_EXCEPTION_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/RemoveP_POLPRINTING_EXCEPTIONResponse" message="tns:IImproveNewBisSvc_RemoveP_POLPRINTING_EXCEPTION_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataP_POLPRINTING_EXCEPTION">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataP_POLPRINTING_EXCEPTION" message="tns:IImproveNewBisSvc_GetDataP_POLPRINTING_EXCEPTION_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataP_POLPRINTING_EXCEPTIONResponse" message="tns:IImproveNewBisSvc_GetDataP_POLPRINTING_EXCEPTION_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPolicy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckPolicy" message="tns:IImproveNewBisSvc_CheckPolicy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckPolicyResponse" message="tns:IImproveNewBisSvc_CheckPolicy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PUPD_SRM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/PUPD_SRM" message="tns:IImproveNewBisSvc_PUPD_SRM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/PUPD_SRMResponse" message="tns:IImproveNewBisSvc_PUPD_SRM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddP_ORA_TRANSACTION_RECEIPT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddP_ORA_TRANSACTION_RECEIPT" message="tns:IImproveNewBisSvc_AddP_ORA_TRANSACTION_RECEIPT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddP_ORA_TRANSACTION_RECEIPTResponse" message="tns:IImproveNewBisSvc_AddP_ORA_TRANSACTION_RECEIPT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPayMentAccountNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddPayMentAccountNew" message="tns:IImproveNewBisSvc_AddPayMentAccountNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddPayMentAccountNewResponse" message="tns:IImproveNewBisSvc_AddPayMentAccountNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNewBisDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UpdateNewBisDate" message="tns:IImproveNewBisSvc_UpdateNewBisDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UpdateNewBisDateResponse" message="tns:IImproveNewBisSvc_UpdateNewBisDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherAppCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetOtherAppCampaign" message="tns:IImproveNewBisSvc_GetOtherAppCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetOtherAppCampaignResponse" message="tns:IImproveNewBisSvc_GetOtherAppCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPOraInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetPOraInformation" message="tns:IImproveNewBisSvc_GetPOraInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetPOraInformationResponse" message="tns:IImproveNewBisSvc_GetPOraInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddP_SUSPENSE_CONNECT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddP_SUSPENSE_CONNECT" message="tns:IImproveNewBisSvc_AddP_SUSPENSE_CONNECT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddP_SUSPENSE_CONNECTResponse" message="tns:IImproveNewBisSvc_AddP_SUSPENSE_CONNECT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCS_TEMP_PAYMENT_ABSOLUTE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetCS_TEMP_PAYMENT_ABSOLUTE" message="tns:IImproveNewBisSvc_GetCS_TEMP_PAYMENT_ABSOLUTE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetCS_TEMP_PAYMENT_ABSOLUTEResponse" message="tns:IImproveNewBisSvc_GetCS_TEMP_PAYMENT_ABSOLUTE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registerHappyLifeClub">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/registerHappyLifeClub" message="tns:IImproveNewBisSvc_registerHappyLifeClub_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/registerHappyLifeClubResponse" message="tns:IImproveNewBisSvc_registerHappyLifeClub_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isHappyLifeMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/isHappyLifeMember" message="tns:IImproveNewBisSvc_isHappyLifeMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/isHappyLifeMemberResponse" message="tns:IImproveNewBisSvc_isHappyLifeMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataP_NAME_HAPPY_LIFE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataP_NAME_HAPPY_LIFE" message="tns:IImproveNewBisSvc_GetDataP_NAME_HAPPY_LIFE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataP_NAME_HAPPY_LIFEResponse" message="tns:IImproveNewBisSvc_GetDataP_NAME_HAPPY_LIFE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscountNotUsedCreditCardForReturn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDiscountNotUsedCreditCardForReturn" message="tns:IImproveNewBisSvc_GetDiscountNotUsedCreditCardForReturn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDiscountNotUsedCreditCardForReturnResponse" message="tns:IImproveNewBisSvc_GetDiscountNotUsedCreditCardForReturn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicalByPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetMedicalByPlan" message="tns:IImproveNewBisSvc_GetMedicalByPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetMedicalByPlanResponse" message="tns:IImproveNewBisSvc_GetMedicalByPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="INS_OVER_NEW">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/INS_OVER_NEW" message="tns:IImproveNewBisSvc_INS_OVER_NEW_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/INS_OVER_NEWResponse" message="tns:IImproveNewBisSvc_INS_OVER_NEW_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillFromISIS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetBillFromISIS" message="tns:IImproveNewBisSvc_GetBillFromISIS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetBillFromISISResponse" message="tns:IImproveNewBisSvc_GetBillFromISIS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataForRerunReceipt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataForRerunReceipt" message="tns:IImproveNewBisSvc_GetDataForRerunReceipt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataForRerunReceiptResponse" message="tns:IImproveNewBisSvc_GetDataForRerunReceipt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="rerunLetterRunno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/rerunLetterRunno" message="tns:IImproveNewBisSvc_rerunLetterRunno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/rerunLetterRunnoResponse" message="tns:IImproveNewBisSvc_rerunLetterRunno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_U_APP_ISIS_DOCUMENT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UPDATE_U_APP_ISIS_DOCUMENT" message="tns:IImproveNewBisSvc_UPDATE_U_APP_ISIS_DOCUMENT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UPDATE_U_APP_ISIS_DOCUMENTResponse" message="tns:IImproveNewBisSvc_UPDATE_U_APP_ISIS_DOCUMENT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ADD_NEW_ABS_TRAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/ADD_NEW_ABS_TRAN" message="tns:IImproveNewBisSvc_ADD_NEW_ABS_TRAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/ADD_NEW_ABS_TRANResponse" message="tns:IImproveNewBisSvc_ADD_NEW_ABS_TRAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBillNoV2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckBillNoV2" message="tns:IImproveNewBisSvc_CheckBillNoV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckBillNoV2Response" message="tns:IImproveNewBisSvc_CheckBillNoV2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkAgentCanSale">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/checkAgentCanSale" message="tns:IImproveNewBisSvc_checkAgentCanSale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/checkAgentCanSaleResponse" message="tns:IImproveNewBisSvc_checkAgentCanSale_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="fixCsReceiptOption">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/fixCsReceiptOption" message="tns:IImproveNewBisSvc_fixCsReceiptOption_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/fixCsReceiptOptionResponse" message="tns:IImproveNewBisSvc_fixCsReceiptOption_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateNewBisODPremium">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CalculateNewBisODPremium" message="tns:IImproveNewBisSvc_CalculateNewBisODPremium_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CalculateNewBisODPremiumResponse" message="tns:IImproveNewBisSvc_CalculateNewBisODPremium_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalPremiumForQuotation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CalPremiumForQuotation" message="tns:IImproveNewBisSvc_CalPremiumForQuotation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CalPremiumForQuotationResponse" message="tns:IImproveNewBisSvc_CalPremiumForQuotation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertACDebt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/InsertACDebt" message="tns:IImproveNewBisSvc_InsertACDebt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/InsertACDebtResponse" message="tns:IImproveNewBisSvc_InsertACDebt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ADD_PD_BILLING">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/ADD_PD_BILLING" message="tns:IImproveNewBisSvc_ADD_PD_BILLING_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/ADD_PD_BILLINGResponse" message="tns:IImproveNewBisSvc_ADD_PD_BILLING_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHealth1stRenewalApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddHealth1stRenewalApplication" message="tns:IImproveNewBisSvc_AddHealth1stRenewalApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddHealth1stRenewalApplicationResponse" message="tns:IImproveNewBisSvc_AddHealth1stRenewalApplication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="collectDataBillingV2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/collectDataBillingV2" message="tns:IImproveNewBisSvc_collectDataBillingV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/collectDataBillingV2Response" message="tns:IImproveNewBisSvc_collectDataBillingV2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsRenewalByUappId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/IsRenewalByUappId" message="tns:IImproveNewBisSvc_IsRenewalByUappId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/IsRenewalByUappIdResponse" message="tns:IImproveNewBisSvc_IsRenewalByUappId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailCancelBillV3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDetailCancelBillV3" message="tns:IImproveNewBisSvc_GetDetailCancelBillV3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDetailCancelBillV3Response" message="tns:IImproveNewBisSvc_GetDetailCancelBillV3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillCancelInformationV2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetBillCancelInformationV2" message="tns:IImproveNewBisSvc_GetBillCancelInformationV2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetBillCancelInformationV2Response" message="tns:IImproveNewBisSvc_GetBillCancelInformationV2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewReceipt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddNewReceipt" message="tns:IImproveNewBisSvc_AddNewReceipt_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddNewReceiptResponse" message="tns:IImproveNewBisSvc_AddNewReceipt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStampImageLetter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UpdateStampImageLetter" message="tns:IImproveNewBisSvc_UpdateStampImageLetter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/UpdateStampImageLetterResponse" message="tns:IImproveNewBisSvc_UpdateStampImageLetter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCapturePrivilege">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getCapturePrivilege" message="tns:IImproveNewBisSvc_getCapturePrivilege_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getCapturePrivilegeResponse" message="tns:IImproveNewBisSvc_getCapturePrivilege_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataU_APPLICATION_SIGN_VOICE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataU_APPLICATION_SIGN_VOICE" message="tns:IImproveNewBisSvc_GetDataU_APPLICATION_SIGN_VOICE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataU_APPLICATION_SIGN_VOICEResponse" message="tns:IImproveNewBisSvc_GetDataU_APPLICATION_SIGN_VOICE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PCL_ALLSUM_V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/PCL_ALLSUM_V2" message="tns:IImproveNewBisSvc_PCL_ALLSUM_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/PCL_ALLSUM_V2Response" message="tns:IImproveNewBisSvc_PCL_ALLSUM_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PCL_ALLSUM_GM_V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/PCL_ALLSUM_GM_V2" message="tns:IImproveNewBisSvc_PCL_ALLSUM_GM_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/PCL_ALLSUM_GM_V2Response" message="tns:IImproveNewBisSvc_PCL_ALLSUM_GM_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="manageAbsoluteTrans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/manageAbsoluteTrans" message="tns:IImproveNewBisSvc_manageAbsoluteTrans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/manageAbsoluteTransResponse" message="tns:IImproveNewBisSvc_manageAbsoluteTrans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkBankCallStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/checkBankCallStatus" message="tns:IImproveNewBisSvc_checkBankCallStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/checkBankCallStatusResponse" message="tns:IImproveNewBisSvc_checkBankCallStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLoanPromotion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getLoanPromotion" message="tns:IImproveNewBisSvc_getLoanPromotion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/getLoanPromotionResponse" message="tns:IImproveNewBisSvc_getLoanPromotion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendAtBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetSendAtBranch" message="tns:IImproveNewBisSvc_GetSendAtBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetSendAtBranchResponse" message="tns:IImproveNewBisSvc_GetSendAtBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TranferToAppOFGM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/TranferToAppOFGM" message="tns:IImproveNewBisSvc_TranferToAppOFGM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/TranferToAppOFGMResponse" message="tns:IImproveNewBisSvc_TranferToAppOFGM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="INS_ABSOLUTE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/INS_ABSOLUTE" message="tns:IImproveNewBisSvc_INS_ABSOLUTE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/INS_ABSOLUTEResponse" message="tns:IImproveNewBisSvc_INS_ABSOLUTE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="INS_ABSOLUTE_V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/INS_ABSOLUTE_V2" message="tns:IImproveNewBisSvc_INS_ABSOLUTE_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/INS_ABSOLUTE_V2Response" message="tns:IImproveNewBisSvc_INS_ABSOLUTE_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBLA_V_SUSPENSE_Collection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetBLA_V_SUSPENSE_Collection" message="tns:IImproveNewBisSvc_GetBLA_V_SUSPENSE_Collection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetBLA_V_SUSPENSE_CollectionResponse" message="tns:IImproveNewBisSvc_GetBLA_V_SUSPENSE_Collection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CANCEL_ABS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CANCEL_ABS" message="tns:IImproveNewBisSvc_CANCEL_ABS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CANCEL_ABSResponse" message="tns:IImproveNewBisSvc_CANCEL_ABS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppUpdateSuspense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAppUpdateSuspense" message="tns:IImproveNewBisSvc_GetAppUpdateSuspense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAppUpdateSuspenseResponse" message="tns:IImproveNewBisSvc_GetAppUpdateSuspense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataP_SUSPENSE_CONNECT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataP_SUSPENSE_CONNECT" message="tns:IImproveNewBisSvc_GetDataP_SUSPENSE_CONNECT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataP_SUSPENSE_CONNECTResponse" message="tns:IImproveNewBisSvc_GetDataP_SUSPENSE_CONNECT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportPolicyPrinting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetReportPolicyPrinting" message="tns:IImproveNewBisSvc_GetReportPolicyPrinting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetReportPolicyPrintingResponse" message="tns:IImproveNewBisSvc_GetReportPolicyPrinting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAppID" message="tns:IImproveNewBisSvc_GetAppID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAppIDResponse" message="tns:IImproveNewBisSvc_GetAppID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckFileProtect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckFileProtect" message="tns:IImproveNewBisSvc_CheckFileProtect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckFileProtectResponse" message="tns:IImproveNewBisSvc_CheckFileProtect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkMBPhoneDuplicate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/checkMBPhoneDuplicate" message="tns:IImproveNewBisSvc_checkMBPhoneDuplicate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/checkMBPhoneDuplicateResponse" message="tns:IImproveNewBisSvc_checkMBPhoneDuplicate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDataForNewBisSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddDataForNewBisSystem" message="tns:IImproveNewBisSvc_AddDataForNewBisSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddDataForNewBisSystemResponse" message="tns:IImproveNewBisSvc_AddDataForNewBisSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrokerOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetBrokerOffice" message="tns:IImproveNewBisSvc_GetBrokerOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetBrokerOfficeResponse" message="tns:IImproveNewBisSvc_GetBrokerOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddU_NEWBIS_SCAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddU_NEWBIS_SCAN" message="tns:IImproveNewBisSvc_AddU_NEWBIS_SCAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/AddU_NEWBIS_SCANResponse" message="tns:IImproveNewBisSvc_AddU_NEWBIS_SCAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoUnderwritingResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAutoUnderwritingResult" message="tns:IImproveNewBisSvc_GetAutoUnderwritingResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAutoUnderwritingResultResponse" message="tns:IImproveNewBisSvc_GetAutoUnderwritingResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentBehaviour">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAgentBehaviour" message="tns:IImproveNewBisSvc_GetAgentBehaviour_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAgentBehaviourResponse" message="tns:IImproveNewBisSvc_GetAgentBehaviour_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentBehaviourBad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAgentBehaviourBad" message="tns:IImproveNewBisSvc_GetAgentBehaviourBad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetAgentBehaviourBadResponse" message="tns:IImproveNewBisSvc_GetAgentBehaviourBad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateMOBroker">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/updateMOBroker" message="tns:IImproveNewBisSvc_updateMOBroker_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/updateMOBrokerResponse" message="tns:IImproveNewBisSvc_updateMOBroker_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckGPFRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckGPFRegister" message="tns:IImproveNewBisSvc_CheckGPFRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/CheckGPFRegisterResponse" message="tns:IImproveNewBisSvc_CheckGPFRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataEV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataEV" message="tns:IImproveNewBisSvc_GetDataEV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IImproveNewBisSvc/GetDataEVResponse" message="tns:IImproveNewBisSvc_GetDataEV_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IImproveNewBisSvc" type="tns:IImproveNewBisSvc">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAgentBehaviourLoss">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetAgentBehaviourLoss" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIsAccount">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CheckIsAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIsParrentAccount">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CheckIsParrentAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMiniByLot">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/sendMiniByLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TerminateSuspenseConnect">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/TerminateSuspenseConnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChannelTypeByBlock">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetChannelTypeByBlock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMKTName">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetMKTName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOldStructurePolicy">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/InsertOldStructurePolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StampSendOldStruct">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/StampSendOldStruct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageMigration">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetImageMigration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUImageMigration">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/UpdateUImageMigration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePayerPageAmount">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/UpdatePayerPageAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckHealthFirstIsu">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CheckHealthFirstIsu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveSuspense">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/MoveSuspense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUNewbisScanForAccept">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetUNewbisScanForAccept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddU_APP_ISIS_DOCUMENT">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/AddU_APP_ISIS_DOCUMENT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUNewbisScanInfoForAcceptFix">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetUNewbisScanInfoForAcceptFix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCsSuupenseAllByAppNo">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetCsSuupenseAllByAppNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalPremiumByAppNo">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetCalPremiumByAppNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuspenseNbrFmt">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetSuspenseNbrFmt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFSDetail">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetFSDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCTPAIDForBillPayment">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetCTPAIDForBillPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="suspenseMigration">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/suspenseMigration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstall_Policy_detail_New">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetInstall_Policy_detail_New" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRejectApp_Detail_New">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetRejectApp_Detail_New" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppInProcess">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetAppInProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUapplicationLock">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetUapplicationLock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastU_APPLICATION_LOCK">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetLastU_APPLICATION_LOCK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditLock">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/EditLock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLock">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/RemoveLock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppInProcessByUappID">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetAppInProcessByUappID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRenewalApplication">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/AddRenewalApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVIPbyNamecode">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CheckVIPbyNamecode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVIPDocument">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetVIPDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEkyc">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetEkyc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnameCode">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetUnameCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAppNoValid">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CheckAppNoValid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTempPaymentAbsolute">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetTempPaymentAbsolute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddApproveFlag">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/AddApproveFlag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelNewCS_ORD_BILL">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/DelNewCS_ORD_BILL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAgentBlackList">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CheckAgentBlackList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAgentWarning">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/getAgentWarning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkAppnameId">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/checkAppnameId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPayerAppPage">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/getPayerAppPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGMNotInAppOldStruct">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/getGMNotInAppOldStruct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkParPayYearly">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/checkParPayYearly" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEKYCDate">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetEKYCDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkTrainingAMLO">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/checkTrainingAMLO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForSendOldStructure">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetForSendOldStructure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMarketingTypeAllPlan">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/getMarketingTypeAllPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMarketingTypeByAppNo">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/getMarketingTypeByAppNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialMEMO">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetSpecialMEMO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPensionData">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetPensionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditP_POLPRINTING_EXCEPTION">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/EditP_POLPRINTING_EXCEPTION" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckNdid">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CheckNdid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataU_AUTO_INFORCE">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetDataU_AUTO_INFORCE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAbsoluteProcessStatus">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/UpdateAbsoluteProcessStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_U_NEWBIS_SCAN">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/UPDATE_U_NEWBIS_SCAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateInforceComplete">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/updateInforceComplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearAutoInforceRemain">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/clearAutoInforceRemain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveP_POLPRINTING_EXCEPTION">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/RemoveP_POLPRINTING_EXCEPTION" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataP_POLPRINTING_EXCEPTION">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetDataP_POLPRINTING_EXCEPTION" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPolicy">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CheckPolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PUPD_SRM">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/PUPD_SRM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddP_ORA_TRANSACTION_RECEIPT">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/AddP_ORA_TRANSACTION_RECEIPT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPayMentAccountNew">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/AddPayMentAccountNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNewBisDate">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/UpdateNewBisDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherAppCampaign">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetOtherAppCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOraInformation">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetPOraInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddP_SUSPENSE_CONNECT">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/AddP_SUSPENSE_CONNECT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCS_TEMP_PAYMENT_ABSOLUTE">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetCS_TEMP_PAYMENT_ABSOLUTE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registerHappyLifeClub">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/registerHappyLifeClub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isHappyLifeMember">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/isHappyLifeMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataP_NAME_HAPPY_LIFE">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetDataP_NAME_HAPPY_LIFE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscountNotUsedCreditCardForReturn">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetDiscountNotUsedCreditCardForReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMedicalByPlan">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetMedicalByPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="INS_OVER_NEW">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/INS_OVER_NEW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillFromISIS">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetBillFromISIS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataForRerunReceipt">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetDataForRerunReceipt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rerunLetterRunno">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/rerunLetterRunno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UPDATE_U_APP_ISIS_DOCUMENT">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/UPDATE_U_APP_ISIS_DOCUMENT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ADD_NEW_ABS_TRAN">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/ADD_NEW_ABS_TRAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBillNoV2">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CheckBillNoV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkAgentCanSale">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/checkAgentCanSale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fixCsReceiptOption">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/fixCsReceiptOption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateNewBisODPremium">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CalculateNewBisODPremium" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalPremiumForQuotation">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CalPremiumForQuotation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertACDebt">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/InsertACDebt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ADD_PD_BILLING">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/ADD_PD_BILLING" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHealth1stRenewalApplication">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/AddHealth1stRenewalApplication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="collectDataBillingV2">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/collectDataBillingV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsRenewalByUappId">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/IsRenewalByUappId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailCancelBillV3">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetDetailCancelBillV3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillCancelInformationV2">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetBillCancelInformationV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewReceipt">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/AddNewReceipt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStampImageLetter">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/UpdateStampImageLetter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCapturePrivilege">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/getCapturePrivilege" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataU_APPLICATION_SIGN_VOICE">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetDataU_APPLICATION_SIGN_VOICE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PCL_ALLSUM_V2">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/PCL_ALLSUM_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PCL_ALLSUM_GM_V2">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/PCL_ALLSUM_GM_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="manageAbsoluteTrans">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/manageAbsoluteTrans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkBankCallStatus">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/checkBankCallStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLoanPromotion">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/getLoanPromotion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendAtBranch">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetSendAtBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TranferToAppOFGM">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/TranferToAppOFGM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="INS_ABSOLUTE">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/INS_ABSOLUTE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="INS_ABSOLUTE_V2">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/INS_ABSOLUTE_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBLA_V_SUSPENSE_Collection">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetBLA_V_SUSPENSE_Collection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CANCEL_ABS">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CANCEL_ABS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppUpdateSuspense">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetAppUpdateSuspense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataP_SUSPENSE_CONNECT">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetDataP_SUSPENSE_CONNECT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportPolicyPrinting">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetReportPolicyPrinting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppID">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetAppID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckFileProtect">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CheckFileProtect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkMBPhoneDuplicate">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/checkMBPhoneDuplicate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDataForNewBisSystem">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/AddDataForNewBisSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrokerOffice">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetBrokerOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddU_NEWBIS_SCAN">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/AddU_NEWBIS_SCAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoUnderwritingResult">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetAutoUnderwritingResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentBehaviour">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetAgentBehaviour" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentBehaviourBad">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetAgentBehaviourBad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMOBroker">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/updateMOBroker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckGPFRegister">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/CheckGPFRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataEV">
+      <soap:operation soapAction="http://tempuri.org/IImproveNewBisSvc/GetDataEV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ImproveNewBisSvc">
+    <wsdl:port name="BasicHttpBinding_IImproveNewBisSvc" binding="tns:BasicHttpBinding_IImproveNewBisSvc">
+      <soap:address location="http://intranetuat.bla.co.th:88/ImproveNewBisWcfSvc/ImproveNewBisWcf.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

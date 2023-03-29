@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://ctDocSvc.Model/2011/cdDocModel" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DocSvc" targetNamespace="http://ctDocSvc.Model/2011/cdDocModel" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://ws2.bla.co.th/CtDocWCFSvcImpTest/CtDocWcfScv.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://ctDocSvc.Model/2011/cdDocModel/Imports">
+      <xsd:import schemaLocation="http://ws2.bla.co.th/CtDocWCFSvcImpTest/CtDocWcfScv.svc?xsd=xsd0" namespace="http://ctDocSvc.Model/2011/cdDocModel" />
+      <xsd:import schemaLocation="http://ws2.bla.co.th/CtDocWCFSvcImpTest/CtDocWcfScv.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertImgReq">
+    <wsdl:part name="parameters" element="tns:InsertImgReq" />
+  </wsdl:message>
+  <wsdl:message name="InsertImgRes">
+    <wsdl:part name="parameters" element="tns:InsertImgRes" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImgReq">
+    <wsdl:part name="parameters" element="tns:DeleteImgReq" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImgRes">
+    <wsdl:part name="parameters" element="tns:DeleteImgRes" />
+  </wsdl:message>
+  <wsdl:message name="InsertDepartReq">
+    <wsdl:part name="parameters" element="tns:InsertDepartReq" />
+  </wsdl:message>
+  <wsdl:message name="InserDepartRes">
+    <wsdl:part name="parameters" element="tns:InserDepartRes" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartReq">
+    <wsdl:part name="parameters" element="tns:GetDepartReq" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartRes">
+    <wsdl:part name="parameters" element="tns:GetDepartRes" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartByIDReq">
+    <wsdl:part name="parameters" element="tns:GetDepartByIDReq" />
+  </wsdl:message>
+  <wsdl:message name="GetDepartByIDRes">
+    <wsdl:part name="parameters" element="tns:GetDepartByIDRes" />
+  </wsdl:message>
+  <wsdl:message name="EditDepartReq">
+    <wsdl:part name="parameters" element="tns:EditDepartReq" />
+  </wsdl:message>
+  <wsdl:message name="EditDepartRes">
+    <wsdl:part name="parameters" element="tns:EditDepartRes" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDepartReq">
+    <wsdl:part name="parameters" element="tns:DeleteDepartReq" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDepartRes">
+    <wsdl:part name="parameters" element="tns:DeleteDepartRes" />
+  </wsdl:message>
+  <wsdl:message name="InsertCategoryReq">
+    <wsdl:part name="parameters" element="tns:InsertCategoryReq" />
+  </wsdl:message>
+  <wsdl:message name="InsertCategoryRes">
+    <wsdl:part name="parameters" element="tns:InsertCategoryRes" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryReq">
+    <wsdl:part name="parameters" element="tns:GetCategoryReq" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryRes">
+    <wsdl:part name="parameters" element="tns:GetCategoryRes" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryByIDReq">
+    <wsdl:part name="parameters" element="tns:GetCategoryByIDReq" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryByIDRes">
+    <wsdl:part name="parameters" element="tns:GetCategoryByIDRes" />
+  </wsdl:message>
+  <wsdl:message name="EditCategoryReq">
+    <wsdl:part name="parameters" element="tns:EditCategoryReq" />
+  </wsdl:message>
+  <wsdl:message name="EditCategoryRes">
+    <wsdl:part name="parameters" element="tns:EditCategoryRes" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCategoryReq">
+    <wsdl:part name="parameters" element="tns:DeleteCategoryReq" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCategoryRes">
+    <wsdl:part name="parameters" element="tns:DeleteCategoryRes" />
+  </wsdl:message>
+  <wsdl:message name="InsertDoctypeReq">
+    <wsdl:part name="parameters" element="tns:InsertDoctypeReq" />
+  </wsdl:message>
+  <wsdl:message name="InsertDoctypeRes">
+    <wsdl:part name="parameters" element="tns:InsertDoctypeRes" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctypeReq">
+    <wsdl:part name="parameters" element="tns:GetDoctypeReq" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctypeRes">
+    <wsdl:part name="parameters" element="tns:GetDoctypeRes" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctypeByIDReq">
+    <wsdl:part name="parameters" element="tns:GetDoctypeByIDReq" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctypeByIDRes">
+    <wsdl:part name="parameters" element="tns:GetDoctypeByIDRes" />
+  </wsdl:message>
+  <wsdl:message name="EditDoctypeReq">
+    <wsdl:part name="parameters" element="tns:EditDoctypeReq" />
+  </wsdl:message>
+  <wsdl:message name="EditDoctypeRes">
+    <wsdl:part name="parameters" element="tns:EditDoctypeRes" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDoctypeReq">
+    <wsdl:part name="parameters" element="tns:DeleteDoctypeReq" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDoctypeRes">
+    <wsdl:part name="parameters" element="tns:DeleteDoctypeRes" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctypeByCateReq">
+    <wsdl:part name="parameters" element="tns:GetDoctypeByCateReq" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctypeByCateRes">
+    <wsdl:part name="parameters" element="tns:GetDoctypeByCateRes" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryByNameReq">
+    <wsdl:part name="parameters" element="tns:GetCategoryByNameReq" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryByNameRes">
+    <wsdl:part name="parameters" element="tns:GetCategoryByNameRes" />
+  </wsdl:message>
+  <wsdl:message name="InsertAuthorityReq">
+    <wsdl:part name="parameters" element="tns:InsertAuthorityReq" />
+  </wsdl:message>
+  <wsdl:message name="InsertAuthorityRes">
+    <wsdl:part name="parameters" element="tns:InsertAuthorityRes" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorityByIDReq">
+    <wsdl:part name="parameters" element="tns:GetAuthorityByIDReq" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorityByIDRes">
+    <wsdl:part name="parameters" element="tns:GetAuthorityByIDRes" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAuthorityReq">
+    <wsdl:part name="parameters" element="tns:DeleteAuthorityReq" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAuthorityRes">
+    <wsdl:part name="parameters" element="tns:DeleteAuthorityRes" />
+  </wsdl:message>
+  <wsdl:message name="InsertDocRefDetailReq">
+    <wsdl:part name="parameters" element="tns:InsertDocRefDetailReq" />
+  </wsdl:message>
+  <wsdl:message name="InsertDocRefDetailRes">
+    <wsdl:part name="parameters" element="tns:InsertDocRefDetailRes" />
+  </wsdl:message>
+  <wsdl:message name="GetDocRefDetailReq">
+    <wsdl:part name="parameters" element="tns:GetDocRefDetailReq" />
+  </wsdl:message>
+  <wsdl:message name="GetDocRefDetailRes">
+    <wsdl:part name="parameters" element="tns:GetDocRefDetailRes" />
+  </wsdl:message>
+  <wsdl:message name="GetDocRefDetailByIDReq">
+    <wsdl:part name="parameters" element="tns:GetDocRefDetailByIDReq" />
+  </wsdl:message>
+  <wsdl:message name="GetDocRefDetailByIDRes">
+    <wsdl:part name="parameters" element="tns:GetDocRefDetailByIDRes" />
+  </wsdl:message>
+  <wsdl:message name="EditDocRefDetailReq">
+    <wsdl:part name="parameters" element="tns:EditDocRefDetailReq" />
+  </wsdl:message>
+  <wsdl:message name="EditDocRefDetailRes">
+    <wsdl:part name="parameters" element="tns:EditDocRefDetailRes" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryByDepartReq">
+    <wsdl:part name="parameters" element="tns:GetCategoryByDepartReq" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryByDepartRes">
+    <wsdl:part name="parameters" element="tns:GetCategoryByDepartRes" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctypeByCateDocandTitleReq">
+    <wsdl:part name="parameters" element="tns:GetDoctypeByCateDocandTitleReq" />
+  </wsdl:message>
+  <wsdl:message name="GetDoctypeByCateDocandTitleRes">
+    <wsdl:part name="parameters" element="tns:GetDoctypeByCateDocandTitleRes" />
+  </wsdl:message>
+  <wsdl:message name="GetDocRefDetailByDoctypeReq">
+    <wsdl:part name="parameters" element="tns:GetDocRefDetailByDoctypeReq" />
+  </wsdl:message>
+  <wsdl:message name="GetDocRefDetailByDoctypeRes">
+    <wsdl:part name="parameters" element="tns:GetDocRefDetailByDoctypeRes" />
+  </wsdl:message>
+  <wsdl:message name="GetHierarchyReq">
+    <wsdl:part name="parameters" element="tns:GetHierarchyReq" />
+  </wsdl:message>
+  <wsdl:message name="GetHierarchyRes">
+    <wsdl:part name="parameters" element="tns:GetHierarchyRes" />
+  </wsdl:message>
+  <wsdl:message name="InsertDocrefReq">
+    <wsdl:part name="parameters" element="tns:InsertDocrefReq" />
+  </wsdl:message>
+  <wsdl:message name="InsertDocrefRes">
+    <wsdl:part name="parameters" element="tns:InsertDocrefRes" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDocrefReq">
+    <wsdl:part name="parameters" element="tns:DeleteDocrefReq" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDocrefRes">
+    <wsdl:part name="parameters" element="tns:DeleteDocrefRes" />
+  </wsdl:message>
+  <wsdl:message name="DocImageSearchReq">
+    <wsdl:part name="parameters" element="tns:DocImageSearchReq" />
+  </wsdl:message>
+  <wsdl:message name="DocImageSearchRes">
+    <wsdl:part name="parameters" element="tns:DocImageSearchRes" />
+  </wsdl:message>
+  <wsdl:message name="GetImageByIDReq">
+    <wsdl:part name="parameters" element="tns:GetImageByIDReq" />
+  </wsdl:message>
+  <wsdl:message name="GetImageByIDRes">
+    <wsdl:part name="parameters" element="tns:GetImageByIDRes" />
+  </wsdl:message>
+  <wsdl:message name="InsertDocLogReq">
+    <wsdl:part name="parameters" element="tns:InsertDocLogReq" />
+  </wsdl:message>
+  <wsdl:message name="InsertDocLogRes">
+    <wsdl:part name="parameters" element="tns:InsertDocLogRes" />
+  </wsdl:message>
+  <wsdl:message name="GetDocrefByIDReq">
+    <wsdl:part name="parameters" element="tns:GetDocrefByIDReq" />
+  </wsdl:message>
+  <wsdl:message name="GetDocrefByIDRes">
+    <wsdl:part name="parameters" element="tns:GetDocrefByIDRes" />
+  </wsdl:message>
+  <wsdl:message name="EditImageReq">
+    <wsdl:part name="parameters" element="tns:EditImageReq" />
+  </wsdl:message>
+  <wsdl:message name="EditImageRes">
+    <wsdl:part name="parameters" element="tns:EditImageRes" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorityByUserIDReq">
+    <wsdl:part name="parameters" element="tns:GetAuthorityByUserIDReq" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorityByUserIDRes">
+    <wsdl:part name="parameters" element="tns:GetAuthorityByUserIDRes" />
+  </wsdl:message>
+  <wsdl:message name="InsertHighAuthorityReq">
+    <wsdl:part name="parameters" element="tns:InsertHighAuthorityReq" />
+  </wsdl:message>
+  <wsdl:message name="InsertHighAuthorityRes">
+    <wsdl:part name="parameters" element="tns:InsertHighAuthorityRes" />
+  </wsdl:message>
+  <wsdl:message name="GetHighAuthorityByIDReq">
+    <wsdl:part name="parameters" element="tns:GetHighAuthorityByIDReq" />
+  </wsdl:message>
+  <wsdl:message name="GetHighAuthorityByIDRes">
+    <wsdl:part name="parameters" element="tns:GetHighAuthorityByIDRes" />
+  </wsdl:message>
+  <wsdl:message name="DeleteHighAuthorityReq">
+    <wsdl:part name="parameters" element="tns:DeleteHighAuthorityReq" />
+  </wsdl:message>
+  <wsdl:message name="DeleteHighAuthorityRes">
+    <wsdl:part name="parameters" element="tns:DeleteHighAuthorityRes" />
+  </wsdl:message>
+  <wsdl:message name="InsertImgTempReq">
+    <wsdl:part name="DocImgTemp" element="tns:DocImgTemp" />
+  </wsdl:message>
+  <wsdl:message name="InsertImgTempRes">
+    <wsdl:part name="DocImgFilename" element="tns:DocImgFilename" />
+  </wsdl:message>
+  <wsdl:message name="GetImageTempByNameReq">
+    <wsdl:part name="parameters" element="tns:GetImageTempByNameReq" />
+  </wsdl:message>
+  <wsdl:message name="GetImageTempByNameRes">
+    <wsdl:part name="parameters" element="tns:GetImageTempByNameRes" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImgTempReq">
+    <wsdl:part name="parameters" element="tns:DeleteImgTempReq" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImgTempRes">
+    <wsdl:part name="parameters" element="tns:DeleteImgTempRes" />
+  </wsdl:message>
+  <wsdl:message name="ChkImgFromCounterReq">
+    <wsdl:part name="parameters" element="tns:ChkImgFromCounterReq" />
+  </wsdl:message>
+  <wsdl:message name="ChkImgFromCounterRes">
+    <wsdl:part name="parameters" element="tns:ChkImgFromCounterRes" />
+  </wsdl:message>
+  <wsdl:message name="DocImagefixSearchReq">
+    <wsdl:part name="parameters" element="tns:DocImagefixSearchReq" />
+  </wsdl:message>
+  <wsdl:message name="DocImagefixSearchRes">
+    <wsdl:part name="parameters" element="tns:DocImagefixSearchRes" />
+  </wsdl:message>
+  <wsdl:message name="ChkImgByRegReq">
+    <wsdl:part name="parameters" element="tns:ChkImgByRegReq" />
+  </wsdl:message>
+  <wsdl:message name="ChkImgByRegRes">
+    <wsdl:part name="parameters" element="tns:ChkImgByRegRes" />
+  </wsdl:message>
+  <wsdl:portType name="DocServiceContract">
+    <wsdl:operation name="InsertImg">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertImg" name="InsertImgReq" message="tns:InsertImgReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertImgResponse" name="InsertImgRes" message="tns:InsertImgRes" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImg">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteImg" name="DeleteImgReq" message="tns:DeleteImgReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteImgResponse" name="DeleteImgRes" message="tns:DeleteImgRes" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDepart">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDepart" name="InsertDepartReq" message="tns:InsertDepartReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDepartResponse" name="InserDepartRes" message="tns:InserDepartRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepart">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDepart" name="GetDepartReq" message="tns:GetDepartReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDepartResponse" name="GetDepartRes" message="tns:GetDepartRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepartByID">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDepartByID" name="GetDepartByIDReq" message="tns:GetDepartByIDReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDepartByIDResponse" name="GetDepartByIDRes" message="tns:GetDepartByIDRes" />
+    </wsdl:operation>
+    <wsdl:operation name="EditDepart">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditDepart" name="EditDepartReq" message="tns:EditDepartReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditDepartResponse" name="EditDepartRes" message="tns:EditDepartRes" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDepart">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteDepart" name="DeleteDepartReq" message="tns:DeleteDepartReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteDepartResponse" name="DeleteDepartRes" message="tns:DeleteDepartRes" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCategory">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertCategory" name="InsertCategoryReq" message="tns:InsertCategoryReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertCategoryResponse" name="InsertCategoryRes" message="tns:InsertCategoryRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategory">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetCategory" name="GetCategoryReq" message="tns:GetCategoryReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetCategoryResponse" name="GetCategoryRes" message="tns:GetCategoryRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryByID">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetCategoryByID" name="GetCategoryByIDReq" message="tns:GetCategoryByIDReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetCategoryByIDResponse" name="GetCategoryByIDRes" message="tns:GetCategoryByIDRes" />
+    </wsdl:operation>
+    <wsdl:operation name="EditCategory">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditCategory" name="EditCategoryReq" message="tns:EditCategoryReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditCategoryResponse" name="EditCategoryRes" message="tns:EditCategoryRes" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCategory">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteCategory" name="DeleteCategoryReq" message="tns:DeleteCategoryReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteCategoryResponse" name="DeleteCategoryRes" message="tns:DeleteCategoryRes" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDoctype">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDoctype" name="InsertDoctypeReq" message="tns:InsertDoctypeReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDoctypeResponse" name="InsertDoctypeRes" message="tns:InsertDoctypeRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctype">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDoctype" name="GetDoctypeReq" message="tns:GetDoctypeReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDoctypeResponse" name="GetDoctypeRes" message="tns:GetDoctypeRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctypeByID">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDoctypeByID" name="GetDoctypeByIDReq" message="tns:GetDoctypeByIDReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDoctypeByIDResponse" name="GetDoctypeByIDRes" message="tns:GetDoctypeByIDRes" />
+    </wsdl:operation>
+    <wsdl:operation name="EditDoctype">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditDoctype" name="EditDoctypeReq" message="tns:EditDoctypeReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditDoctypeResponse" name="EditDoctypeRes" message="tns:EditDoctypeRes" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDoctype">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteDoctype" name="DeleteDoctypeReq" message="tns:DeleteDoctypeReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteDoctypeResponse" name="DeleteDoctypeRes" message="tns:DeleteDoctypeRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctypeByCate">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDoctypeByCate" name="GetDoctypeByCateReq" message="tns:GetDoctypeByCateReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDoctypeByCateResponse" name="GetDoctypeByCateRes" message="tns:GetDoctypeByCateRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryByName">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetCategoryByName" name="GetCategoryByNameReq" message="tns:GetCategoryByNameReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetCategoryByNameResponse" name="GetCategoryByNameRes" message="tns:GetCategoryByNameRes" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAuthority">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertAuthority" name="InsertAuthorityReq" message="tns:InsertAuthorityReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertAuthorityResponse" name="InsertAuthorityRes" message="tns:InsertAuthorityRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorityByID">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetAuthorityByID" name="GetAuthorityByIDReq" message="tns:GetAuthorityByIDReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetAuthorityByIDResponse" name="GetAuthorityByIDRes" message="tns:GetAuthorityByIDRes" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuthority">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteAuthority" name="DeleteAuthorityReq" message="tns:DeleteAuthorityReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteAuthorityResponse" name="DeleteAuthorityRes" message="tns:DeleteAuthorityRes" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocRefDetail">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDocRefDetail" name="InsertDocRefDetailReq" message="tns:InsertDocRefDetailReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDocRefDetailResponse" name="InsertDocRefDetailRes" message="tns:InsertDocRefDetailRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocRefDetail">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDocRefDetail" name="GetDocRefDetailReq" message="tns:GetDocRefDetailReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDocRefDetailResponse" name="GetDocRefDetailRes" message="tns:GetDocRefDetailRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocRefDetailByID">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDocRefDetailByID" name="GetDocRefDetailByIDReq" message="tns:GetDocRefDetailByIDReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDocRefDetailByIDResponse" name="GetDocRefDetailByIDRes" message="tns:GetDocRefDetailByIDRes" />
+    </wsdl:operation>
+    <wsdl:operation name="EditDocRefDetail">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditDocRefDetail" name="EditDocRefDetailReq" message="tns:EditDocRefDetailReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditDocRefDetailResponse" name="EditDocRefDetailRes" message="tns:EditDocRefDetailRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryByDepart">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetCategoryByDepart" name="GetCategoryByDepartReq" message="tns:GetCategoryByDepartReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetCategoryByDepartResponse" name="GetCategoryByDepartRes" message="tns:GetCategoryByDepartRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctypeByCateDocandTitle">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDoctypeByCateDocandTitle" name="GetDoctypeByCateDocandTitleReq" message="tns:GetDoctypeByCateDocandTitleReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDoctypeByCateDocandTitleResponse" name="GetDoctypeByCateDocandTitleRes" message="tns:GetDoctypeByCateDocandTitleRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocRefDetailByDoctype">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDocRefDetailByDoctype" name="GetDocRefDetailByDoctypeReq" message="tns:GetDocRefDetailByDoctypeReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDocRefDetailByDoctypeResponse" name="GetDocRefDetailByDoctypeRes" message="tns:GetDocRefDetailByDoctypeRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHierarchy">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetHierarchy" name="GetHierarchyReq" message="tns:GetHierarchyReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetHierarchyResponse" name="GetHierarchyRes" message="tns:GetHierarchyRes" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocref">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDocref" name="InsertDocrefReq" message="tns:InsertDocrefReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDocrefResponse" name="InsertDocrefRes" message="tns:InsertDocrefRes" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocref">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteDocref" name="DeleteDocrefReq" message="tns:DeleteDocrefReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteDocrefResponse" name="DeleteDocrefRes" message="tns:DeleteDocrefRes" />
+    </wsdl:operation>
+    <wsdl:operation name="DocImageSearch">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DocImageSearch" name="DocImageSearchReq" message="tns:DocImageSearchReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DocImageSearchResponse" name="DocImageSearchRes" message="tns:DocImageSearchRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageByID">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetImageByID" name="GetImageByIDReq" message="tns:GetImageByIDReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetImageByIDResponse" name="GetImageByIDRes" message="tns:GetImageByIDRes" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocLog">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDocLog" name="InsertDocLogReq" message="tns:InsertDocLogReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertDocLogResponse" name="InsertDocLogRes" message="tns:InsertDocLogRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocrefByID">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDocrefByID" name="GetDocrefByIDReq" message="tns:GetDocrefByIDReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetDocrefByIDResponse" name="GetDocrefByIDRes" message="tns:GetDocrefByIDRes" />
+    </wsdl:operation>
+    <wsdl:operation name="EditImage">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditImage" name="EditImageReq" message="tns:EditImageReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/EditImageResponse" name="EditImageRes" message="tns:EditImageRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorityByUserID">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetAuthorityByUserID" name="GetAuthorityByUserIDReq" message="tns:GetAuthorityByUserIDReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetAuthorityByUserIDResponse" name="GetAuthorityByUserIDRes" message="tns:GetAuthorityByUserIDRes" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertHighAuthority">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertHighAuthority" name="InsertHighAuthorityReq" message="tns:InsertHighAuthorityReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertHighAuthorityResponse" name="InsertHighAuthorityRes" message="tns:InsertHighAuthorityRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHighAuthorityByID">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetHighAuthorityByID" name="GetHighAuthorityByIDReq" message="tns:GetHighAuthorityByIDReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetHighAuthorityByIDResponse" name="GetHighAuthorityByIDRes" message="tns:GetHighAuthorityByIDRes" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHighAuthority">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteHighAuthority" name="DeleteHighAuthorityReq" message="tns:DeleteHighAuthorityReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteHighAuthorityResponse" name="DeleteHighAuthorityRes" message="tns:DeleteHighAuthorityRes" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertImgTemp">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertImgTemp" name="InsertImgTempReq" message="tns:InsertImgTempReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/InsertImgTempResponse" name="InsertImgTempRes" message="tns:InsertImgTempRes" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageTempByName">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetImageTempByName" name="GetImageTempByNameReq" message="tns:GetImageTempByNameReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/GetImageTempByNameResponse" name="GetImageTempByNameRes" message="tns:GetImageTempByNameRes" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImgTemp">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteImgTemp" name="DeleteImgTempReq" message="tns:DeleteImgTempReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DeleteImgTempResponse" name="DeleteImgTempRes" message="tns:DeleteImgTempRes" />
+    </wsdl:operation>
+    <wsdl:operation name="ChkImgFromCounter">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/ChkImgFromCounter" name="ChkImgFromCounterReq" message="tns:ChkImgFromCounterReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/ChkImgFromCounterResponse" name="ChkImgFromCounterRes" message="tns:ChkImgFromCounterRes" />
+    </wsdl:operation>
+    <wsdl:operation name="DocImagefixSearch">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DocImagefixSearch" name="DocImagefixSearchReq" message="tns:DocImagefixSearchReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/DocImagefixSearchResponse" name="DocImagefixSearchRes" message="tns:DocImagefixSearchRes" />
+    </wsdl:operation>
+    <wsdl:operation name="ChkImgByReg">
+      <wsdl:input wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/ChkImgByReg" name="ChkImgByRegReq" message="tns:ChkImgByRegReq" />
+      <wsdl:output wsaw:Action="http://ctDocSvc.Model/2011/cdDocModel/DocServiceContract/ChkImgByRegResponse" name="ChkImgByRegRes" message="tns:ChkImgByRegRes" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="DocSvc">
+    <wsdl:port name="BasicHttpBinding_DocServiceContract" binding="i0:BasicHttpBinding_DocServiceContract">
+      <soap:address location="http://ws2.bla.co.th/CtDocWCFSvcImpTest/CtDocWcfScv.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

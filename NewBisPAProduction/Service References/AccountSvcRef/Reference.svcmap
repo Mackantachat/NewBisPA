@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5d3a6d13-9df0-4909-8226-d3972ee24b56" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ws2.bla.co.th/AccountWcfSvc/AccountWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AccountWcf.xsd" MetadataType="Schema" ID="5f446764-6f9b-4eba-af7c-0419dd2e9929" SourceId="1" SourceUrl="http://ws2.bla.co.th/AccountWcfSvc/AccountWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="AccountWcf1.xsd" MetadataType="Schema" ID="e6ba35af-97cb-47d0-bc8f-6bb602bb4732" SourceId="1" SourceUrl="http://ws2.bla.co.th/AccountWcfSvc/AccountWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="AccountWcf2.xsd" MetadataType="Schema" ID="ea89e71f-c29a-498d-b6db-3047449a9965" SourceId="1" SourceUrl="http://ws2.bla.co.th/AccountWcfSvc/AccountWcf.svc?xsd=xsd2" />
+    <MetadataFile FileName="AccountWcf3.xsd" MetadataType="Schema" ID="e45ccada-9afc-4d07-bba2-9cac724baaa6" SourceId="1" SourceUrl="http://ws2.bla.co.th/AccountWcfSvc/AccountWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="AccountWcf.disco" MetadataType="Disco" ID="249553e5-5a9d-44c3-b902-29dec43af25b" SourceId="1" SourceUrl="http://ws2.bla.co.th/AccountWcfSvc/AccountWcf.svc?disco" />
+    <MetadataFile FileName="AccountService.wsdl" MetadataType="Wsdl" ID="2feacf91-75df-4a31-9bc4-979d70b0ab4d" SourceId="1" SourceUrl="http://ws2.bla.co.th/AccountWcfSvc/AccountWcf.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

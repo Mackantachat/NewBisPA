@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0513f985-9ff3-4542-85ee-1c6623e9098a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://intranetuat.bla.co.th:88/PolicyWcfSvcUAT/PolicyWcf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PolicySvc.wsdl" MetadataType="Wsdl" ID="eea5c82d-7a1d-4cc7-80c8-eed22167beec" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/PolicyWcfSvcUat/PolicyWcf.svc?wsdl" />
+    <MetadataFile FileName="PolicyWcf.xsd" MetadataType="Schema" ID="9fa2da82-50a3-4955-bcf0-b35cfdf864f9" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/PolicyWcfSvcUat/PolicyWcf.svc?xsd=xsd0" />
+    <MetadataFile FileName="PolicyWcf1.xsd" MetadataType="Schema" ID="42e7a6b9-d6a9-4fae-9e76-aa88e04c4d29" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/PolicyWcfSvcUat/PolicyWcf.svc?xsd=xsd1" />
+    <MetadataFile FileName="PolicyWcf.disco" MetadataType="Disco" ID="06878cfb-f3fe-4f32-ae6e-205346e9d562" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/PolicyWcfSvcUat/PolicyWcf.svc?disco" />
+    <MetadataFile FileName="PolicyWcf2.xsd" MetadataType="Schema" ID="704383e3-81f3-4149-86f3-17b37b220fa0" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/PolicyWcfSvcUat/PolicyWcf.svc?xsd=xsd3" />
+    <MetadataFile FileName="PolicyWcf3.xsd" MetadataType="Schema" ID="4a0db0d6-ad69-4253-8dde-d2477827329e" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/PolicyWcfSvcUat/PolicyWcf.svc?xsd=xsd4" />
+    <MetadataFile FileName="PolicyWcf4.xsd" MetadataType="Schema" ID="afa0752f-1b03-4a4f-92e5-918c20754cf9" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/PolicyWcfSvcUat/PolicyWcf.svc?xsd=xsd5" />
+    <MetadataFile FileName="PolicyWcf5.xsd" MetadataType="Schema" ID="741eb90e-b90f-46ee-859a-1c9ec3f33160" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/PolicyWcfSvcUat/PolicyWcf.svc?xsd=xsd6" />
+    <MetadataFile FileName="PolicyWcf6.xsd" MetadataType="Schema" ID="d56b5cbc-8a0a-4ffb-bb8f-9d02973276fd" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/PolicyWcfSvcUat/PolicyWcf.svc?xsd=xsd7" />
+    <MetadataFile FileName="PolicyWcf7.xsd" MetadataType="Schema" ID="45d3274b-45e0-47a8-be0a-224b88401e85" SourceId="1" SourceUrl="http://intranetuat.bla.co.th:88/PolicyWcfSvcUat/PolicyWcf.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

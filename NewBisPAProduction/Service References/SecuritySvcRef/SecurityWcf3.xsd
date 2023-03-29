@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ws2.bla.co.th/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AppSecurityProvider" />
+  <xs:import schemaLocation="http://ws2.bla.co.th/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CenterProvider" />
+  <xs:import schemaLocation="http://ws2.bla.co.th/SecurityWcfSvc/SecurityWcf.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetWebApplicationByPermit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWebApplicationByPermitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AppSecurityProvider" minOccurs="0" name="GetWebApplicationByPermitResult" nillable="true" type="q1:ArrayOfApplication" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="processResult" nillable="true" type="q2:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWinApplicationByPermit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWinApplicationByPermitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/AppSecurityProvider" minOccurs="0" name="GetWinApplicationByPermitResult" nillable="true" type="q3:ArrayOfApplication" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="processResult" nillable="true" type="q4:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWebProgramByPermit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ApplicationID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWebProgramByPermitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/AppSecurityProvider" minOccurs="0" name="GetWebProgramByPermitResult" nillable="true" type="q5:ArrayOfProgram" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="processResult" nillable="true" type="q6:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWinProgramByPermit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ApplicationID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWinProgramByPermitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/AppSecurityProvider" minOccurs="0" name="GetWinProgramByPermitResult" nillable="true" type="q7:ArrayOfProgram" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="processResult" nillable="true" type="q8:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyPermit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="applicationID" type="xs:long" />
+        <xs:element minOccurs="0" name="programCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyPermitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyPermitResult" type="xs:boolean" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="processResult" nillable="true" type="q9:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyPermitByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="applicationCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="programCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyPermitByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyPermitByCodeResult" type="xs:boolean" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="processResult" nillable="true" type="q10:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="VerifyPasswordResult" type="xs:boolean" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="processResult" nillable="true" type="q11:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChangePasswordResult" type="xs:boolean" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="processResult" nillable="true" type="q12:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNUserId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inputUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNUserIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNUserIdResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="processResult" nillable="true" type="q13:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProgramGroupByPermit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ApplicationID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProgramGroupByPermitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/AppSecurityProvider" minOccurs="0" name="GetProgramGroupByPermitResult" nillable="true" type="q14:ArrayOfProgramGroup" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="processResult" nillable="true" type="q15:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProgramGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="applicationId" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="programType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="display" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProgramGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/AppSecurityProvider" minOccurs="0" name="GetProgramGroupResult" nillable="true" type="q16:ArrayOfProgramGroup" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="processResult" nillable="true" type="q17:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProgramGroupById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="programGroupId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProgramGroupByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="GetProgramGroupByIdResult" nillable="true" type="q18:ProcessResult" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/AppSecurityProvider" minOccurs="0" name="programGroup" nillable="true" type="q19:ProgramGroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyDomainUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyDomainUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="VerifyDomainUserResult" nillable="true" type="q20:ProcessResult" />
+        <xs:element minOccurs="0" name="verified" type="xs:boolean" />
+        <xs:element minOccurs="0" name="oldUserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newUserId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyUserId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyUserIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="VerifyUserIdResult" nillable="true" type="q21:ProcessResult" />
+        <xs:element minOccurs="0" name="verified" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="applicationId" nillable="true" type="q22:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/AppSecurityProvider" minOccurs="0" name="GetApplicationResult" nillable="true" type="q23:ArrayOfApplication" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="processResult" nillable="true" type="q24:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyLdapUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyLdapUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/CenterProvider" minOccurs="0" name="VerifyLdapUserResult" nillable="true" type="q25:ProcessResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

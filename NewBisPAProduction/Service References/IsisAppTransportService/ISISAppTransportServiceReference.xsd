@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://NewISISService/2012/ISISAppTransportService" elementFormDefault="qualified" targetNamespace="http://NewISISService/2012/ISISAppTransportService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://owssvr.bla.co.th/ISISAppTransportService/ISISAppTransportServiceReference.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AppTransport.DataContract" />
+  <xs:element name="ChangeAppFormStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appRegisterID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="detail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="requestDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="gracePeriod" type="xs:int" />
+        <xs:element minOccurs="0" name="isisDocID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeAppFormStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppFormContentByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appRegisterID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppFormContentByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAppFormContentByIDResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMoreContentByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="responseID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMoreContentByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMoreContentByIDResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContentByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contentID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContentByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContentByIDResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendCompleteContentStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appRegisterID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendCompleteContentStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendReceiveContentStatusToOutSide">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appRegisterID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isisDocID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="receiveBranchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="createdBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contentID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendReceiveContentStatusToOutSideResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestToIssueNewPolicy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appRegisterID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AppTransport.DataContract" minOccurs="0" name="billing" nillable="true" type="q1:OrdBilling" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestToIssueNewPolicyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AppTransport.DataContract" minOccurs="0" name="billing" nillable="true" type="q2:OrdBilling" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestToCancelBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/AppTransport.DataContract" minOccurs="0" name="billingCancel" nillable="true" type="q3:OrdBillingCancel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestToCancelBillResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestToIssueNewBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/AppTransport.DataContract" minOccurs="0" name="billing" nillable="true" type="q4:OrdBilling" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RequestToIssueNewBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/AppTransport.DataContract" minOccurs="0" name="billing" nillable="true" type="q5:OrdBilling" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendScanRatingSheetCompleteToOutSide">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appRegisterID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="createdBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contentID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendScanRatingSheetCompleteToOutSideResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendScanOtherDocCompleteToOutSide">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appRegisterID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="blaBranchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="createdBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contentID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendScanOtherDocCompleteToOutSideResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTaxPremium">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTaxPremiumResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

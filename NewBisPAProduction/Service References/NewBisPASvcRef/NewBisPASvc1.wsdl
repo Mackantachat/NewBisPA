@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NewBisPASvc" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://intranettest.bla.co.th/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd2" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://intranettest.bla.co.th/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://intranettest.bla.co.th/NewBisPAWcfSvc/NewBisPAWcf.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/NewBISService.DataContract" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INewBisPASvc_GetBaseControlsData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBaseControlsData" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetBaseControlsData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBaseControlsDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetSaleAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleAgent" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetSaleAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaleAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetPNameIDByCustomerData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPNameIDByCustomerData" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetPNameIDByCustomerData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPNameIDByCustomerDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetAge_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAge" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetAge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetAgeOD_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgeOD" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetAgeOD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgeODResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetOldAddressByNameID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldAddressByNameID" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetOldAddressByNameID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOldAddressByNameIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetZtbPlanOfPM_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZtbPlanOfPM" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetZtbPlanOfPM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZtbPlanOfPMResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetZtbPlanOfPO_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetZtbPlanOfPO" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetZtbPlanOfPO_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetZtbPlanOfPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetValidatePA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidatePA" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetValidatePA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidatePAResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetCreditCardData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCardData" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetCreditCardData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCardDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetUnderWriteAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnderWriteAll" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetUnderWriteAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnderWriteAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetDateOfStatusInforce_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDateOfStatusInforce" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetDateOfStatusInforce_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDateOfStatusInforceResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetQuestionPA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionPA" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetQuestionPA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionPAResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_ValidateAddressLengthPA_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddressLengthPA" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_ValidateAddressLengthPA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddressLengthPAResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_ConcatAddressPA_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConcatAddressPA" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_ConcatAddressPA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConcatAddressPAResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetBranchNamePA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchNamePA" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetBranchNamePA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchNamePAResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetDepositType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepositType" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetDepositType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepositTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetSuspenseData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuspenseData" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetSuspenseData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuspenseDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetUapplicationLockByAppID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUapplicationLockByAppID" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetUapplicationLockByAppID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUapplicationLockByAppIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_AdjustUApplicationLock_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdjustUApplicationLock" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_AdjustUApplicationLock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdjustUApplicationLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetWSummaryHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWSummaryHistory" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetWSummaryHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWSummaryHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetTotalSumm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalSumm" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetTotalSumm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalSummResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetPolicyAndAppAllChannel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPolicyAndAppAllChannel" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetPolicyAndAppAllChannel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPolicyAndAppAllChannelResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetAppNoByPolicyNoPA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppNoByPolicyNoPA" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetAppNoByPolicyNoPA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppNoByPolicyNoPAResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_AddUpdateUApplicationID_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUpdateUApplicationID" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_AddUpdateUApplicationID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUpdateUApplicationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetUApplicationIDOfPA_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUApplicationIDOfPA" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_GetUApplicationIDOfPA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUApplicationIDOfPAResponse" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_AddISISapplicationForPA1_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddISISapplicationForPA1" />
+  </wsdl:message>
+  <wsdl:message name="INewBisPASvc_AddISISapplicationForPA1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddISISapplicationForPA1Response" />
+  </wsdl:message>
+  <wsdl:portType name="INewBisPASvc">
+    <wsdl:operation name="GetBaseControlsData">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetBaseControlsData" message="tns:INewBisPASvc_GetBaseControlsData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetBaseControlsDataResponse" message="tns:INewBisPASvc_GetBaseControlsData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleAgent">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetSaleAgent" message="tns:INewBisPASvc_GetSaleAgent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetSaleAgentResponse" message="tns:INewBisPASvc_GetSaleAgent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPNameIDByCustomerData">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetPNameIDByCustomerData" message="tns:INewBisPASvc_GetPNameIDByCustomerData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetPNameIDByCustomerDataResponse" message="tns:INewBisPASvc_GetPNameIDByCustomerData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAge">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetAge" message="tns:INewBisPASvc_GetAge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetAgeResponse" message="tns:INewBisPASvc_GetAge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgeOD">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetAgeOD" message="tns:INewBisPASvc_GetAgeOD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetAgeODResponse" message="tns:INewBisPASvc_GetAgeOD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOldAddressByNameID">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetOldAddressByNameID" message="tns:INewBisPASvc_GetOldAddressByNameID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetOldAddressByNameIDResponse" message="tns:INewBisPASvc_GetOldAddressByNameID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZtbPlanOfPM">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetZtbPlanOfPM" message="tns:INewBisPASvc_GetZtbPlanOfPM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetZtbPlanOfPMResponse" message="tns:INewBisPASvc_GetZtbPlanOfPM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZtbPlanOfPO">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetZtbPlanOfPO" message="tns:INewBisPASvc_GetZtbPlanOfPO_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetZtbPlanOfPOResponse" message="tns:INewBisPASvc_GetZtbPlanOfPO_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidatePA">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetValidatePA" message="tns:INewBisPASvc_GetValidatePA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetValidatePAResponse" message="tns:INewBisPASvc_GetValidatePA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardData">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetCreditCardData" message="tns:INewBisPASvc_GetCreditCardData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetCreditCardDataResponse" message="tns:INewBisPASvc_GetCreditCardData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnderWriteAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetUnderWriteAll" message="tns:INewBisPASvc_GetUnderWriteAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetUnderWriteAllResponse" message="tns:INewBisPASvc_GetUnderWriteAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDateOfStatusInforce">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetDateOfStatusInforce" message="tns:INewBisPASvc_GetDateOfStatusInforce_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetDateOfStatusInforceResponse" message="tns:INewBisPASvc_GetDateOfStatusInforce_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionPA">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetQuestionPA" message="tns:INewBisPASvc_GetQuestionPA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetQuestionPAResponse" message="tns:INewBisPASvc_GetQuestionPA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAddressLengthPA">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/ValidateAddressLengthPA" message="tns:INewBisPASvc_ValidateAddressLengthPA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/ValidateAddressLengthPAResponse" message="tns:INewBisPASvc_ValidateAddressLengthPA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConcatAddressPA">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/ConcatAddressPA" message="tns:INewBisPASvc_ConcatAddressPA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/ConcatAddressPAResponse" message="tns:INewBisPASvc_ConcatAddressPA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchNamePA">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetBranchNamePA" message="tns:INewBisPASvc_GetBranchNamePA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetBranchNamePAResponse" message="tns:INewBisPASvc_GetBranchNamePA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepositType">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetDepositType" message="tns:INewBisPASvc_GetDepositType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetDepositTypeResponse" message="tns:INewBisPASvc_GetDepositType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSuspenseData">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetSuspenseData" message="tns:INewBisPASvc_GetSuspenseData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetSuspenseDataResponse" message="tns:INewBisPASvc_GetSuspenseData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUapplicationLockByAppID">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetUapplicationLockByAppID" message="tns:INewBisPASvc_GetUapplicationLockByAppID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetUapplicationLockByAppIDResponse" message="tns:INewBisPASvc_GetUapplicationLockByAppID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdjustUApplicationLock">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/AdjustUApplicationLock" message="tns:INewBisPASvc_AdjustUApplicationLock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/AdjustUApplicationLockResponse" message="tns:INewBisPASvc_AdjustUApplicationLock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWSummaryHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetWSummaryHistory" message="tns:INewBisPASvc_GetWSummaryHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetWSummaryHistoryResponse" message="tns:INewBisPASvc_GetWSummaryHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalSumm">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetTotalSumm" message="tns:INewBisPASvc_GetTotalSumm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetTotalSummResponse" message="tns:INewBisPASvc_GetTotalSumm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyAndAppAllChannel">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetPolicyAndAppAllChannel" message="tns:INewBisPASvc_GetPolicyAndAppAllChannel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetPolicyAndAppAllChannelResponse" message="tns:INewBisPASvc_GetPolicyAndAppAllChannel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppNoByPolicyNoPA">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetAppNoByPolicyNoPA" message="tns:INewBisPASvc_GetAppNoByPolicyNoPA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetAppNoByPolicyNoPAResponse" message="tns:INewBisPASvc_GetAppNoByPolicyNoPA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUpdateUApplicationID">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/AddUpdateUApplicationID" message="tns:INewBisPASvc_AddUpdateUApplicationID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/AddUpdateUApplicationIDResponse" message="tns:INewBisPASvc_AddUpdateUApplicationID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUApplicationIDOfPA">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/GetUApplicationIDOfPA" message="tns:INewBisPASvc_GetUApplicationIDOfPA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/GetUApplicationIDOfPAResponse" message="tns:INewBisPASvc_GetUApplicationIDOfPA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddISISapplicationForPA1">
+      <wsdl:input wsaw:Action="http://tempuri.org/INewBisPASvc/AddISISapplicationForPA1" message="tns:INewBisPASvc_AddISISapplicationForPA1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INewBisPASvc/AddISISapplicationForPA1Response" message="tns:INewBisPASvc_AddISISapplicationForPA1_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INewBisPASvc" type="tns:INewBisPASvc">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBaseControlsData">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetBaseControlsData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaleAgent">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetSaleAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPNameIDByCustomerData">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetPNameIDByCustomerData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAge">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetAge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgeOD">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetAgeOD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOldAddressByNameID">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetOldAddressByNameID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZtbPlanOfPM">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetZtbPlanOfPM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZtbPlanOfPO">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetZtbPlanOfPO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidatePA">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetValidatePA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardData">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetCreditCardData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnderWriteAll">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetUnderWriteAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDateOfStatusInforce">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetDateOfStatusInforce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionPA">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetQuestionPA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAddressLengthPA">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/ValidateAddressLengthPA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConcatAddressPA">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/ConcatAddressPA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchNamePA">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetBranchNamePA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepositType">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetDepositType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuspenseData">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetSuspenseData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUapplicationLockByAppID">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetUapplicationLockByAppID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdjustUApplicationLock">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/AdjustUApplicationLock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWSummaryHistory">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetWSummaryHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalSumm">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetTotalSumm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyAndAppAllChannel">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetPolicyAndAppAllChannel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppNoByPolicyNoPA">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetAppNoByPolicyNoPA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUpdateUApplicationID">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/AddUpdateUApplicationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUApplicationIDOfPA">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/GetUApplicationIDOfPA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddISISapplicationForPA1">
+      <soap:operation soapAction="http://tempuri.org/INewBisPASvc/AddISISapplicationForPA1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NewBisPASvc">
+    <wsdl:port name="BasicHttpBinding_INewBisPASvc" binding="tns:BasicHttpBinding_INewBisPASvc">
+      <soap:address location="http://intranettest.bla.co.th/NewBisPAWcfSvc/NewBisPAWcf.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

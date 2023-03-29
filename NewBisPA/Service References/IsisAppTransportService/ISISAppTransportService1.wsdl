@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://NewISISService/2012/ISISAppTransportService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ISISAppTransportService" targetNamespace="http://NewISISService/2012/ISISAppTransportService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="ISISAppTransportServiceEndpoint_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://NewISISService/2012/ISISAppTransportService/Imports">
+      <xsd:import schemaLocation="http://owssvr.bla.co.th/ISISAppTransportService.Test/ISISAppTransportServiceReference.svc?xsd=xsd0" namespace="http://NewISISService/2012/ISISAppTransportService" />
+      <xsd:import schemaLocation="http://owssvr.bla.co.th/ISISAppTransportService.Test/ISISAppTransportServiceReference.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://owssvr.bla.co.th/ISISAppTransportService.Test/ISISAppTransportServiceReference.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AppTransport.DataContract" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAppTransportServiceContract_ChangeAppFormStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeAppFormStatus" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_ChangeAppFormStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeAppFormStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_GetAppFormContentByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppFormContentByID" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_GetAppFormContentByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppFormContentByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_GetMoreContentByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoreContentByID" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_GetMoreContentByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoreContentByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_GetContentByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentByID" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_GetContentByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContentByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_SendCompleteContentStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendCompleteContentStatus" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_SendCompleteContentStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendCompleteContentStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_SendReceiveContentStatusToOutSide_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendReceiveContentStatusToOutSide" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_SendReceiveContentStatusToOutSide_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendReceiveContentStatusToOutSideResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_RequestToIssueNewPolicy_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestToIssueNewPolicy" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_RequestToIssueNewPolicy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestToIssueNewPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_RequestToCancelBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestToCancelBill" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_RequestToCancelBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestToCancelBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_RequestToIssueNewBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestToIssueNewBill" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_RequestToIssueNewBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestToIssueNewBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_SendScanRatingSheetCompleteToOutSide_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendScanRatingSheetCompleteToOutSide" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_SendScanRatingSheetCompleteToOutSide_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendScanRatingSheetCompleteToOutSideResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_SendScanOtherDocCompleteToOutSide_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendScanOtherDocCompleteToOutSide" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_SendScanOtherDocCompleteToOutSide_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendScanOtherDocCompleteToOutSideResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_UpdateTaxPremium_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTaxPremium" />
+  </wsdl:message>
+  <wsdl:message name="IAppTransportServiceContract_UpdateTaxPremium_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTaxPremiumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAppTransportServiceContract">
+    <wsdl:operation name="ChangeAppFormStatus">
+      <wsdl:input wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/ChangeAppFormStatus" message="tns:IAppTransportServiceContract_ChangeAppFormStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/ChangeAppFormStatusResponse" message="tns:IAppTransportServiceContract_ChangeAppFormStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppFormContentByID">
+      <wsdl:input wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/GetAppFormContentByID" message="tns:IAppTransportServiceContract_GetAppFormContentByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/GetAppFormContentByIDResponse" message="tns:IAppTransportServiceContract_GetAppFormContentByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMoreContentByID">
+      <wsdl:input wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/GetMoreContentByID" message="tns:IAppTransportServiceContract_GetMoreContentByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/GetMoreContentByIDResponse" message="tns:IAppTransportServiceContract_GetMoreContentByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContentByID">
+      <wsdl:input wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/GetContentByID" message="tns:IAppTransportServiceContract_GetContentByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/GetContentByIDResponse" message="tns:IAppTransportServiceContract_GetContentByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCompleteContentStatus">
+      <wsdl:input wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/SendCompleteContentStatus" message="tns:IAppTransportServiceContract_SendCompleteContentStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/SendCompleteContentStatusResponse" message="tns:IAppTransportServiceContract_SendCompleteContentStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendReceiveContentStatusToOutSide">
+      <wsdl:input wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/SendReceiveContentStatusToOutSide" message="tns:IAppTransportServiceContract_SendReceiveContentStatusToOutSide_InputMessage" />
+      <wsdl:output wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/SendReceiveContentStatusToOutSideResponse" message="tns:IAppTransportServiceContract_SendReceiveContentStatusToOutSide_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestToIssueNewPolicy">
+      <wsdl:input wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/RequestToIssueNewPolicy" message="tns:IAppTransportServiceContract_RequestToIssueNewPolicy_InputMessage" />
+      <wsdl:output wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/RequestToIssueNewPolicyResponse" message="tns:IAppTransportServiceContract_RequestToIssueNewPolicy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestToCancelBill">
+      <wsdl:input wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/RequestToCancelBill" message="tns:IAppTransportServiceContract_RequestToCancelBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/RequestToCancelBillResponse" message="tns:IAppTransportServiceContract_RequestToCancelBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestToIssueNewBill">
+      <wsdl:input wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/RequestToIssueNewBill" message="tns:IAppTransportServiceContract_RequestToIssueNewBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/RequestToIssueNewBillResponse" message="tns:IAppTransportServiceContract_RequestToIssueNewBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendScanRatingSheetCompleteToOutSide">
+      <wsdl:input wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/SendScanRatingSheetCompleteToOutSide" message="tns:IAppTransportServiceContract_SendScanRatingSheetCompleteToOutSide_InputMessage" />
+      <wsdl:output wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/SendScanRatingSheetCompleteToOutSideResponse" message="tns:IAppTransportServiceContract_SendScanRatingSheetCompleteToOutSide_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendScanOtherDocCompleteToOutSide">
+      <wsdl:input wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/SendScanOtherDocCompleteToOutSide" message="tns:IAppTransportServiceContract_SendScanOtherDocCompleteToOutSide_InputMessage" />
+      <wsdl:output wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/SendScanOtherDocCompleteToOutSideResponse" message="tns:IAppTransportServiceContract_SendScanOtherDocCompleteToOutSide_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTaxPremium">
+      <wsdl:input wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/UpdateTaxPremium" message="tns:IAppTransportServiceContract_UpdateTaxPremium_InputMessage" />
+      <wsdl:output wsaw:Action="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/UpdateTaxPremiumResponse" message="tns:IAppTransportServiceContract_UpdateTaxPremium_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ISISAppTransportServiceEndpoint" type="tns:IAppTransportServiceContract">
+    <wsp:PolicyReference URI="#ISISAppTransportServiceEndpoint_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ChangeAppFormStatus">
+      <soap12:operation soapAction="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/ChangeAppFormStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppFormContentByID">
+      <soap12:operation soapAction="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/GetAppFormContentByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoreContentByID">
+      <soap12:operation soapAction="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/GetMoreContentByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContentByID">
+      <soap12:operation soapAction="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/GetContentByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCompleteContentStatus">
+      <soap12:operation soapAction="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/SendCompleteContentStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendReceiveContentStatusToOutSide">
+      <soap12:operation soapAction="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/SendReceiveContentStatusToOutSide" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestToIssueNewPolicy">
+      <soap12:operation soapAction="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/RequestToIssueNewPolicy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestToCancelBill">
+      <soap12:operation soapAction="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/RequestToCancelBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestToIssueNewBill">
+      <soap12:operation soapAction="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/RequestToIssueNewBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendScanRatingSheetCompleteToOutSide">
+      <soap12:operation soapAction="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/SendScanRatingSheetCompleteToOutSide" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendScanOtherDocCompleteToOutSide">
+      <soap12:operation soapAction="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/SendScanOtherDocCompleteToOutSide" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTaxPremium">
+      <soap12:operation soapAction="http://NewISISService/2012/ISISAppTransportService/IAppTransportServiceContract/UpdateTaxPremium" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ISISAppTransportService">
+    <wsdl:port name="ISISAppTransportServiceEndpoint" binding="tns:ISISAppTransportServiceEndpoint">
+      <soap12:address location="http://owssvr.bla.co.th/ISISAppTransportService.Test/ISISAppTransportServiceReference.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://owssvr.bla.co.th/ISISAppTransportService.Test/ISISAppTransportServiceReference.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
